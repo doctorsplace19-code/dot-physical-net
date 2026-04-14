@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | DOT Physical</title>
+<meta name="description" content="DOT compliance news, FMCSA updates, and guides for drivers and employers. Stay informed with the DOT Physical blog.">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg:#F4F7FF;--bg-white:#FFFFFF;--accent:#1A56DB;--accent-dim:#1447C0;--accent-light:#EBF0FF;--teal:#0694A2;--teal-light:#E0F7FA;--heading:#0C1B3A;--body:#3D5280;--muted:#7A8FB8;--border:rgba(26,86,219,0.1);--border-strong:rgba(26,86,219,0.22);--shadow:0 2px 16px rgba(26,86,219,0.08);--shadow-md:0 6px 32px rgba(26,86,219,0.13);--radius:16px;--radius-sm:10px}
+  html{scroll-behavior:smooth}
+  body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--heading);overflow-x:hidden}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 4rem;background:rgba(255,255,255,0.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+  .nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.35rem;letter-spacing:-0.02em;display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--heading)}
+  .logo-dot{width:10px;height:10px;border-radius:50%;background:var(--accent);display:inline-block}
+  .nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+  .nav-links a{color:var(--body);text-decoration:none;font-size:0.9rem;transition:color 0.2s}
+  .nav-links a:hover{color:var(--heading)}
+  .nav-cta{background:var(--accent)!important;color:#fff!important;padding:0.55rem 1.4rem;border-radius:100px;font-weight:600!important;font-size:0.875rem!important;box-shadow:0 2px 12px rgba(26,86,219,0.3);transition:background 0.2s,transform 0.15s!important}
+  .nav-cta:hover{background:var(--accent-dim)!important;transform:translateY(-1px)}
+  .page-hero{padding:8rem 4rem 4rem;background:linear-gradient(150deg,#fff 0%,#EDF1FF 55%,#E4EDFF 100%);border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+  .hero-grid{position:absolute;inset:0;z-index:0;background-image:linear-gradient(rgba(26,86,219,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(26,86,219,0.04) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 90% 90% at 50% 50%,black 10%,transparent 100%)}
+  .page-hero-inner{position:relative;z-index:1;max-width:700px}
+  .section-label{display:inline-block;font-size:0.75rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:1rem}
+  .page-hero h1{font-family:'Syne',sans-serif;font-size:clamp(2.2rem,4vw,3.4rem);font-weight:800;letter-spacing:-0.03em;color:var(--heading);margin-bottom:1rem;line-height:1.08}
+  .page-hero p{color:var(--body);font-size:1.05rem;line-height:1.7;font-weight:300;max-width:580px}
+  .main{padding:5rem 4rem 6rem}
+  .section-title{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:700;letter-spacing:-0.02em;line-height:1.1;margin-bottom:1.25rem;color:var(--heading)}
+  .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+  .blog-card{background:var(--bg-white);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:border-color 0.25s,box-shadow 0.25s,transform 0.2s;text-decoration:none;display:flex;flex-direction:column}
+  .blog-card:hover{border-color:var(--accent);box-shadow:var(--shadow-md);transform:translateY(-3px)}
+  .blog-thumb{height:180px;background:linear-gradient(135deg,var(--accent-light) 0%,var(--teal-light) 100%);display:flex;align-items:center;justify-content:center;font-size:3rem}
+  .blog-body{padding:1.5rem;flex:1;display:flex;flex-direction:column}
+  .blog-cat{font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--teal);margin-bottom:0.6rem}
+  .blog-title{font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;color:var(--heading);line-height:1.35;margin-bottom:0.6rem}
+  .blog-excerpt{color:var(--body);font-size:0.875rem;line-height:1.65;flex:1}
+  .blog-meta{display:flex;align-items:center;gap:0.75rem;margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--border)}
+  .blog-date{color:var(--muted);font-size:0.8rem}
+  .blog-read{color:var(--accent);font-size:0.8rem;font-weight:600;margin-left:auto}
+  .featured-post{background:var(--bg-white);border:1px solid var(--border);border-radius:var(--radius);padding:3rem;margin-bottom:3rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+  .featured-badge{display:inline-block;background:var(--accent);color:#fff;font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.3rem 0.75rem;border-radius:100px;margin-bottom:1rem}
+  .featured-post h2{font-family:'Syne',sans-serif;font-size:1.75rem;font-weight:800;color:var(--heading);letter-spacing:-0.02em;line-height:1.15;margin-bottom:0.75rem}
+  .featured-post p{color:var(--body);font-size:0.95rem;line-height:1.7;margin-bottom:1.5rem}
+  .btn-primary{background:var(--accent);color:#fff;padding:0.85rem 2rem;border-radius:100px;font-weight:600;font-size:0.95rem;text-decoration:none;transition:transform 0.15s,background 0.2s;display:inline-flex;align-items:center;gap:8px;box-shadow:0 4px 16px rgba(26,86,219,0.3)}
+  .btn-primary:hover{transform:translateY(-2px);background:var(--accent-dim)}
+  .featured-img{height:280px;background:linear-gradient(135deg,var(--accent) 0%,var(--teal) 100%);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:5rem}
+  .cta-banner{background:linear-gradient(135deg,var(--accent) 0%,#1447C0 100%);border-radius:24px;padding:3.5rem 4rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-top:4rem;box-shadow:0 8px 40px rgba(26,86,219,0.3)}
+  .cta-banner h2{font-family:'Syne',sans-serif;font-size:clamp(1.5rem,2.5vw,2rem);font-weight:800;color:#fff;letter-spacing:-0.03em;max-width:450px;line-height:1.15}
+  .cta-banner p{color:rgba(255,255,255,0.7);font-size:0.95rem;margin-top:0.4rem}
+  .cta-actions{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+  .btn-white{background:#fff;color:var(--accent);padding:0.85rem 2rem;border-radius:100px;font-weight:600;font-size:0.95rem;text-decoration:none;transition:transform 0.15s;display:inline-flex;align-items:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,0.12)}
+  .btn-white:hover{transform:translateY(-2px)}
+  .btn-outline-white{color:#fff;border:1.5px solid rgba(255,255,255,0.45);padding:0.85rem 2rem;border-radius:100px;font-weight:500;font-size:0.95rem;text-decoration:none;transition:border-color 0.2s,background 0.2s}
+  .btn-outline-white:hover{border-color:#fff;background:rgba(255,255,255,0.1)}
+  footer{background:var(--heading);padding:3.5rem 4rem;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem}
+  .footer-brand p{color:rgba(255,255,255,0.4);font-size:0.875rem;line-height:1.7;margin-top:0.75rem;max-width:260px}
+  .footer-contact{margin-top:1.25rem}
+  .footer-contact a{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.4);text-decoration:none;font-size:0.875rem;margin-bottom:0.5rem;transition:color 0.2s}
+  .footer-contact a:hover{color:#fff}
+  .footer-col h5{font-family:'Syne',sans-serif;font-weight:700;font-size:0.8rem;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:1rem}
+  .footer-col a{display:block;color:rgba(255,255,255,0.52);text-decoration:none;font-size:0.875rem;margin-bottom:0.6rem;transition:color 0.2s}
+  .footer-col a:hover{color:#fff}
+  .footer-bottom{grid-column:1/-1;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.07);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+  .footer-bottom p{color:rgba(255,255,255,0.28);font-size:0.8rem}
+  @media(max-width:1024px){nav{padding:1.1rem 2rem}.page-hero{padding:7rem 2rem 3rem}.main{padding:4rem 2rem 5rem}.blog-grid{grid-template-columns:1fr 1fr}.featured-post{grid-template-columns:1fr}.cta-banner{padding:2.5rem;flex-direction:column}footer{grid-template-columns:1fr 1fr;padding:3rem 2rem}}
+  @media(max-width:640px){.nav-links{display:none}.blog-grid{grid-template-columns:1fr}footer{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo"><span class="logo-dot"></span>DOT Physical</a>
+  <ul class="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="employers.html">Employers</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="book.html">Book Now</a></li>
+    <li><a href="http://portal.dot-physical.net" class="nav-cta" target="_blank" rel="noopener">Employer Portal</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="hero-grid"></div>
+  <div class="page-hero-inner">
+    <div class="section-label">Blog</div>
+    <h1>DOT Compliance News<br>&amp; Driver Resources</h1>
+    <p>FMCSA updates, compliance guides, and practical advice for drivers and fleet managers.</p>
+  </div>
+</div>
+
+<div class="main">
+  <div class="featured-post">
+    <div>
+      <div class="featured-badge">Featured</div>
+      <h2>2025 FMCSA Random Drug Testing Rate Stays at 50%</h2>
+      <p>The FMCSA has confirmed the random drug testing rate for CDL drivers remains at 50% of covered employees for 2025. Here's what that means for your fleet's testing program and how to ensure you hit the required numbers.</p>
+      <a href="#" class="btn-primary">Read Article &rarr;</a>
+    </div>
+    <div class="featured-img">🚛</div>
+  </div>
+
+  <div class="section-label">Recent Articles</div>
+  <h2 class="section-title">Latest Posts</h2>
+  <div class="blog-grid" style="margin-top:2rem;">
+    <a href="#" class="blog-card">
+      <div class="blog-thumb">🩺</div>
+      <div class="blog-body">
+        <div class="blog-cat">DOT Physical</div>
+        <div class="blog-title">What to Expect at Your First DOT Physical Exam</div>
+        <div class="blog-excerpt">A step-by-step walkthrough of the FMCSA DOT physical — what the examiner checks, how long it takes, and how to prepare.</div>
+        <div class="blog-meta"><span class="blog-date">March 15, 2025</span><span class="blog-read">5 min read</span></div>
+      </div>
+    </a>
+    <a href="#" class="blog-card">
+      <div class="blog-thumb">💊</div>
+      <div class="blog-body">
+        <div class="blog-cat">Drug Testing</div>
+        <div class="blog-title">Can Prescription Medications Cause a Positive DOT Drug Test?</div>
+        <div class="blog-excerpt">How MRO review protects drivers who use legitimate prescription medications — and which drugs to disclose before your test.</div>
+        <div class="blog-meta"><span class="blog-date">March 8, 2025</span><span class="blog-read">7 min read</span></div>
+      </div>
+    </a>
+    <a href="#" class="blog-card">
+      <div class="blog-thumb">📋</div>
+      <div class="blog-body">
+        <div class="blog-cat">Employer Guide</div>
+        <div class="blog-title">5 Things That Fail a DOT Compliance Audit — and How to Fix Them</div>
+        <div class="blog-excerpt">FMCSA auditors look for specific gaps. Here are the five most common compliance failures and exactly how to close them before your next review.</div>
+        <div class="blog-meta"><span class="blog-date">February 28, 2025</span><span class="blog-read">6 min read</span></div>
+      </div>
+    </a>
+    <a href="#" class="blog-card">
+      <div class="blog-thumb">🔄</div>
+      <div class="blog-body">
+        <div class="blog-cat">Return to Duty</div>
+        <div class="blog-title">The Return to Duty Process Explained: A Step-by-Step Guide</div>
+        <div class="blog-excerpt">After a positive drug test, what happens next? We break down every step of the DOT Return to Duty process for drivers and employers.</div>
+        <div class="blog-meta"><span class="blog-date">February 20, 2025</span><span class="blog-read">8 min read</span></div>
+      </div>
+    </a>
+    <a href="#" class="blog-card">
+      <div class="blog-thumb">❤️</div>
+      <div class="blog-body">
+        <div class="blog-cat">DOT Physical</div>
+        <div class="blog-title">High Blood Pressure and CDL Certification: What Drivers Need to Know</div>
+        <div class="blog-excerpt">Hypertension is the most common reason drivers receive shortened certification periods. Here's how the stages work and what you can do.</div>
+        <div class="blog-meta"><span class="blog-date">February 12, 2025</span><span class="blog-read">5 min read</span></div>
+      </div>
+    </a>
+    <a href="#" class="blog-card">
+      <div class="blog-thumb">🎲</div>
+      <div class="blog-body">
+        <div class="blog-cat">Random Testing</div>
+        <div class="blog-title">Owner-Operators: You Must Be in a Random Testing Consortium</div>
+        <div class="blog-excerpt">Many owner-operators don't realize they're out of compliance on random testing. Here's why the requirement exists and how to get enrolled fast.</div>
+        <div class="blog-meta"><span class="blog-date">January 30, 2025</span><span class="blog-read">4 min read</span></div>
+      </div>
+    </a>
+  </div>
+
+  <div class="cta-banner">
+    <div><h2>Ready to book your exam?</h2><p>10,000+ locations. Same-day certificate. $110 flat rate.</p></div>
+    <div class="cta-actions">
+      <a href="book.html" class="btn-white">Book Now</a>
+      <a href="services.html" class="btn-outline-white">All Services</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-brand">
+    <a href="index.html" class="nav-logo" style="color:#fff;"><span class="logo-dot"></span>DOT Physical</a>
+    <p>A Doctors Place company. Fast, reliable, FMCSA-compliant DOT physicals and drug testing services nationwide.</p>
+    <div class="footer-contact">
+      <a href="tel:2013455803">📞 201-345-5803</a>
+      <a href="contact.html">📍 75 Summit Ave, Hackensack, NJ 07601</a>
+    </div>
+  </div>
+  <div class="footer-col">
+    <h5>Services</h5>
+    <a href="dot-physical.html">DOT Physical Exam</a>
+    <a href="drug-testing.html">DOT Drug Testing</a>
+    <a href="pre-employment.html">Pre-Employment Physical</a>
+    <a href="return-to-duty.html">Return to Duty</a>
+    <a href="services.html">All Services</a>
+  </div>
+  <div class="footer-col">
+    <h5>Employers</h5>
+    <a href="http://portal.dot-physical.net" target="_blank" rel="noopener">Employer Portal</a>
+    <a href="ctpa.html">C/TPA Services</a>
+    <a href="random-pool.html">Random Pool Program</a>
+    <a href="mro.html">MRO Services</a>
+    <a href="cost-of-services.html">Cost of Services</a>
+  </div>
+  <div class="footer-col">
+    <h5>Company</h5>
+    <a href="about.html">About Us</a>
+    <a href="blog.html">Blog</a>
+    <a href="who-we-serve.html">Who We Serve</a>
+    <a href="book.html">Book Online</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 DOT Physical &mdash; a Doctors Place company. All rights reserved.</p>
+    <p>FMCSA Certified &middot; DOT Compliant &middot; Nationwide</p>
+  </div>
+</footer>
+</body>
+</html>

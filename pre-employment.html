@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pre-Employment Physical | DOT Physical</title>
+<meta name="description" content="Comprehensive pre-employment physicals for safety-sensitive roles. Fast scheduling, same-day results, $110 flat rate.">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg:#F4F7FF;--bg-white:#FFFFFF;--accent:#1A56DB;--accent-dim:#1447C0;--accent-light:#EBF0FF;--teal:#0694A2;--teal-light:#E0F7FA;--heading:#0C1B3A;--body:#3D5280;--muted:#7A8FB8;--border:rgba(26,86,219,0.1);--border-strong:rgba(26,86,219,0.22);--shadow:0 2px 16px rgba(26,86,219,0.08);--shadow-md:0 6px 32px rgba(26,86,219,0.13);--radius:16px;--radius-sm:10px}
+  html{scroll-behavior:smooth}
+  body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--heading);overflow-x:hidden}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 4rem;background:rgba(255,255,255,0.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+  .nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.35rem;letter-spacing:-0.02em;display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--heading)}
+  .logo-dot{width:10px;height:10px;border-radius:50%;background:var(--accent);display:inline-block}
+  .nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+  .nav-links a{color:var(--body);text-decoration:none;font-size:0.9rem;transition:color 0.2s}
+  .nav-links a:hover{color:var(--heading)}
+  .nav-cta{background:var(--accent)!important;color:#fff!important;padding:0.55rem 1.4rem;border-radius:100px;font-weight:600!important;font-size:0.875rem!important;box-shadow:0 2px 12px rgba(26,86,219,0.3);transition:background 0.2s,transform 0.15s!important}
+  .nav-cta:hover{background:var(--accent-dim)!important;transform:translateY(-1px)}
+  .page-hero{padding:8rem 4rem 4rem;background:linear-gradient(150deg,#fff 0%,#EDF1FF 55%,#E4EDFF 100%);border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+  .hero-grid{position:absolute;inset:0;z-index:0;background-image:linear-gradient(rgba(26,86,219,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(26,86,219,0.04) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 90% 90% at 50% 50%,black 10%,transparent 100%)}
+  .page-hero-inner{position:relative;z-index:1;max-width:700px}
+  .section-label{display:inline-block;font-size:0.75rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:1rem}
+  .page-hero h1{font-family:'Syne',sans-serif;font-size:clamp(2.2rem,4vw,3.4rem);font-weight:800;letter-spacing:-0.03em;color:var(--heading);margin-bottom:1rem;line-height:1.08}
+  .page-hero p{color:var(--body);font-size:1.05rem;line-height:1.7;font-weight:300;max-width:580px;margin-bottom:1.75rem}
+  .hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+  .btn-primary{background:var(--accent);color:#fff;padding:0.85rem 2rem;border-radius:100px;font-weight:600;font-size:0.95rem;text-decoration:none;transition:transform 0.15s,background 0.2s;display:inline-flex;align-items:center;gap:8px;box-shadow:0 4px 16px rgba(26,86,219,0.3)}
+  .btn-primary:hover{transform:translateY(-2px);background:var(--accent-dim)}
+  .btn-outline{color:var(--accent);border:1.5px solid var(--border-strong);padding:0.85rem 2rem;border-radius:100px;font-weight:500;font-size:0.95rem;text-decoration:none;transition:border-color 0.2s,background 0.2s;display:inline-flex;align-items:center;gap:8px}
+  .btn-outline:hover{border-color:var(--accent);background:var(--accent-light)}
+  .main{padding:5rem 4rem 6rem}
+  .section-title{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:700;letter-spacing:-0.02em;line-height:1.1;margin-bottom:1.25rem;color:var(--heading)}
+  .section-sub{color:var(--body);font-size:1rem;line-height:1.75;max-width:600px;font-weight:300;margin-bottom:2rem}
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+  .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem}
+  .card{background:var(--bg-white);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;transition:border-color 0.25s,box-shadow 0.25s,transform 0.2s}
+  .card:hover{border-color:var(--accent);box-shadow:var(--shadow-md);transform:translateY(-3px)}
+  .card h3{font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;color:var(--heading);margin-bottom:0.6rem}
+  .card p{color:var(--body);font-size:0.9rem;line-height:1.65}
+  .icon-box{width:46px;height:46px;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1.1rem}
+  .ib-blue{background:var(--accent-light)}.ib-teal{background:var(--teal-light)}.ib-indigo{background:#EEF2FF}.ib-amber{background:#FFFBEB}
+  .check-list{list-style:none;display:flex;flex-direction:column;gap:0.75rem;margin-bottom:2rem}
+  .check-list li{display:flex;gap:0.75rem;align-items:flex-start;color:var(--body);font-size:0.95rem;line-height:1.6}
+  .check-list li::before{content:"✓";color:var(--teal);font-weight:700;flex-shrink:0;margin-top:2px}
+  .price-box{background:var(--bg-white);border:2px solid var(--accent);border-radius:var(--radius);padding:2.5rem;text-align:center}
+  .price-box .amount{font-family:'Syne',sans-serif;font-size:3.5rem;font-weight:800;color:var(--accent);line-height:1}
+  .price-box .label{color:var(--muted);font-size:0.9rem;margin-top:0.5rem;margin-bottom:1.5rem}
+  .industry-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;margin-top:2rem}
+  .industry-chip{background:var(--bg-white);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.9rem 1.1rem;font-size:0.875rem;color:var(--body);font-weight:500;display:flex;align-items:center;gap:0.5rem}
+  .faq{background:var(--bg-white);border:1px solid var(--border);border-radius:var(--radius-sm);padding:1.5rem;margin-bottom:0.75rem}
+  .faq h4{font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;color:var(--heading);margin-bottom:0.5rem}
+  .faq p{color:var(--body);font-size:0.875rem;line-height:1.65}
+  .cta-banner{background:linear-gradient(135deg,var(--accent) 0%,#1447C0 100%);border-radius:24px;padding:3.5rem 4rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-top:4rem;box-shadow:0 8px 40px rgba(26,86,219,0.3)}
+  .cta-banner h2{font-family:'Syne',sans-serif;font-size:clamp(1.5rem,2.5vw,2rem);font-weight:800;color:#fff;letter-spacing:-0.03em;max-width:450px;line-height:1.15}
+  .cta-banner p{color:rgba(255,255,255,0.7);font-size:0.95rem;margin-top:0.4rem}
+  .cta-actions{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+  .btn-white{background:#fff;color:var(--accent);padding:0.85rem 2rem;border-radius:100px;font-weight:600;font-size:0.95rem;text-decoration:none;transition:transform 0.15s;display:inline-flex;align-items:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,0.12)}
+  .btn-white:hover{transform:translateY(-2px)}
+  .btn-outline-white{color:#fff;border:1.5px solid rgba(255,255,255,0.45);padding:0.85rem 2rem;border-radius:100px;font-weight:500;font-size:0.95rem;text-decoration:none;transition:border-color 0.2s,background 0.2s}
+  .btn-outline-white:hover{border-color:#fff;background:rgba(255,255,255,0.1)}
+  footer{background:var(--heading);padding:3.5rem 4rem;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem}
+  .footer-brand p{color:rgba(255,255,255,0.4);font-size:0.875rem;line-height:1.7;margin-top:0.75rem;max-width:260px}
+  .footer-contact{margin-top:1.25rem}
+  .footer-contact a{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.4);text-decoration:none;font-size:0.875rem;margin-bottom:0.5rem;transition:color 0.2s}
+  .footer-contact a:hover{color:#fff}
+  .footer-col h5{font-family:'Syne',sans-serif;font-weight:700;font-size:0.8rem;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:1rem}
+  .footer-col a{display:block;color:rgba(255,255,255,0.52);text-decoration:none;font-size:0.875rem;margin-bottom:0.6rem;transition:color 0.2s}
+  .footer-col a:hover{color:#fff}
+  .footer-bottom{grid-column:1/-1;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.07);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+  .footer-bottom p{color:rgba(255,255,255,0.28);font-size:0.8rem}
+  @media(max-width:1024px){nav{padding:1.1rem 2rem}.page-hero{padding:7rem 2rem 3rem}.main{padding:4rem 2rem 5rem}.two-col,.grid-2,.grid-3,.industry-grid{grid-template-columns:1fr}.cta-banner{padding:2.5rem;flex-direction:column}footer{grid-template-columns:1fr 1fr;padding:3rem 2rem}}
+  @media(max-width:640px){.nav-links{display:none}footer{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo"><span class="logo-dot"></span>DOT Physical</a>
+  <ul class="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="employers.html">Employers</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="book.html">Book Now</a></li>
+    <li><a href="http://portal.dot-physical.net" class="nav-cta" target="_blank" rel="noopener">Employer Portal</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="hero-grid"></div>
+  <div class="page-hero-inner">
+    <div class="section-label">Pre-Employment Physical</div>
+    <h1>Pre-Hire Health Screening<br>for Safety-Sensitive Roles</h1>
+    <p>Comprehensive pre-employment physicals that assess fitness for duty before day one. Fast scheduling, same-day results, employer billing available.</p>
+    <div class="hero-actions">
+      <a href="book.html" class="btn-primary">Book an Exam &rarr;</a>
+      <a href="employers.html" class="btn-outline">Employer Accounts</a>
+    </div>
+  </div>
+</div>
+
+<div class="main">
+  <div class="two-col">
+    <div>
+      <div class="section-label">What's Included</div>
+      <h2 class="section-title">Comprehensive Pre-Hire Screening</h2>
+      <p class="section-sub">Our pre-employment physicals go beyond basic vital signs. We evaluate the whole employee to ensure they're fit for the demands of the role.</p>
+      <ul class="check-list">
+        <li>Complete health history review</li>
+        <li>Blood pressure and pulse assessment</li>
+        <li>Vision and hearing screening</li>
+        <li>Musculoskeletal and range-of-motion evaluation</li>
+        <li>Respiratory assessment</li>
+        <li>Urinalysis (glucose and protein)</li>
+        <li>Cardiovascular and neurological screening</li>
+        <li>Body mass index (BMI) documentation</li>
+        <li>Employer-customized additional tests available</li>
+        <li>Same-day physician-signed clearance letter</li>
+      </ul>
+    </div>
+    <div>
+      <div class="price-box">
+        <div class="amount">$110</div>
+        <div class="label">Flat rate — same-day clearance letter</div>
+        <a href="book.html" class="btn-primary" style="justify-content:center;width:100%;">Book Now &rarr;</a>
+        <p style="margin-top:1rem;color:var(--muted);font-size:0.8rem;">Employer portal billing available. Volume pricing for 5+ employees.</p>
+      </div>
+      <div class="card" style="margin-top:1.25rem;">
+        <div class="icon-box ib-teal">➕</div>
+        <h3>Add-On Services</h3>
+        <ul class="check-list" style="margin-bottom:0;">
+          <li>DOT drug screen (+$69.99)</li>
+          <li>TB skin test / QuantiFERON (+$65)</li>
+          <li>Respirator fit test (+$60)</li>
+          <li>Breath alcohol test (+$45)</li>
+          <li>Lab panel — CBC, CMP, lipids (call for pricing)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:4rem;">
+    <div class="section-label">Industries We Serve</div>
+    <h2 class="section-title">Built for High-Stakes Hiring</h2>
+    <p class="section-sub">We serve employers across safety-sensitive industries where fitness for duty isn't optional.</p>
+    <div class="industry-grid">
+      <div class="industry-chip">🚛 Trucking &amp; Freight</div>
+      <div class="industry-chip">🏗️ Construction</div>
+      <div class="industry-chip">🏭 Manufacturing</div>
+      <div class="industry-chip">🚌 Transit &amp; Bus</div>
+      <div class="industry-chip">✈️ Aviation Ground Crews</div>
+      <div class="industry-chip">🛢️ Oil &amp; Gas</div>
+      <div class="industry-chip">🚂 Railroad</div>
+      <div class="industry-chip">🏥 Healthcare</div>
+      <div class="industry-chip">🔧 Utilities &amp; Energy</div>
+    </div>
+  </div>
+
+  <div style="margin-top:4rem;">
+    <div class="section-label">Why Choose Us</div>
+    <h2 class="section-title">Faster Onboarding Starts Here</h2>
+    <div class="grid-3" style="margin-top:2rem;">
+      <div class="card"><div class="icon-box ib-blue">⚡</div><h3>Same-Day Clearance</h3><p>No waiting for results. Your new hire walks out with a signed clearance letter.</p></div>
+      <div class="card"><div class="icon-box ib-teal">📍</div><h3>Near Any Job Site</h3><p>10,000+ locations means you can send new hires to a clinic near where they'll work.</p></div>
+      <div class="card"><div class="icon-box ib-indigo">🖥️</div><h3>Employer Portal</h3><p>Order exams, track status, and receive results digitally — all from one dashboard.</p></div>
+    </div>
+  </div>
+
+  <div style="margin-top:4rem;max-width:760px;">
+    <div class="section-label">FAQ</div>
+    <h2 class="section-title">Common Questions</h2>
+    <div style="margin-top:2rem;">
+      <div class="faq"><h4>Is a pre-employment physical the same as a DOT physical?</h4><p>Not necessarily. A DOT physical is specifically required for CDL drivers and follows FMCSA guidelines. A pre-employment physical is a general fitness-for-duty exam that can be customized by the employer. Both are available here.</p></div>
+      <div class="faq"><h4>Can the employer specify what's included?</h4><p>Yes. Employers can set up custom exam protocols through our portal, specifying which components to include for different job roles.</p></div>
+      <div class="faq"><h4>How long does the exam take?</h4><p>A standard pre-employment physical takes 30–45 minutes. Add-on tests like drug screens or lab work may add time.</p></div>
+    </div>
+  </div>
+
+  <div class="cta-banner">
+    <div><h2>Streamline your pre-hire process.</h2><p>Set up an employer account and start ordering exams today.</p></div>
+    <div class="cta-actions">
+      <a href="http://portal.dot-physical.net" class="btn-white" target="_blank" rel="noopener">Employer Portal</a>
+      <a href="book.html" class="btn-outline-white">Book an Exam</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-brand">
+    <a href="index.html" class="nav-logo" style="color:#fff;"><span class="logo-dot"></span>DOT Physical</a>
+    <p>A Doctors Place company. Fast, reliable, FMCSA-compliant DOT physicals and drug testing services nationwide.</p>
+    <div class="footer-contact">
+      <a href="tel:2013455803">📞 201-345-5803</a>
+      <a href="contact.html">📍 75 Summit Ave, Hackensack, NJ 07601</a>
+    </div>
+  </div>
+  <div class="footer-col">
+    <h5>Services</h5>
+    <a href="dot-physical.html">DOT Physical Exam</a>
+    <a href="drug-testing.html">DOT Drug Testing</a>
+    <a href="pre-employment.html">Pre-Employment Physical</a>
+    <a href="return-to-duty.html">Return to Duty</a>
+    <a href="services.html">All Services</a>
+  </div>
+  <div class="footer-col">
+    <h5>Employers</h5>
+    <a href="http://portal.dot-physical.net" target="_blank" rel="noopener">Employer Portal</a>
+    <a href="ctpa.html">C/TPA Services</a>
+    <a href="random-pool.html">Random Pool Program</a>
+    <a href="mro.html">MRO Services</a>
+    <a href="cost-of-services.html">Cost of Services</a>
+  </div>
+  <div class="footer-col">
+    <h5>Company</h5>
+    <a href="about.html">About Us</a>
+    <a href="blog.html">Blog</a>
+    <a href="who-we-serve.html">Who We Serve</a>
+    <a href="book.html">Book Online</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 DOT Physical &mdash; a Doctors Place company. All rights reserved.</p>
+    <p>FMCSA Certified &middot; DOT Compliant &middot; Nationwide</p>
+  </div>
+</footer>
+</body>
+</html>
