@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>High Blood Pressure and Your CDL: What the Stages Mean | DOT Physical Blog</title>
+<meta name="description" content="Hypertension is the #1 reason CDL drivers receive shortened medical certificates. Here's exactly how the stages work and what you can do to protect your certification.">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg:#F4F7FF;--bg-white:#FFFFFF;--accent:#1A56DB;--accent-dim:#1447C0;--accent-light:#EBF0FF;--teal:#0694A2;--teal-light:#E0F7FA;--heading:#0C1B3A;--body:#3D5280;--muted:#7A8FB8;--border:rgba(26,86,219,0.1);--border-strong:rgba(26,86,219,0.22);--shadow:0 2px 16px rgba(26,86,219,0.08);--shadow-md:0 6px 32px rgba(26,86,219,0.13);--radius:16px;--radius-sm:10px}
+  html{scroll-behavior:smooth}
+  body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--heading);overflow-x:hidden}
+
+  /* NAV */
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 4rem;background:rgba(255,255,255,0.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+  .nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.35rem;letter-spacing:-0.02em;display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--heading)}
+  .logo-dot{width:10px;height:10px;border-radius:50%;background:var(--accent);display:inline-block}
+  .nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+  .nav-links a{color:var(--body);text-decoration:none;font-size:0.9rem;transition:color 0.2s}
+  .nav-links a:hover{color:var(--heading)}
+  .nav-cta{background:var(--accent)!important;color:#fff!important;padding:0.55rem 1.4rem;border-radius:100px;font-weight:600!important;font-size:0.875rem!important;box-shadow:0 2px 12px rgba(26,86,219,0.3);transition:background 0.2s,transform 0.15s!important}
+  .nav-cta:hover{background:var(--accent-dim)!important;transform:translateY(-1px)}
+
+  /* POST HERO */
+  .post-hero{padding:8rem 4rem 4rem;background:linear-gradient(150deg,#fff 0%,#EDF1FF 55%,#E4EDFF 100%);border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+  .hero-grid{position:absolute;inset:0;z-index:0;background-image:linear-gradient(rgba(26,86,219,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(26,86,219,0.04) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 90% 90% at 50% 50%,black 10%,transparent 100%)}
+  .post-hero-inner{position:relative;z-index:1;max-width:780px}
+  .breadcrumb{display:flex;align-items:center;gap:0.5rem;margin-bottom:1.25rem;font-size:0.82rem;color:var(--muted)}
+  .breadcrumb a{color:var(--muted);text-decoration:none;transition:color 0.2s}
+  .breadcrumb a:hover{color:var(--accent)}
+  .breadcrumb span{color:var(--border-strong)}
+  .post-cat{display:inline-block;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:0.85rem;background:var(--teal-light);padding:0.3rem 0.75rem;border-radius:100px}
+  .post-hero h1{font-family:'Syne',sans-serif;font-size:clamp(1.9rem,4vw,3rem);font-weight:800;letter-spacing:-0.03em;color:var(--heading);margin-bottom:1.1rem;line-height:1.1}
+  .post-hero .excerpt{color:var(--body);font-size:1.05rem;line-height:1.7;font-weight:300;max-width:660px;margin-bottom:1.75rem}
+  .post-meta-bar{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
+  .meta-author{display:flex;align-items:center;gap:0.65rem}
+  .author-avatar{width:36px;height:36px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:0.85rem;font-family:'Syne',sans-serif}
+  .author-name{font-size:0.875rem;font-weight:500;color:var(--heading)}
+  .meta-sep{width:4px;height:4px;border-radius:50%;background:var(--border-strong)}
+  .meta-date,.meta-read{color:var(--muted);font-size:0.82rem}
+  .meta-tag{background:var(--accent-light);color:var(--accent);font-size:0.72rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:100px}
+
+  /* LAYOUT */
+  .post-layout{display:grid;grid-template-columns:1fr 300px;gap:4rem;max-width:1200px;margin:0 auto;padding:4rem 4rem 6rem}
+
+  /* ARTICLE BODY */
+  .article-body{min-width:0}
+  .post-featured-img{width:100%;height:340px;background:linear-gradient(135deg,var(--accent) 0%,var(--teal) 100%);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:6rem;margin-bottom:2.5rem}
+  .article-content{font-size:1rem;line-height:1.85;color:var(--body);font-weight:300}
+  .article-content h2{font-family:'Syne',sans-serif;font-size:1.55rem;font-weight:800;color:var(--heading);letter-spacing:-0.02em;margin:2.5rem 0 1rem;line-height:1.2}
+  .article-content h3{font-family:'Syne',sans-serif;font-size:1.15rem;font-weight:700;color:var(--heading);margin:2rem 0 0.75rem}
+  .article-content p{margin-bottom:1.25rem}
+  .article-content strong{color:var(--heading);font-weight:600}
+  .article-content ul,.article-content ol{margin:0 0 1.25rem 1.5rem;display:flex;flex-direction:column;gap:0.5rem}
+  .article-content li{line-height:1.7}
+  .article-content a{color:var(--accent);text-decoration:underline;text-decoration-color:rgba(26,86,219,0.3);transition:text-decoration-color 0.2s}
+  .article-content a:hover{text-decoration-color:var(--accent)}
+  .callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:1.25rem 1.5rem;margin:2rem 0;color:var(--heading);font-size:0.95rem;line-height:1.7}
+  .callout strong{display:block;font-family:'Syne',sans-serif;font-weight:700;margin-bottom:0.3rem;color:var(--accent)}
+  .callout-teal{background:var(--teal-light);border-left-color:var(--teal)}
+  .callout-teal strong{color:var(--teal)}
+  .data-table{width:100%;border-collapse:collapse;background:var(--bg-white);border-radius:var(--radius-sm);overflow:hidden;border:1px solid var(--border);margin:1.5rem 0}
+  .data-table th{background:var(--heading);color:rgba(255,255,255,0.85);font-family:'Syne',sans-serif;font-size:0.8rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;padding:0.9rem 1.25rem;text-align:left}
+  .data-table td{padding:0.8rem 1.25rem;font-size:0.875rem;color:var(--body);border-top:1px solid var(--border)}
+  .data-table tr:nth-child(even) td{background:var(--bg)}
+
+  /* POST FOOTER */
+  .post-tags{display:flex;flex-wrap:wrap;gap:0.5rem;margin:2.5rem 0;padding:2rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+  .post-tag{background:var(--bg);border:1px solid var(--border);color:var(--body);font-size:0.78rem;padding:0.3rem 0.75rem;border-radius:100px;text-decoration:none;transition:border-color 0.2s,color 0.2s}
+  .post-tag:hover{border-color:var(--accent);color:var(--accent)}
+  .share-bar{display:flex;align-items:center;gap:0.75rem;margin-bottom:2.5rem;flex-wrap:wrap}
+  .share-label{font-size:0.85rem;color:var(--muted);font-weight:500}
+  .share-btn{display:inline-flex;align-items:center;gap:0.4rem;padding:0.4rem 0.9rem;border-radius:100px;font-size:0.78rem;font-weight:600;text-decoration:none;transition:opacity 0.2s}
+  .share-btn:hover{opacity:0.8}
+  .share-twitter{background:#000;color:#fff}
+  .share-linkedin{background:#0A66C2;color:#fff}
+  .share-copy{background:var(--bg-white);border:1px solid var(--border);color:var(--body);cursor:pointer;border:none;font-family:'DM Sans',sans-serif}
+
+  /* AUTHOR BIO */
+  .author-bio{background:var(--bg-white);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;display:flex;gap:1.5rem;align-items:flex-start;margin-bottom:3rem}
+  .bio-avatar{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--teal));display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Syne',sans-serif;font-weight:800;font-size:1.4rem;flex-shrink:0}
+  .bio-name{font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;color:var(--heading);margin-bottom:0.3rem}
+  .bio-role{font-size:0.8rem;color:var(--teal);font-weight:500;margin-bottom:0.6rem}
+  .bio-text{font-size:0.875rem;color:var(--body);line-height:1.65}
+
+  /* RELATED POSTS */
+  .related-section h3{font-family:'Syne',sans-serif;font-weight:700;font-size:1.25rem;color:var(--heading);margin-bottom:1.25rem}
+  .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+  .related-card{background:var(--bg-white);border:1px solid var(--border);border-radius:var(--radius-sm);padding:1.25rem;text-decoration:none;transition:border-color 0.2s,box-shadow 0.2s,transform 0.2s}
+  .related-card:hover{border-color:var(--accent);box-shadow:var(--shadow-md);transform:translateY(-2px)}
+  .related-icon{font-size:1.5rem;margin-bottom:0.6rem}
+  .related-cat{font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--teal);margin-bottom:0.3rem}
+  .related-title{font-family:'Syne',sans-serif;font-weight:700;font-size:0.875rem;color:var(--heading);line-height:1.35}
+
+  /* SIDEBAR */
+  .sidebar{display:flex;flex-direction:column;gap:1.5rem;position:sticky;top:6rem}
+  .sidebar-card{background:var(--bg-white);border:1px solid var(--border);border-radius:var(--radius);padding:1.75rem}
+  .sidebar-card h4{font-family:'Syne',sans-serif;font-weight:700;font-size:0.9rem;color:var(--heading);margin-bottom:1rem;padding-bottom:0.75rem;border-bottom:1px solid var(--border)}
+  .sidebar-newsletter{background:var(--heading);border:none;border-radius:var(--radius);padding:1.75rem}
+  .sidebar-newsletter h4{font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;color:#fff;margin-bottom:0.4rem;border:none;padding:0}
+  .sidebar-newsletter p{color:rgba(255,255,255,0.5);font-size:0.8rem;line-height:1.6;margin-bottom:1.25rem}
+  .sidebar-form{display:flex;flex-direction:column;gap:0.6rem}
+  .sidebar-input{background:rgba(255,255,255,0.08);border:1.5px solid rgba(255,255,255,0.12);border-radius:var(--radius-sm);padding:0.7rem 1rem;font-family:'DM Sans',sans-serif;font-size:0.875rem;color:#fff;outline:none;transition:border-color 0.2s}
+  .sidebar-input::placeholder{color:rgba(255,255,255,0.3)}
+  .sidebar-input:focus{border-color:rgba(255,255,255,0.45)}
+  .btn-sidebar{background:var(--accent);color:#fff;padding:0.7rem 1rem;border-radius:var(--radius-sm);font-weight:600;font-size:0.875rem;border:none;cursor:pointer;transition:background 0.2s;width:100%;font-family:'DM Sans',sans-serif}
+  .btn-sidebar:hover{background:var(--accent-dim)}
+  .sidebar-note{color:rgba(255,255,255,0.28);font-size:0.72rem;text-align:center}
+  .toc-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem}
+  .toc-list li a{color:var(--body);text-decoration:none;font-size:0.85rem;line-height:1.45;display:flex;gap:0.5rem;align-items:flex-start;transition:color 0.2s}
+  .toc-list li a:hover{color:var(--accent)}
+  .toc-num{color:var(--muted);font-size:0.75rem;font-weight:600;flex-shrink:0;margin-top:2px}
+  .recent-posts{list-style:none;display:flex;flex-direction:column;gap:0.75rem}
+  .recent-posts li a{display:flex;gap:0.75rem;text-decoration:none;align-items:flex-start}
+  .recent-icon{width:38px;height:38px;border-radius:var(--radius-sm);background:var(--bg);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+  .recent-title{font-size:0.8rem;font-weight:500;color:var(--heading);line-height:1.4;transition:color 0.2s}
+  .recent-posts li a:hover .recent-title{color:var(--accent)}
+  .recent-date{font-size:0.72rem;color:var(--muted);margin-top:0.2rem}
+
+  /* SUCCESS */
+  .success-msg{display:none;background:rgba(6,148,162,0.15);border:1px solid var(--teal);border-radius:var(--radius-sm);padding:0.75rem 1rem;color:var(--teal);font-size:0.85rem;font-weight:500;text-align:center;margin-top:0.5rem}
+
+  /* FOOTER */
+  footer{background:var(--heading);padding:3.5rem 4rem;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem}
+  .footer-brand p{color:rgba(255,255,255,0.4);font-size:0.875rem;line-height:1.7;margin-top:0.75rem;max-width:260px}
+  .footer-contact{margin-top:1.25rem}
+  .footer-contact a{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.4);text-decoration:none;font-size:0.875rem;margin-bottom:0.5rem;transition:color 0.2s}
+  .footer-contact a:hover{color:#fff}
+  .footer-col h5{font-family:'Syne',sans-serif;font-weight:700;font-size:0.8rem;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:1rem}
+  .footer-col a{display:block;color:rgba(255,255,255,0.52);text-decoration:none;font-size:0.875rem;margin-bottom:0.6rem;transition:color 0.2s}
+  .footer-col a:hover{color:#fff}
+  .footer-bottom{grid-column:1/-1;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.07);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+  .footer-bottom p{color:rgba(255,255,255,0.28);font-size:0.8rem}
+
+  @media(max-width:1024px){nav{padding:1.1rem 2rem}.post-hero{padding:7rem 2rem 3rem}.post-layout{grid-template-columns:1fr;padding:3rem 2rem}.sidebar{position:static}.related-grid{grid-template-columns:1fr 1fr}footer{grid-template-columns:1fr 1fr;padding:3rem 2rem}}
+  @media(max-width:640px){.nav-links{display:none}.related-grid{grid-template-columns:1fr}footer{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo"><span class="logo-dot"></span>DOT Physical</a>
+  <ul class="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="employers.html">Employers</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="book.html">Book Now</a></li>
+    <li><a href="http://portal.dot-physical.net" class="nav-cta" target="_blank" rel="noopener">Employer Portal</a></li>
+  </ul>
+</nav>
+
+<!-- POST HERO -->
+<div class="post-hero">
+  <div class="hero-grid"></div>
+  <div class="post-hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span>/</span>
+      <a href="blog.html">Blog</a><span>/</span>
+      <span>DOT Physical</span>
+    </div>
+    <div class="post-cat">DOT Physical</div>
+    <h1>High Blood Pressure and Your CDL: What the Stages Mean for Certification</h1>
+    <p class="excerpt">Hypertension is the #1 reason CDL drivers receive shortened medical certificates. Here's exactly how the stages work and what you can do to protect your certification.</p>
+    <div class="post-meta-bar">
+      <div class="meta-author">
+        <div class="author-avatar">DP</div>
+        <span class="author-name">DOT Physical Team</span>
+      </div>
+      <div class="meta-sep"></div>
+      <span class="meta-date">May 11, 2026</span>
+      <div class="meta-sep"></div>
+      <span class="meta-read">5 min read</span>
+      <span class="meta-tag">DOT Physical</span>
+      <span class="meta-tag">Blood Pressure</span>
+    </div>
+  </div>
+</div>
+
+<!-- POST LAYOUT -->
+<div class="post-layout">
+  <article class="article-body">
+
+    <div class="post-featured-img">&#x2764;&#xFE0F;</div>
+
+    <div class="article-content">
+
+      <p>Hypertension affects nearly half of American adults — and CDL drivers are no exception. In fact, elevated blood pressure is the single most common reason commercial drivers walk out of a DOT physical with a shortened certificate rather than the standard two-year card. For many drivers, it comes as a surprise: they feel fine, they haven't had any cardiac symptoms, and they don't understand why their blood pressure reading affects their ability to drive professionally.</p>
+
+      <p>The FMCSA's position is straightforward: uncontrolled hypertension significantly increases the risk of a sudden incapacitating event — particularly stroke and heart attack — while operating a vehicle that can weigh up to 80,000 pounds. Understanding exactly how the three blood pressure stages work under federal rules can help you prepare for your exam and protect your certification long-term.</p>
+
+      <h2 id="why-bp-matters">Why Blood Pressure Matters for CDL</h2>
+
+      <p>The federal standard for blood pressure in commercial drivers is codified under <strong>49 CFR 391.41(b)(6)</strong>, which requires that a driver have no current clinical diagnosis of high blood pressure likely to interfere with the driver's ability to operate a CMV safely. The FMCSA Medical Advisory Criteria provide additional guidance on how examiners should apply this standard in practice.</p>
+
+      <p>The practical concern is not chronic hypertension managed with medication — most drivers with treated high blood pressure can and do remain certified. The concern is <strong>acute, uncontrolled hypertension</strong> that creates measurable cardiovascular risk during the certification period. A driver who suffers a hypertensive crisis, stroke, or heart attack while operating a loaded semi-truck poses a catastrophic public safety risk.</p>
+
+      <p>Hypertension is also frequently asymptomatic — dubbed the "silent killer" precisely because drivers may feel completely normal with blood pressure readings that are clinically dangerous. The DOT physical blood pressure check is often the first time a driver becomes aware their BP is elevated, which is one of the reasons the exam's cardiovascular screening has genuine public health value beyond regulatory compliance.</p>
+
+      <h2 id="stage-1">Stage 1 Hypertension: 140&ndash;159 / 90&ndash;99 mmHg</h2>
+
+      <p>Stage 1 hypertension under FMCSA standards is defined as a systolic reading between 140 and 159 mmHg or a diastolic reading between 90 and 99 mmHg at the time of the DOT physical.</p>
+
+      <p><strong>Certification outcome:</strong> The driver is certified, but receives a <strong>one-year certificate</strong> rather than the standard two-year card. This shorter period requires an earlier return for re-examination.</p>
+
+      <p><strong>What happens at re-examination:</strong> At the follow-up exam (within 12 months), the driver's blood pressure is measured again. If the reading is below 140/90, the driver can be issued a full two-year certificate. If the reading remains in Stage 1 range or higher, the examiner will make a determination based on the reading at that time — potentially issuing another one-year certificate or, if the BP has worsened, applying Stage 2 or Stage 3 criteria.</p>
+
+      <p><strong>Can the driver keep operating?</strong> Yes. A Stage 1 driver is certified and can continue operating without interruption. There is no requirement to begin treatment, though it is strongly encouraged both for certification purposes and for the driver's own long-term health.</p>
+
+      <h2 id="stage-2">Stage 2 Hypertension: 160&ndash;179 / 100&ndash;109 mmHg</h2>
+
+      <p>Stage 2 hypertension represents a meaningfully elevated cardiovascular risk level. A reading in this range at your DOT physical triggers a more restrictive certification pathway.</p>
+
+      <p><strong>Certification outcome:</strong> The examiner issues a <strong>one-time, three-month certificate</strong>. This is not a renewable short certificate — it is a single bridge period designed to give the driver time to seek treatment and get their blood pressure under control before being recertified.</p>
+
+      <p><strong>What happens at the three-month follow-up:</strong> At the follow-up exam, the driver must present with a blood pressure reading at or below 140/90 mmHg. If they do, they can be certified for one year (not two — the Stage 1 rule applies at that reading). If the blood pressure is still in Stage 2 range or higher at the three-month mark, the driver is not recertified and cannot legally operate a CMV until they achieve controlled BP and pass a new exam.</p>
+
+      <p><strong>What this means practically:</strong> Medical treatment with antihypertensive medication is essentially required to pass the three-month follow-up. Lifestyle changes alone — diet, exercise, sodium reduction — rarely produce enough BP reduction in 90 days to move from Stage 2 to below 140/90. Drivers in this stage should see their primary care physician immediately and begin an appropriate medication regimen with enough lead time to demonstrate effect before their follow-up.</p>
+
+      <p><strong>Can the driver keep operating?</strong> Yes, for the three-month period covered by the certificate. After the certificate expires, the driver cannot operate until they pass the follow-up exam or obtain a new certificate from a re-examination that shows improved BP.</p>
+
+      <h2 id="stage-3">Stage 3 Hypertension: 180+ / 110+ mmHg</h2>
+
+      <p>Stage 3 hypertension is the most serious classification and results in immediate disqualification at the time of the DOT physical. A systolic reading of 180 mmHg or higher, or a diastolic reading of 110 mmHg or higher, means the driver does not leave the exam with a certificate.</p>
+
+      <p><strong>Certification outcome:</strong> <strong>Disqualified.</strong> The driver cannot operate a CMV until the condition is treated and BP is brought below the Stage 3 threshold.</p>
+
+      <p><strong>The path back to certification:</strong></p>
+
+      <ol>
+        <li>The driver must seek medical treatment for hypertension immediately.</li>
+        <li>Once treatment has reduced blood pressure to below 160/100 mmHg, the driver may return to a Medical Examiner for re-examination.</li>
+        <li>If BP is below 160/100 at that exam, the examiner may issue a one-time three-month certificate — applying Stage 2 criteria to the re-exam reading.</li>
+        <li>At the three-month follow-up, the driver must achieve a reading at or below 140/90 to receive a one-year certificate.</li>
+      </ol>
+
+      <p>This staged re-entry process exists because a driver who has been at Stage 3 levels needs to demonstrate that their BP is consistently controlled — not just controlled on a single day. The three-month certificate acts as a probationary period with a documented follow-up requirement.</p>
+
+      <h3>Blood Pressure Certification Reference Table</h3>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>BP Range</th>
+            <th>Stage</th>
+            <th>Certificate Period</th>
+            <th>Action Required</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Below 140/90</td>
+            <td>Normal</td>
+            <td>2 years</td>
+            <td>None; maintain current health</td>
+          </tr>
+          <tr>
+            <td>140&ndash;159 / 90&ndash;99</td>
+            <td>Stage 1</td>
+            <td>1 year</td>
+            <td>Re-exam in 12 months; treatment encouraged</td>
+          </tr>
+          <tr>
+            <td>160&ndash;179 / 100&ndash;109</td>
+            <td>Stage 2</td>
+            <td>3 months (one-time)</td>
+            <td>Seek treatment; must achieve &lt;140/90 at follow-up</td>
+          </tr>
+          <tr>
+            <td>&ge;180 / &ge;110</td>
+            <td>Stage 3</td>
+            <td>Disqualified until treated</td>
+            <td>Treat to below 160/100, then re-apply; 3-month cert issued</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="lower-bp-tips">Tips to Lower BP Before Your Exam</h2>
+
+      <p>If you know your blood pressure tends to run high, there are several evidence-based steps you can take in the days before your DOT physical to optimize your reading. These are not tricks to cheat the system — they are legitimate health practices that produce real reductions in blood pressure:</p>
+
+      <ul>
+        <li><strong>Take your medication consistently.</strong> If you are prescribed antihypertensive medication, take it consistently for at least 2–3 weeks before your exam. A single dose the morning of the exam may not be sufficient to achieve a sustained lower reading. The medication needs to be at therapeutic levels in your system.</li>
+        <li><strong>Avoid caffeine for 12 hours before.</strong> Caffeine acutely raises blood pressure in many individuals. Skip the morning coffee on exam day.</li>
+        <li><strong>Avoid alcohol for at least 24 hours before.</strong> While a glass of wine may feel relaxing, alcohol can cause rebound hypertension the following day.</li>
+        <li><strong>Avoid tobacco products for at least 12 hours before.</strong> Nicotine causes acute vasoconstriction that elevates blood pressure and heart rate.</li>
+        <li><strong>Get a full night's sleep.</strong> Poor sleep — particularly one bad night — measurably raises blood pressure. Prioritize rest in the days leading up to your exam.</li>
+        <li><strong>Arrive early and sit quietly.</strong> After you check in, sit calmly for at least 5 minutes before the examiner takes your reading. Physical activity and stress both temporarily elevate BP. Give your body time to settle.</li>
+        <li><strong>Wear loose-fitting clothing.</strong> A tight sleeve or restrictive cuff can artificially elevate a reading. Wear a shirt you can easily roll up or remove.</li>
+      </ul>
+
+      <div class="callout callout-teal">
+        <strong>&#x1F3E5; White Coat Hypertension Is Real</strong>
+        Some drivers have blood pressure that is well-controlled at home but spikes in a clinical setting due to anxiety — a phenomenon called white coat hypertension. If this applies to you, bring a log of home blood pressure readings taken over several weeks. Some Medical Examiners will consider this documentation when making their certification determination, though the exam-day reading still carries significant weight.
+      </div>
+
+      <h2 id="medications">Medications and Driving</h2>
+
+      <p>One of the most common concerns drivers have about hypertension treatment is whether blood pressure medications will interfere with their ability to hold a CDL. In the vast majority of cases, the answer is no — most antihypertensive medications are fully permitted under FMCSA rules and do not affect CDL certification.</p>
+
+      <ul>
+        <li><strong>ACE inhibitors and ARBs</strong> (lisinopril, losartan, etc.): Fully permitted. No side effects that affect driving safety in typical doses.</li>
+        <li><strong>Calcium channel blockers</strong> (amlodipine, diltiazem, etc.): Fully permitted. Diltiazem and verapamil can occasionally cause dizziness or heart rate changes — disclose to your examiner.</li>
+        <li><strong>Beta-blockers</strong> (metoprolol, atenolol, etc.): Permitted, but Medical Examiners are trained to note that beta-blockers can cause fatigue, exercise intolerance, and in some cases slowed reaction time. Disclose your medication and any side effects you have experienced.</li>
+        <li><strong>Diuretics</strong> (hydrochlorothiazide, furosemide, etc.): Permitted. The examiner may note the potential for urinary frequency during long hauls, which is a practical consideration but not a disqualifying one.</li>
+        <li><strong>Alpha-blockers</strong> (doxazosin, terazosin): Permitted. May cause orthostatic hypotension (dizziness when standing up quickly) — disclose to your examiner.</li>
+      </ul>
+
+      <p><strong>The critical rule, regardless of which medication you take: always disclose all medications on your DOT physical form.</strong> Concealing a medication — even a blood pressure pill that is not disqualifying — is a federal violation under 49 CFR 390.35 and can result in revocation of your certificate and civil penalties. Your Medical Examiner is not your adversary. They need the full picture to certify you correctly and safely.</p>
+
+      <div class="callout">
+        <strong>&#x1F4CD; Book Your DOT Physical Today</strong>
+        Our examiners are experienced with hypertension cases and can guide you through the certification process — including what documentation to bring and how to navigate shortened certificate periods. Book online at any of our 10,000+ nationwide locations.
+        <br><br><a href="book.html" style="color:var(--accent);font-weight:600;">Book Your Appointment &rarr;</a>
+      </div>
+
+    </div><!-- /article-content -->
+
+    <!-- TAGS -->
+    <div class="post-tags">
+      <a href="#" class="post-tag">DOT Physical</a>
+      <a href="#" class="post-tag">Blood Pressure</a>
+      <a href="#" class="post-tag">Hypertension</a>
+      <a href="#" class="post-tag">CDL</a>
+      <a href="#" class="post-tag">Medical Examiner</a>
+    </div>
+
+    <!-- SHARE -->
+    <div class="share-bar">
+      <span class="share-label">Share this article:</span>
+      <a href="#" class="share-btn share-twitter">&#x1D54F; Share</a>
+      <a href="#" class="share-btn share-linkedin">in LinkedIn</a>
+      <button class="share-btn share-copy" onclick="copyLink()">&#x1F517; Copy Link</button>
+    </div>
+
+    <!-- AUTHOR BIO -->
+    <div class="author-bio">
+      <div class="bio-avatar">DP</div>
+      <div>
+        <div class="bio-name">DOT Physical Compliance Team</div>
+        <div class="bio-role">DOT Physical &mdash; Hackensack, NJ</div>
+        <div class="bio-text">Our compliance team includes certified medical examiners, licensed MROs, and DOT regulatory specialists with decades of combined experience serving CDL drivers and transportation employers across all 50 states.</div>
+      </div>
+    </div>
+
+    <!-- RELATED POSTS -->
+    <div class="related-section">
+      <h3>Related Articles</h3>
+      <div class="related-grid">
+        <a href="post-dot-physical-exam.html" class="related-card">
+          <div class="related-icon">&#x1FA7A;</div>
+          <div class="related-cat">DOT Physical</div>
+          <div class="related-title">What to Expect at Your First DOT Physical Exam</div>
+        </a>
+        <a href="post-medical-certificate.html" class="related-card">
+          <div class="related-icon">&#x1FAA4;</div>
+          <div class="related-cat">DOT Physical</div>
+          <div class="related-title">3 Things That Get Your DOT Medical Certificate Revoked</div>
+        </a>
+        <a href="post-prescription-meds.html" class="related-card">
+          <div class="related-icon">&#x1F48A;</div>
+          <div class="related-cat">DOT Physical</div>
+          <div class="related-title">Can Prescriptions Cause a Positive DOT Drug Test?</div>
+        </a>
+      </div>
+    </div>
+
+  </article>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <!-- NEWSLETTER -->
+    <div class="sidebar-newsletter">
+      <h4>&#x1F4EC; Weekly Newsletter</h4>
+      <p>Get new compliance articles and FMCSA updates every Monday morning.</p>
+      <form class="sidebar-form" id="sidebar-form-blood-pressure-cdl" onsubmit="handleSubscribe(event,'sidebar-success-blood-pressure-cdl')">
+        <input class="sidebar-input" type="text" placeholder="Your first name">
+        <input class="sidebar-input" type="email" placeholder="your@email.com" required>
+        <button type="submit" class="btn-sidebar">Subscribe Free &rarr;</button>
+        <div class="sidebar-note">No spam. Unsubscribe any time.</div>
+      </form>
+      <div class="success-msg" id="sidebar-success-blood-pressure-cdl">&#x2713; You're in! See you Monday.</div>
+    </div>
+
+    <!-- TABLE OF CONTENTS -->
+    <div class="sidebar-card">
+      <h4>In This Article</h4>
+      <ul class="toc-list">
+        <li><a href="#why-bp-matters"><span class="toc-num">01</span>Why Blood Pressure Matters for CDL</a></li>
+        <li><a href="#stage-1"><span class="toc-num">02</span>Stage 1 (140&ndash;159/90&ndash;99)</a></li>
+        <li><a href="#stage-2"><span class="toc-num">03</span>Stage 2 (160&ndash;179/100&ndash;109)</a></li>
+        <li><a href="#stage-3"><span class="toc-num">04</span>Stage 3 (180+/110+)</a></li>
+        <li><a href="#lower-bp-tips"><span class="toc-num">05</span>Tips to Lower BP Before Your Exam</a></li>
+        <li><a href="#medications"><span class="toc-num">06</span>Medications and Driving</a></li>
+      </ul>
+    </div>
+
+    <!-- RECENT POSTS -->
+    <div class="sidebar-card">
+      <h4>Recent Posts</h4>
+      <ul class="recent-posts">
+        <li><a href="post-owner-operator-compliance.html"><div class="recent-icon">&#x1F69B;</div><div><div class="recent-title">Owner-Operator DOT Compliance: Your Complete Checklist</div><div class="recent-date">May 4, 2026</div></div></a></li>
+        <li><a href="post-clearinghouse-guide.html"><div class="recent-icon">&#x1F5C4;&#xFE0F;</div><div><div class="recent-title">The FMCSA Drug &amp; Alcohol Clearinghouse: What Every Driver Must Know</div><div class="recent-date">April 27, 2026</div></div></a></li>
+        <li><a href="post-medical-certificate.html"><div class="recent-icon">&#x1FAA4;</div><div><div class="recent-title">3 Things That Get Your DOT Medical Certificate Revoked</div><div class="recent-date">April 20, 2026</div></div></a></li>
+        <li><a href="post-dot-physical-exam.html"><div class="recent-icon">&#x1FA7A;</div><div><div class="recent-title">What to Expect at Your First DOT Physical Exam</div><div class="recent-date">April 7, 2025</div></div></a></li>
+      </ul>
+    </div>
+
+    <!-- BOOK CTA -->
+    <div class="sidebar-card" style="background:linear-gradient(135deg,var(--accent) 0%,var(--teal) 100%);border:none;text-align:center;">
+      <div style="font-size:2.5rem;margin-bottom:0.75rem;">&#x1F489;</div>
+      <h4 style="border:none;padding:0;margin-bottom:0.5rem;font-size:1rem;color:#fff;">Need a DOT Physical?</h4>
+      <p style="color:rgba(255,255,255,0.65);font-size:0.85rem;margin-bottom:1.25rem;">$110 flat rate. Same-day certificate. 10,000+ locations.</p>
+      <a href="book.html" style="background:#fff;color:var(--accent);padding:0.7rem 1.5rem;border-radius:100px;font-weight:700;font-size:0.875rem;text-decoration:none;display:inline-block;">Book Now &rarr;</a>
+    </div>
+
+  </aside>
+</div>
+
+<footer>
+  <div class="footer-brand">
+    <a href="index.html" class="nav-logo" style="color:#fff;"><span class="logo-dot"></span>DOT Physical</a>
+    <p>A Doctors Place company. Fast, reliable, FMCSA-compliant DOT physicals and drug testing services nationwide.</p>
+    <div class="footer-contact">
+      <a href="tel:2013455803">&#x1F4DE; 201-345-5803</a>
+      <a href="contact.html">&#x1F4CD; 75 Summit Ave, Hackensack, NJ 07601</a>
+    </div>
+  </div>
+  <div class="footer-col">
+    <h5>Services</h5>
+    <a href="dot-physical.html">DOT Physical Exam</a>
+    <a href="drug-testing.html">DOT Drug Testing</a>
+    <a href="pre-employment.html">Pre-Employment Physical</a>
+    <a href="return-to-duty.html">Return to Duty</a>
+    <a href="services.html">All Services</a>
+  </div>
+  <div class="footer-col">
+    <h5>Employers</h5>
+    <a href="http://portal.dot-physical.net" target="_blank" rel="noopener">Employer Portal</a>
+    <a href="ctpa.html">C/TPA Services</a>
+    <a href="random-pool.html">Random Pool Program</a>
+    <a href="mro.html">MRO Services</a>
+    <a href="cost-of-services.html">Cost of Services</a>
+  </div>
+  <div class="footer-col">
+    <h5>Company</h5>
+    <a href="about.html">About Us</a>
+    <a href="blog.html">Blog</a>
+    <a href="who-we-serve.html">Who We Serve</a>
+    <a href="book.html">Book Online</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 DOT Physical &mdash; a Doctors Place company. All rights reserved.</p>
+    <p>FMCSA Certified &middot; DOT Compliant &middot; Nationwide</p>
+  </div>
+</footer>
+
+<script src="mailchimp.js"></script>
+<script src="newsletter-popup.js"></script>
+<script>
+function handleSubscribe(e, successId) {
+  e.preventDefault();
+  var form = e.target;
+  var emailInput = form.querySelector('[type="email"]');
+  var nameInput = form.querySelector('[type="text"]');
+  var email = emailInput ? emailInput.value.trim() : '';
+  var fname = nameInput ? nameInput.value.trim() : '';
+  var btn = form.querySelector('button[type="submit"]');
+  if (!email) return;
+  if (btn) { btn.disabled = true; btn.textContent = 'Subscribing\u2026'; }
+  MC.subscribe(email, function() {
+    form.style.display = 'none';
+    var s = document.getElementById(successId);
+    if (s) s.style.display = 'block';
+  }, function(msg) {
+    if (btn) { btn.disabled = false; btn.textContent = 'Subscribe Free \u2192'; }
+    alert(msg);
+  }, fname ? { FNAME: fname } : {});
+}
+function copyLink() {
+  navigator.clipboard.writeText(window.location.href).then(function() { alert('Link copied!'); });
+}
+</script>
+</body>
+</html>

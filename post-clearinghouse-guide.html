@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The FMCSA Drug &amp; Alcohol Clearinghouse: What Every Driver Must Know | DOT Physical Blog</title>
+<meta name="description" content="The FMCSA Clearinghouse went fully mandatory in January 2023. Here's what it tracks, how it affects you, and what employers must do before hiring any CDL driver.">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg:#F4F7FF;--bg-white:#FFFFFF;--accent:#1A56DB;--accent-dim:#1447C0;--accent-light:#EBF0FF;--teal:#0694A2;--teal-light:#E0F7FA;--heading:#0C1B3A;--body:#3D5280;--muted:#7A8FB8;--border:rgba(26,86,219,0.1);--border-strong:rgba(26,86,219,0.22);--shadow:0 2px 16px rgba(26,86,219,0.08);--shadow-md:0 6px 32px rgba(26,86,219,0.13);--radius:16px;--radius-sm:10px}
+  html{scroll-behavior:smooth}
+  body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--heading);overflow-x:hidden}
+
+  /* NAV */
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 4rem;background:rgba(255,255,255,0.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+  .nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.35rem;letter-spacing:-0.02em;display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--heading)}
+  .logo-dot{width:10px;height:10px;border-radius:50%;background:var(--accent);display:inline-block}
+  .nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+  .nav-links a{color:var(--body);text-decoration:none;font-size:0.9rem;transition:color 0.2s}
+  .nav-links a:hover{color:var(--heading)}
+  .nav-cta{background:var(--accent)!important;color:#fff!important;padding:0.55rem 1.4rem;border-radius:100px;font-weight:600!important;font-size:0.875rem!important;box-shadow:0 2px 12px rgba(26,86,219,0.3);transition:background 0.2s,transform 0.15s!important}
+  .nav-cta:hover{background:var(--accent-dim)!important;transform:translateY(-1px)}
+
+  /* POST HERO */
+  .post-hero{padding:8rem 4rem 4rem;background:linear-gradient(150deg,#fff 0%,#EDF1FF 55%,#E4EDFF 100%);border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+  .hero-grid{position:absolute;inset:0;z-index:0;background-image:linear-gradient(rgba(26,86,219,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(26,86,219,0.04) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 90% 90% at 50% 50%,black 10%,transparent 100%)}
+  .post-hero-inner{position:relative;z-index:1;max-width:780px}
+  .breadcrumb{display:flex;align-items:center;gap:0.5rem;margin-bottom:1.25rem;font-size:0.82rem;color:var(--muted)}
+  .breadcrumb a{color:var(--muted);text-decoration:none;transition:color 0.2s}
+  .breadcrumb a:hover{color:var(--accent)}
+  .breadcrumb span{color:var(--border-strong)}
+  .post-cat{display:inline-block;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:0.85rem;background:var(--teal-light);padding:0.3rem 0.75rem;border-radius:100px}
+  .post-hero h1{font-family:'Syne',sans-serif;font-size:clamp(1.9rem,4vw,3rem);font-weight:800;letter-spacing:-0.03em;color:var(--heading);margin-bottom:1.1rem;line-height:1.1}
+  .post-hero .excerpt{color:var(--body);font-size:1.05rem;line-height:1.7;font-weight:300;max-width:660px;margin-bottom:1.75rem}
+  .post-meta-bar{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
+  .meta-author{display:flex;align-items:center;gap:0.65rem}
+  .author-avatar{width:36px;height:36px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:0.85rem;font-family:'Syne',sans-serif}
+  .author-name{font-size:0.875rem;font-weight:500;color:var(--heading)}
+  .meta-sep{width:4px;height:4px;border-radius:50%;background:var(--border-strong)}
+  .meta-date,.meta-read{color:var(--muted);font-size:0.82rem}
+  .meta-tag{background:var(--accent-light);color:var(--accent);font-size:0.72rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:100px}
+
+  /* LAYOUT */
+  .post-layout{display:grid;grid-template-columns:1fr 300px;gap:4rem;max-width:1200px;margin:0 auto;padding:4rem 4rem 6rem}
+
+  /* ARTICLE BODY */
+  .article-body{min-width:0}
+  .post-featured-img{width:100%;height:340px;background:linear-gradient(135deg,var(--accent) 0%,var(--teal) 100%);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:6rem;margin-bottom:2.5rem}
+  .article-content{font-size:1rem;line-height:1.85;color:var(--body);font-weight:300}
+  .article-content h2{font-family:'Syne',sans-serif;font-size:1.55rem;font-weight:800;color:var(--heading);letter-spacing:-0.02em;margin:2.5rem 0 1rem;line-height:1.2}
+  .article-content h3{font-family:'Syne',sans-serif;font-size:1.15rem;font-weight:700;color:var(--heading);margin:2rem 0 0.75rem}
+  .article-content p{margin-bottom:1.25rem}
+  .article-content strong{color:var(--heading);font-weight:600}
+  .article-content ul,.article-content ol{margin:0 0 1.25rem 1.5rem;display:flex;flex-direction:column;gap:0.5rem}
+  .article-content li{line-height:1.7}
+  .article-content a{color:var(--accent);text-decoration:underline;text-decoration-color:rgba(26,86,219,0.3);transition:text-decoration-color 0.2s}
+  .article-content a:hover{text-decoration-color:var(--accent)}
+  .callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:1.25rem 1.5rem;margin:2rem 0;color:var(--heading);font-size:0.95rem;line-height:1.7}
+  .callout strong{display:block;font-family:'Syne',sans-serif;font-weight:700;margin-bottom:0.3rem;color:var(--accent)}
+  .callout-teal{background:var(--teal-light);border-left-color:var(--teal)}
+  .callout-teal strong{color:var(--teal)}
+  .data-table{width:100%;border-collapse:collapse;background:var(--bg-white);border-radius:var(--radius-sm);overflow:hidden;border:1px solid var(--border);margin:1.5rem 0}
+  .data-table th{background:var(--heading);color:rgba(255,255,255,0.85);font-family:'Syne',sans-serif;font-size:0.8rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;padding:0.9rem 1.25rem;text-align:left}
+  .data-table td{padding:0.8rem 1.25rem;font-size:0.875rem;color:var(--body);border-top:1px solid var(--border)}
+  .data-table tr:nth-child(even) td{background:var(--bg)}
+
+  /* POST FOOTER */
+  .post-tags{display:flex;flex-wrap:wrap;gap:0.5rem;margin:2.5rem 0;padding:2rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+  .post-tag{background:var(--bg);border:1px solid var(--border);color:var(--body);font-size:0.78rem;padding:0.3rem 0.75rem;border-radius:100px;text-decoration:none;transition:border-color 0.2s,color 0.2s}
+  .post-tag:hover{border-color:var(--accent);color:var(--accent)}
+  .share-bar{display:flex;align-items:center;gap:0.75rem;margin-bottom:2.5rem;flex-wrap:wrap}
+  .share-label{font-size:0.85rem;color:var(--muted);font-weight:500}
+  .share-btn{display:inline-flex;align-items:center;gap:0.4rem;padding:0.4rem 0.9rem;border-radius:100px;font-size:0.78rem;font-weight:600;text-decoration:none;transition:opacity 0.2s}
+  .share-btn:hover{opacity:0.8}
+  .share-twitter{background:#000;color:#fff}
+  .share-linkedin{background:#0A66C2;color:#fff}
+  .share-copy{background:var(--bg-white);border:1px solid var(--border);color:var(--body);cursor:pointer;border:none;font-family:'DM Sans',sans-serif}
+
+  /* AUTHOR BIO */
+  .author-bio{background:var(--bg-white);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;display:flex;gap:1.5rem;align-items:flex-start;margin-bottom:3rem}
+  .bio-avatar{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--teal));display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Syne',sans-serif;font-weight:800;font-size:1.4rem;flex-shrink:0}
+  .bio-name{font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;color:var(--heading);margin-bottom:0.3rem}
+  .bio-role{font-size:0.8rem;color:var(--teal);font-weight:500;margin-bottom:0.6rem}
+  .bio-text{font-size:0.875rem;color:var(--body);line-height:1.65}
+
+  /* RELATED POSTS */
+  .related-section h3{font-family:'Syne',sans-serif;font-weight:700;font-size:1.25rem;color:var(--heading);margin-bottom:1.25rem}
+  .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+  .related-card{background:var(--bg-white);border:1px solid var(--border);border-radius:var(--radius-sm);padding:1.25rem;text-decoration:none;transition:border-color 0.2s,box-shadow 0.2s,transform 0.2s}
+  .related-card:hover{border-color:var(--accent);box-shadow:var(--shadow-md);transform:translateY(-2px)}
+  .related-icon{font-size:1.5rem;margin-bottom:0.6rem}
+  .related-cat{font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--teal);margin-bottom:0.3rem}
+  .related-title{font-family:'Syne',sans-serif;font-weight:700;font-size:0.875rem;color:var(--heading);line-height:1.35}
+
+  /* SIDEBAR */
+  .sidebar{display:flex;flex-direction:column;gap:1.5rem;position:sticky;top:6rem}
+  .sidebar-card{background:var(--bg-white);border:1px solid var(--border);border-radius:var(--radius);padding:1.75rem}
+  .sidebar-card h4{font-family:'Syne',sans-serif;font-weight:700;font-size:0.9rem;color:var(--heading);margin-bottom:1rem;padding-bottom:0.75rem;border-bottom:1px solid var(--border)}
+  .sidebar-newsletter{background:var(--heading);border:none;border-radius:var(--radius);padding:1.75rem}
+  .sidebar-newsletter h4{font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;color:#fff;margin-bottom:0.4rem;border:none;padding:0}
+  .sidebar-newsletter p{color:rgba(255,255,255,0.5);font-size:0.8rem;line-height:1.6;margin-bottom:1.25rem}
+  .sidebar-form{display:flex;flex-direction:column;gap:0.6rem}
+  .sidebar-input{background:rgba(255,255,255,0.08);border:1.5px solid rgba(255,255,255,0.12);border-radius:var(--radius-sm);padding:0.7rem 1rem;font-family:'DM Sans',sans-serif;font-size:0.875rem;color:#fff;outline:none;transition:border-color 0.2s}
+  .sidebar-input::placeholder{color:rgba(255,255,255,0.3)}
+  .sidebar-input:focus{border-color:rgba(255,255,255,0.45)}
+  .btn-sidebar{background:var(--accent);color:#fff;padding:0.7rem 1rem;border-radius:var(--radius-sm);font-weight:600;font-size:0.875rem;border:none;cursor:pointer;transition:background 0.2s;width:100%;font-family:'DM Sans',sans-serif}
+  .btn-sidebar:hover{background:var(--accent-dim)}
+  .sidebar-note{color:rgba(255,255,255,0.28);font-size:0.72rem;text-align:center}
+  .toc-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem}
+  .toc-list li a{color:var(--body);text-decoration:none;font-size:0.85rem;line-height:1.45;display:flex;gap:0.5rem;align-items:flex-start;transition:color 0.2s}
+  .toc-list li a:hover{color:var(--accent)}
+  .toc-num{color:var(--muted);font-size:0.75rem;font-weight:600;flex-shrink:0;margin-top:2px}
+  .recent-posts{list-style:none;display:flex;flex-direction:column;gap:0.75rem}
+  .recent-posts li a{display:flex;gap:0.75rem;text-decoration:none;align-items:flex-start}
+  .recent-icon{width:38px;height:38px;border-radius:var(--radius-sm);background:var(--bg);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+  .recent-title{font-size:0.8rem;font-weight:500;color:var(--heading);line-height:1.4;transition:color 0.2s}
+  .recent-posts li a:hover .recent-title{color:var(--accent)}
+  .recent-date{font-size:0.72rem;color:var(--muted);margin-top:0.2rem}
+
+  /* SUCCESS */
+  .success-msg{display:none;background:rgba(6,148,162,0.15);border:1px solid var(--teal);border-radius:var(--radius-sm);padding:0.75rem 1rem;color:var(--teal);font-size:0.85rem;font-weight:500;text-align:center;margin-top:0.5rem}
+
+  /* FOOTER */
+  footer{background:var(--heading);padding:3.5rem 4rem;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem}
+  .footer-brand p{color:rgba(255,255,255,0.4);font-size:0.875rem;line-height:1.7;margin-top:0.75rem;max-width:260px}
+  .footer-contact{margin-top:1.25rem}
+  .footer-contact a{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.4);text-decoration:none;font-size:0.875rem;margin-bottom:0.5rem;transition:color 0.2s}
+  .footer-contact a:hover{color:#fff}
+  .footer-col h5{font-family:'Syne',sans-serif;font-weight:700;font-size:0.8rem;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:1rem}
+  .footer-col a{display:block;color:rgba(255,255,255,0.52);text-decoration:none;font-size:0.875rem;margin-bottom:0.6rem;transition:color 0.2s}
+  .footer-col a:hover{color:#fff}
+  .footer-bottom{grid-column:1/-1;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.07);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+  .footer-bottom p{color:rgba(255,255,255,0.28);font-size:0.8rem}
+
+  @media(max-width:1024px){nav{padding:1.1rem 2rem}.post-hero{padding:7rem 2rem 3rem}.post-layout{grid-template-columns:1fr;padding:3rem 2rem}.sidebar{position:static}.related-grid{grid-template-columns:1fr 1fr}footer{grid-template-columns:1fr 1fr;padding:3rem 2rem}}
+  @media(max-width:640px){.nav-links{display:none}.related-grid{grid-template-columns:1fr}footer{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo"><span class="logo-dot"></span>DOT Physical</a>
+  <ul class="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="employers.html">Employers</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="book.html">Book Now</a></li>
+    <li><a href="http://portal.dot-physical.net" class="nav-cta" target="_blank" rel="noopener">Employer Portal</a></li>
+  </ul>
+</nav>
+
+<!-- POST HERO -->
+<div class="post-hero">
+  <div class="hero-grid"></div>
+  <div class="post-hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span>/</span>
+      <a href="blog.html">Blog</a><span>/</span>
+      <span>Compliance</span>
+    </div>
+    <div class="post-cat">Compliance</div>
+    <h1>The FMCSA Drug &amp; Alcohol Clearinghouse: What Every Driver Must Know</h1>
+    <p class="excerpt">The FMCSA Clearinghouse went fully mandatory in January 2023. Here's what it tracks, how it affects you, and what employers must do before hiring any CDL driver.</p>
+    <div class="post-meta-bar">
+      <div class="meta-author">
+        <div class="author-avatar">DP</div>
+        <span class="author-name">DOT Physical Team</span>
+      </div>
+      <div class="meta-sep"></div>
+      <span class="meta-date">April 27, 2026</span>
+      <div class="meta-sep"></div>
+      <span class="meta-read">7 min read</span>
+      <span class="meta-tag">Clearinghouse</span>
+      <span class="meta-tag">FMCSA</span>
+    </div>
+  </div>
+</div>
+
+<!-- POST LAYOUT -->
+<div class="post-layout">
+  <article class="article-body">
+
+    <div class="post-featured-img">&#x1F5C4;&#xFE0F;</div>
+
+    <div class="article-content">
+
+      <p>The FMCSA Drug and Alcohol Clearinghouse is one of the most significant changes to commercial driver oversight in decades. Since it went live on January 6, 2020, and became fully mandatory for all queries in January 2023, it has fundamentally changed how drug and alcohol violations follow CDL drivers — and what employers must do before putting anyone behind the wheel of a commercial motor vehicle.</p>
+
+      <p>Whether you're a driver who wants to understand your rights, an owner-operator managing your own compliance, or a fleet manager responsible for dozens of drivers, this guide covers everything you need to know.</p>
+
+      <h2 id="what-is">What Is the Clearinghouse?</h2>
+
+      <p>The FMCSA Drug and Alcohol Clearinghouse is a secure federal online database that maintains records of drug and alcohol program violations for CDL holders subject to the FMCSA's drug and alcohol testing program. It is operated by the FMCSA and is accessible at <strong>clearinghouse.fmcsa.dot.gov</strong>.</p>
+
+      <p>Prior to the Clearinghouse, a driver who failed a drug test with one employer could resign, apply to a new employer, and potentially conceal the violation — especially if the new employer did not diligently conduct pre-employment queries with previous employers. The Clearinghouse closed that gap by creating a centralized, real-time record that follows drivers regardless of which employer, state, or carrier they work for.</p>
+
+      <p>The system launched January 6, 2020. From 2020 to January 2023, employers were required to query the Clearinghouse for pre-employment but could still query previous employers directly for historical violations. Starting January 6, 2023, the Clearinghouse became the sole required source — direct employer queries are no longer mandatory.</p>
+
+      <h2 id="what-gets-reported">What Gets Reported?</h2>
+
+      <p>The Clearinghouse tracks five categories of violations and compliance actions:</p>
+
+      <ul>
+        <li><strong>Positive DOT drug or alcohol test results:</strong> Any test administered under 49 CFR Part 40 that returns a confirmed positive result, including both urine drug tests and breath alcohol tests at or above 0.04 BAC.</li>
+        <li><strong>Refusals to test:</strong> This includes not showing up for a scheduled test (a no-show is treated as a refusal), submitting an adulterated or substituted specimen, and any behavior the Collector or MRO classifies as a refusal. Refusals carry the same consequences as a positive test.</li>
+        <li><strong>Actual knowledge violations:</strong> When an employer or supervisor has direct, documented knowledge that a driver used a controlled substance or was under the influence while performing safety-sensitive functions. This can include an admission by the driver.</li>
+        <li><strong>Return-to-Duty (RTD) test results:</strong> When a driver who was in "prohibited" status completes the RTD process and submits a negative test result, this is reported to the Clearinghouse as a compliance event.</li>
+        <li><strong>Follow-up testing completion:</strong> After an RTD test, drivers must complete a follow-up testing program supervised by a Substance Abuse Professional (SAP). Each completed follow-up test is reported, building a record of ongoing compliance.</li>
+      </ul>
+
+      <p>Importantly, not all violations are reported by employers. Third-party administrators (C/TPAs), Medical Review Officers (MROs), and Breath Alcohol Technicians (BATs) also have reporting obligations. The system creates redundancy to ensure violations cannot easily go unreported.</p>
+
+      <h2 id="driver-rights">Driver Rights</h2>
+
+      <p>Drivers have important rights under the Clearinghouse framework that are worth understanding:</p>
+
+      <ul>
+        <li><strong>Right to access your own record:</strong> You can view your own Clearinghouse record at any time, free of charge, by logging into your account at clearinghouse.fmcsa.dot.gov. Every driver subject to FMCSA testing requirements should register and periodically check their record.</li>
+        <li><strong>Consent requirement for full queries:</strong> Employers must obtain your electronic consent through the Clearinghouse before they can run a full query that shows the details of any violations. Without your consent, they can only run a limited query, which shows whether a record exists — not the specifics.</li>
+        <li><strong>Right to dispute incorrect records:</strong> If you believe a record in the Clearinghouse is incorrect, you have the right to dispute it by contacting the employer or service agent who reported the violation. If that is unsuccessful, you can submit a dispute to the FMCSA directly.</li>
+        <li><strong>Record retention period:</strong> Violations remain in the Clearinghouse for <strong>five years from the date of the violation OR until the Return-to-Duty process is fully completed</strong>, whichever is later. If you complete the RTD process in year two, the record still stays for the remainder of the five-year period. Records are not removed early simply because you complete the RTD process.</li>
+      </ul>
+
+      <h2 id="employer-obligations">Employer Obligations</h2>
+
+      <p>Motor carriers and other employers of CDL drivers have mandatory obligations under the Clearinghouse rule. Failure to comply can result in civil penalties of <strong>up to $5,833 per violation</strong>.</p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Query Type</th>
+            <th>When Required</th>
+            <th>What It Shows</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Full Pre-Employment Query</td>
+            <td>Before any CDL driver operates a CMV for the first time</td>
+            <td>Full violation details (requires driver consent)</td>
+          </tr>
+          <tr>
+            <td>Limited Annual Query</td>
+            <td>At least once every 12 months for all current CDL drivers</td>
+            <td>Indicates whether a record exists (no details)</td>
+          </tr>
+          <tr>
+            <td>Full Query on Flag</td>
+            <td>When a limited query returns a hit, a full query must follow</td>
+            <td>Full violation details (requires driver consent)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Employers must also <strong>report violations within 3 business days</strong> of the violation occurring or within 3 business days of receiving a report from an MRO or BAT. This short reporting window is strictly enforced.</p>
+
+      <p>Employers may designate a Consortium/Third-Party Administrator (C/TPA) to handle Clearinghouse queries and reporting on their behalf. This is common for small carriers and owner-operators who lack internal compliance infrastructure.</p>
+
+      <h2 id="how-to-register">How to Register</h2>
+
+      <p>Registration for the Clearinghouse is required for both drivers and employers. The process is straightforward:</p>
+
+      <ol>
+        <li>Go to <strong>clearinghouse.fmcsa.dot.gov</strong>.</li>
+        <li>Create an account using your FMCSA Portal login credentials. If you don't have an FMCSA Portal account, you'll need to create one first at portal.fmcsa.dot.gov.</li>
+        <li><strong>If you're a driver:</strong> Register as a driver. Once registered, you can view your own record, manage consent requests from employers, and monitor your query history.</li>
+        <li><strong>If you're an employer:</strong> Register as an employer. You'll need your USDOT number. You can then designate a C/TPA if applicable, run queries, and submit violation reports.</li>
+        <li><strong>If you're a C/TPA:</strong> Register as a service agent. Once your clients authorize you, you can run queries and submit reports on their behalf.</li>
+      </ol>
+
+      <div class="callout callout-teal">
+        <strong>&#x1F4A1; Register Before You Need To</strong>
+        Drivers: register now even if you have no violations. When an employer runs a pre-employment query, your consent must already be in the system for them to see the full record. Delays in consent can hold up your start date.
+      </div>
+
+      <h2 id="after-violation">What Happens After a Violation</h2>
+
+      <p>Once a violation is reported to the Clearinghouse, the driver is placed in <strong>"prohibited" status</strong>. This means:</p>
+
+      <ul>
+        <li>The driver cannot perform any safety-sensitive functions — including operating a CMV, loading/unloading hazardous materials, or dispatching.</li>
+        <li>Any employer who runs a query will see the prohibited status and is legally barred from allowing the driver to operate.</li>
+        <li>The driver must complete the full <strong>Return-to-Duty (RTD) process</strong> before the prohibited status can be lifted.</li>
+      </ul>
+
+      <p>The RTD process involves:</p>
+
+      <ol>
+        <li>Self-referral or employer referral to a DOT-qualified Substance Abuse Professional (SAP).</li>
+        <li>SAP evaluation and recommended education or treatment program.</li>
+        <li>Completion of the SAP's recommended program.</li>
+        <li>Follow-up evaluation by the same SAP to verify compliance.</li>
+        <li>A negative RTD drug or alcohol test, which is reported to the Clearinghouse.</li>
+        <li>A follow-up testing plan (minimum 6 tests in the first 12 months, per SAP recommendation).</li>
+      </ol>
+
+      <p>When the RTD test is reported and the employer authorizes return to duty, the driver's status changes from "prohibited" to "not prohibited" in the Clearinghouse. However, the violation record itself remains for the full five-year period.</p>
+
+      <div class="callout">
+        <strong>&#x1F4DE; We Handle Clearinghouse Compliance For You</strong>
+        Our C/TPA team can handle all your Clearinghouse queries and reporting — pre-employment, annual limited queries, and violation reporting. Contact us to get set up and stay compliant without the administrative burden.
+        <br><br><a href="contact.html" style="color:var(--accent);font-weight:600;">Contact Our Compliance Team &rarr;</a>
+      </div>
+
+      <h2 id="clearing-record">Clearing Your Record</h2>
+
+      <p>It's important to understand what "clearing" your record does and does not mean. You <strong>cannot remove a violation from the Clearinghouse</strong> by completing treatment or by the passage of time before the five-year window closes. The only actions that change your status are:</p>
+
+      <ul>
+        <li>Completing the RTD process (changes status from "prohibited" to "not prohibited")</li>
+        <li>Successfully disputing an incorrect record (removes the record if the dispute is upheld)</li>
+        <li>The five-year retention period expiring (the record is automatically removed)</li>
+      </ul>
+
+      <p>Drivers who complete treatment and the RTD process can and do return to commercial driving. The Clearinghouse does not permanently bar anyone who completes the required process — it simply ensures that employers have accurate, real-time information about a driver's compliance status before they hand them the keys to a CMV.</p>
+
+    </div><!-- /article-content -->
+
+    <!-- TAGS -->
+    <div class="post-tags">
+      <a href="#" class="post-tag">Clearinghouse</a>
+      <a href="#" class="post-tag">FMCSA</a>
+      <a href="#" class="post-tag">Drug Testing</a>
+      <a href="#" class="post-tag">CDL</a>
+      <a href="#" class="post-tag">Compliance</a>
+    </div>
+
+    <!-- SHARE -->
+    <div class="share-bar">
+      <span class="share-label">Share this article:</span>
+      <a href="#" class="share-btn share-twitter">&#x1D54F; Share</a>
+      <a href="#" class="share-btn share-linkedin">in LinkedIn</a>
+      <button class="share-btn share-copy" onclick="copyLink()">&#x1F517; Copy Link</button>
+    </div>
+
+    <!-- AUTHOR BIO -->
+    <div class="author-bio">
+      <div class="bio-avatar">DP</div>
+      <div>
+        <div class="bio-name">DOT Physical Compliance Team</div>
+        <div class="bio-role">DOT Physical &mdash; Hackensack, NJ</div>
+        <div class="bio-text">Our compliance team includes certified medical examiners, licensed MROs, and DOT regulatory specialists with decades of combined experience serving CDL drivers and transportation employers across all 50 states.</div>
+      </div>
+    </div>
+
+    <!-- RELATED POSTS -->
+    <div class="related-section">
+      <h3>Related Articles</h3>
+      <div class="related-grid">
+        <a href="post-compliance-audit.html" class="related-card">
+          <div class="related-icon">&#x1F4CB;</div>
+          <div class="related-cat">Compliance</div>
+          <div class="related-title">5 Things That Fail a DOT Compliance Audit — and How to Fix Them</div>
+        </a>
+        <a href="post-return-to-duty.html" class="related-card">
+          <div class="related-icon">&#x1F504;</div>
+          <div class="related-cat">Compliance</div>
+          <div class="related-title">The Return to Duty Process Explained</div>
+        </a>
+        <a href="blog-post.html" class="related-card">
+          <div class="related-icon">&#x1F6A6;</div>
+          <div class="related-cat">Drug Testing</div>
+          <div class="related-title">2025 FMCSA Random Drug Testing Rate Stays at 50%</div>
+        </a>
+      </div>
+    </div>
+
+  </article>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <!-- NEWSLETTER -->
+    <div class="sidebar-newsletter">
+      <h4>&#x1F4EC; Weekly Newsletter</h4>
+      <p>Get new compliance articles and FMCSA updates every Monday morning.</p>
+      <form class="sidebar-form" id="sidebar-form-clearinghouse-guide" onsubmit="handleSubscribe(event,'sidebar-success-clearinghouse-guide')">
+        <input class="sidebar-input" type="text" placeholder="Your first name">
+        <input class="sidebar-input" type="email" placeholder="your@email.com" required>
+        <button type="submit" class="btn-sidebar">Subscribe Free &rarr;</button>
+        <div class="sidebar-note">No spam. Unsubscribe any time.</div>
+      </form>
+      <div class="success-msg" id="sidebar-success-clearinghouse-guide">&#x2713; You're in! See you Monday.</div>
+    </div>
+
+    <!-- TABLE OF CONTENTS -->
+    <div class="sidebar-card">
+      <h4>In This Article</h4>
+      <ul class="toc-list">
+        <li><a href="#what-is"><span class="toc-num">01</span>What Is the Clearinghouse?</a></li>
+        <li><a href="#what-gets-reported"><span class="toc-num">02</span>What Gets Reported?</a></li>
+        <li><a href="#driver-rights"><span class="toc-num">03</span>Driver Rights</a></li>
+        <li><a href="#employer-obligations"><span class="toc-num">04</span>Employer Obligations</a></li>
+        <li><a href="#how-to-register"><span class="toc-num">05</span>How to Register</a></li>
+        <li><a href="#after-violation"><span class="toc-num">06</span>What Happens After a Violation</a></li>
+        <li><a href="#clearing-record"><span class="toc-num">07</span>Clearing Your Record</a></li>
+      </ul>
+    </div>
+
+    <!-- RECENT POSTS -->
+    <div class="sidebar-card">
+      <h4>Recent Posts</h4>
+      <ul class="recent-posts">
+        <li><a href="post-medical-certificate.html"><div class="recent-icon">&#x1FAA4;</div><div><div class="recent-title">3 Things That Get Your DOT Medical Certificate Revoked</div><div class="recent-date">April 20, 2026</div></div></a></li>
+        <li><a href="post-dot-physical-exam.html"><div class="recent-icon">&#x1FA7A;</div><div><div class="recent-title">What to Expect at Your First DOT Physical Exam</div><div class="recent-date">April 7, 2025</div></div></a></li>
+        <li><a href="blog-post.html"><div class="recent-icon">&#x1F6A6;</div><div><div class="recent-title">2025 FMCSA Random Drug Testing Rate Stays at 50%</div><div class="recent-date">April 14, 2025</div></div></a></li>
+        <li><a href="post-compliance-audit.html"><div class="recent-icon">&#x1F4CB;</div><div><div class="recent-title">5 Things That Fail a DOT Compliance Audit</div><div class="recent-date">March 24, 2025</div></div></a></li>
+      </ul>
+    </div>
+
+    <!-- BOOK CTA -->
+    <div class="sidebar-card" style="background:linear-gradient(135deg,var(--accent) 0%,var(--teal) 100%);border:none;text-align:center;">
+      <div style="font-size:2.5rem;margin-bottom:0.75rem;">&#x1F489;</div>
+      <h4 style="border:none;padding:0;margin-bottom:0.5rem;font-size:1rem;color:#fff;">Need a DOT Physical?</h4>
+      <p style="color:rgba(255,255,255,0.65);font-size:0.85rem;margin-bottom:1.25rem;">$110 flat rate. Same-day certificate. 10,000+ locations.</p>
+      <a href="book.html" style="background:#fff;color:var(--accent);padding:0.7rem 1.5rem;border-radius:100px;font-weight:700;font-size:0.875rem;text-decoration:none;display:inline-block;">Book Now &rarr;</a>
+    </div>
+
+  </aside>
+</div>
+
+<footer>
+  <div class="footer-brand">
+    <a href="index.html" class="nav-logo" style="color:#fff;"><span class="logo-dot"></span>DOT Physical</a>
+    <p>A Doctors Place company. Fast, reliable, FMCSA-compliant DOT physicals and drug testing services nationwide.</p>
+    <div class="footer-contact">
+      <a href="tel:2013455803">&#x1F4DE; 201-345-5803</a>
+      <a href="contact.html">&#x1F4CD; 75 Summit Ave, Hackensack, NJ 07601</a>
+    </div>
+  </div>
+  <div class="footer-col">
+    <h5>Services</h5>
+    <a href="dot-physical.html">DOT Physical Exam</a>
+    <a href="drug-testing.html">DOT Drug Testing</a>
+    <a href="pre-employment.html">Pre-Employment Physical</a>
+    <a href="return-to-duty.html">Return to Duty</a>
+    <a href="services.html">All Services</a>
+  </div>
+  <div class="footer-col">
+    <h5>Employers</h5>
+    <a href="http://portal.dot-physical.net" target="_blank" rel="noopener">Employer Portal</a>
+    <a href="ctpa.html">C/TPA Services</a>
+    <a href="random-pool.html">Random Pool Program</a>
+    <a href="mro.html">MRO Services</a>
+    <a href="cost-of-services.html">Cost of Services</a>
+  </div>
+  <div class="footer-col">
+    <h5>Company</h5>
+    <a href="about.html">About Us</a>
+    <a href="blog.html">Blog</a>
+    <a href="who-we-serve.html">Who We Serve</a>
+    <a href="book.html">Book Online</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 DOT Physical &mdash; a Doctors Place company. All rights reserved.</p>
+    <p>FMCSA Certified &middot; DOT Compliant &middot; Nationwide</p>
+  </div>
+</footer>
+
+<script src="mailchimp.js"></script>
+<script src="newsletter-popup.js"></script>
+<script>
+function handleSubscribe(e, successId) {
+  e.preventDefault();
+  var form = e.target;
+  var emailInput = form.querySelector('[type="email"]');
+  var nameInput = form.querySelector('[type="text"]');
+  var email = emailInput ? emailInput.value.trim() : '';
+  var fname = nameInput ? nameInput.value.trim() : '';
+  var btn = form.querySelector('button[type="submit"]');
+  if (!email) return;
+  if (btn) { btn.disabled = true; btn.textContent = 'Subscribing\u2026'; }
+  MC.subscribe(email, function() {
+    form.style.display = 'none';
+    var s = document.getElementById(successId);
+    if (s) s.style.display = 'block';
+  }, function(msg) {
+    if (btn) { btn.disabled = false; btn.textContent = 'Subscribe Free \u2192'; }
+    alert(msg);
+  }, fname ? { FNAME: fname } : {});
+}
+function copyLink() {
+  navigator.clipboard.writeText(window.location.href).then(function() { alert('Link copied!'); });
+}
+</script>
+</body>
+</html>
