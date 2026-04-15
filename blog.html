@@ -194,7 +194,7 @@
     <div class="posts-label">Recent Articles</div>
     <div class="blog-list">
 
-      <a href="blog-post.html" class="blog-item">
+      <a href="post-dot-physical-exam.html" class="blog-item">
         <div class="blog-item-icon" style="background:var(--teal-light)">🩺</div>
         <div class="blog-item-body">
           <div class="blog-cat">DOT Physical</div>
@@ -204,7 +204,7 @@
         </div>
       </a>
 
-      <a href="blog-post.html" class="blog-item">
+      <a href="post-prescription-meds.html" class="blog-item">
         <div class="blog-item-icon" style="background:#FEF9C3">💊</div>
         <div class="blog-item-body">
           <div class="blog-cat">Drug Testing</div>
@@ -214,7 +214,7 @@
         </div>
       </a>
 
-      <a href="blog-post.html" class="blog-item">
+      <a href="post-compliance-audit.html" class="blog-item">
         <div class="blog-item-icon" style="background:var(--accent-light)">📋</div>
         <div class="blog-item-body">
           <div class="blog-cat">Employer Guide</div>
@@ -224,7 +224,7 @@
         </div>
       </a>
 
-      <a href="blog-post.html" class="blog-item">
+      <a href="post-return-to-duty.html" class="blog-item">
         <div class="blog-item-icon" style="background:#FCE7F3">🔄</div>
         <div class="blog-item-body">
           <div class="blog-cat">Return to Duty</div>
@@ -234,7 +234,7 @@
         </div>
       </a>
 
-      <a href="blog-post.html" class="blog-item">
+      <a href="post-blood-pressure-cdl.html" class="blog-item">
         <div class="blog-item-icon" style="background:#FEE2E2">❤️</div>
         <div class="blog-item-body">
           <div class="blog-cat">DOT Physical</div>
@@ -244,7 +244,7 @@
         </div>
       </a>
 
-      <a href="blog-post.html" class="blog-item">
+      <a href="post-owner-operator-random-testing.html" class="blog-item">
         <div class="blog-item-icon" style="background:var(--teal-light)">🎲</div>
         <div class="blog-item-body">
           <div class="blog-cat">Random Testing</div>
@@ -254,7 +254,7 @@
         </div>
       </a>
 
-      <a href="blog-post.html" class="blog-item">
+      <a href="post-fmcsa-clearinghouse.html" class="blog-item">
         <div class="blog-item-icon" style="background:var(--accent-light)">🛡️</div>
         <div class="blog-item-body">
           <div class="blog-cat">Compliance</div>
@@ -264,7 +264,7 @@
         </div>
       </a>
 
-      <a href="blog-post.html" class="blog-item">
+      <a href="post-oral-fluid-testing.html" class="blog-item">
         <div class="blog-item-icon" style="background:#FEF9C3">🧪</div>
         <div class="blog-item-body">
           <div class="blog-cat">Drug Testing</div>
@@ -405,13 +405,27 @@
 <script>
 function handleSubscribe(e, successId) {
   e.preventDefault();
-  const form = e.target;
-  const success = document.getElementById(successId);
-  // Hide form inputs, show success
-  form.querySelectorAll('input').forEach(i => i.style.display = 'none');
-  form.querySelectorAll('button').forEach(b => b.style.display = 'none');
-  success.style.display = 'block';
-  // In production: POST to your email service (Mailchimp, ConvertKit, etc.)
+  var form = e.target;
+  var emailInput = form.querySelector('[type="email"]');
+  var nameInput  = form.querySelector('[type="text"]');
+  var email = emailInput ? emailInput.value.trim() : '';
+  var fname = nameInput  ? nameInput.value.trim()  : '';
+  var btn   = form.querySelector('button[type="submit"]');
+  if (!email) return;
+  if (btn) { btn.disabled = true; btn.textContent = 'Subscribing…'; }
+  MC.subscribe(
+    email,
+    function () {
+      form.style.display = 'none';
+      var s = document.getElementById(successId);
+      if (s) s.style.display = 'block';
+    },
+    function (msg) {
+      if (btn) { btn.disabled = false; btn.textContent = 'Subscribe Free →'; }
+      alert(msg);
+    },
+    fname ? { FNAME: fname } : {}
+  );
 }
 </script>
 <script src="mailchimp.js"></script>

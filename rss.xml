@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>DOT Physical — Weekly Compliance Newsletter</title>
+    <link>https://www.dot-physical.net/blog.html</link>
+    <description>FMCSA updates, DOT physical tips, drug testing guides, and employer compliance resources. Delivered every Monday.</description>
+    <language>en-us</language>
+    <managingEditor>info@dot-physical.net (DOT Physical Team)</managingEditor>
+    <webMaster>info@dot-physical.net (DOT Physical Team)</webMaster>
+    <image>
+      <url>https://www.dot-physical.net/og-image.png</url>
+      <title>DOT Physical</title>
+      <link>https://www.dot-physical.net</link>
+    </image>
+    <atom:link href="https://www.dot-physical.net/rss.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>2025 FMCSA Random Drug Testing Rate Stays at 50%</title>
+      <link>https://www.dot-physical.net/blog-post.html</link>
+      <guid isPermaLink="true">https://www.dot-physical.net/blog-post.html</guid>
+      <pubDate>Mon, 14 Apr 2025 08:00:00 -0400</pubDate>
+      <category>FMCSA Updates</category>
+      <description>The FMCSA has confirmed the random drug testing rate for CDL drivers remains at 50% of covered employees for 2025. Here's what that means for your fleet's testing program and how to ensure you hit the required numbers before your next audit.</description>
+      <content:encoded><![CDATA[<p>The FMCSA has confirmed the random drug testing rate for CDL drivers remains at 50% of covered employees for 2025. Here's what that means for your fleet's testing program and how to ensure you hit the required numbers before your next audit.</p><p><a href="https://www.dot-physical.net/blog-post.html">Read the full article →</a></p>]]></content:encoded>
+    </item>
+
+    <item>
+      <title>What to Expect at Your First DOT Physical Exam</title>
+      <link>https://www.dot-physical.net/post-dot-physical-exam.html</link>
+      <guid isPermaLink="true">https://www.dot-physical.net/post-dot-physical-exam.html</guid>
+      <pubDate>Mon, 07 Apr 2025 08:00:00 -0400</pubDate>
+      <category>DOT Physical</category>
+      <description>A step-by-step walkthrough of the FMCSA DOT physical — what the examiner checks, how long it takes, and how to prepare so you pass the first time.</description>
+      <content:encoded><![CDATA[<p>A step-by-step walkthrough of the FMCSA DOT physical — what the examiner checks, how long it takes, and how to prepare so you pass the first time.</p><p><a href="https://www.dot-physical.net/post-dot-physical-exam.html">Read the full article →</a></p>]]></content:encoded>
+    </item>
+
+    <item>
+      <title>Can Prescription Medications Cause a Positive DOT Drug Test?</title>
+      <link>https://www.dot-physical.net/post-prescription-meds.html</link>
+      <guid isPermaLink="true">https://www.dot-physical.net/post-prescription-meds.html</guid>
+      <pubDate>Mon, 31 Mar 2025 08:00:00 -0400</pubDate>
+      <category>Drug Testing</category>
+      <description>How MRO review protects drivers who use legitimate prescription medications — and which drugs to always disclose before your test.</description>
+      <content:encoded><![CDATA[<p>How MRO review protects drivers who use legitimate prescription medications — and which drugs to always disclose before your test.</p><p><a href="https://www.dot-physical.net/post-prescription-meds.html">Read the full article →</a></p>]]></content:encoded>
+    </item>
+
+    <item>
+      <title>5 Things That Fail a DOT Compliance Audit — and How to Fix Them</title>
+      <link>https://www.dot-physical.net/post-compliance-audit.html</link>
+      <guid isPermaLink="true">https://www.dot-physical.net/post-compliance-audit.html</guid>
+      <pubDate>Mon, 24 Mar 2025 08:00:00 -0400</pubDate>
+      <category>Employer Guide</category>
+      <description>FMCSA auditors look for specific gaps. Here are the five most common compliance failures and exactly how to close them before your next review.</description>
+      <content:encoded><![CDATA[<p>FMCSA auditors look for specific gaps. Here are the five most common compliance failures and exactly how to close them before your next review.</p><p><a href="https://www.dot-physical.net/post-compliance-audit.html">Read the full article →</a></p>]]></content:encoded>
+    </item>
+
+    <item>
+      <title>The Return to Duty Process Explained: A Step-by-Step Guide</title>
+      <link>https://www.dot-physical.net/post-return-to-duty.html</link>
+      <guid isPermaLink="true">https://www.dot-physical.net/post-return-to-duty.html</guid>
+      <pubDate>Mon, 17 Mar 2025 08:00:00 -0400</pubDate>
+      <category>Return to Duty</category>
+      <description>After a positive drug test, what happens next? We break down every step of the DOT Return to Duty process for drivers and employers.</description>
+      <content:encoded><![CDATA[<p>After a positive drug test, what happens next? We break down every step of the DOT Return to Duty process for drivers and employers.</p><p><a href="https://www.dot-physical.net/post-return-to-duty.html">Read the full article →</a></p>]]></content:encoded>
+    </item>
+
+  </channel>
+</rss>
