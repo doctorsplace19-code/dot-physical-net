@@ -272,16 +272,41 @@
   </div>
 </footer>
 
+<script src="mailchimp.js"></script>
 <script>
 function handleSignup(e) {
   e.preventDefault();
-  document.getElementById('newsletter-form').style.display = 'none';
-  document.getElementById('success-state').style.display = 'block';
-  // ── Connect to your email service here ──
-  // Mailchimp: replace action URL on the form element with your Mailchimp embed URL
-  // ConvertKit: use their JS embed or API endpoint
-  // Formspree: <form action="https://formspree.io/f/YOUR_ID" method="POST">
+
+  var email   = document.getElementById('email').value.trim();
+  var fname   = document.getElementById('fname').value.trim();
+  var lname   = document.getElementById('lname').value.trim();
+  var submitBtn = e.target.querySelector('.btn-submit');
+
+  if (!email) return;
+
+  // Loading state
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Subscribing…';
+
+  MC.subscribe(
+    email,
+    function () {
+      // SUCCESS
+      document.getElementById('newsletter-form').style.display = 'none';
+      document.getElementById('success-state').style.display = 'block';
+    },
+    function (msg) {
+      // ERROR — restore button and show message
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Subscribe — It\'s Free →';
+      var note = document.querySelector('.form-note');
+      note.style.color = '#e53e3e';
+      note.textContent = '⚠ ' + msg;
+    },
+    { FNAME: fname, LNAME: lname }
+  );
 }
 </script>
+<script src="newsletter-popup.js"></script>
 </body>
 </html>

@@ -81,20 +81,40 @@
 
     document.getElementById('dp-submit-btn').addEventListener('click', function (e) {
       e.preventDefault();
-      var email = document.getElementById('dp-email').value;
+      var emailInput = document.getElementById('dp-email');
+      var email = emailInput.value.trim();
       if (!email || !/\S+@\S+\.\S+/.test(email)) {
-        document.getElementById('dp-email').focus();
+        emailInput.focus();
         return;
       }
-      // ── Send to your email service here ──────────────────────────────────
-      // Example Mailchimp: fetch('/mailchimp-subscribe', { method:'POST', body:JSON.stringify({email}) })
-      // Example ConvertKit: use their JS API
-      // For now: show success and dismiss after 3s
-      // ────────────────────────────────────────────────────────────────────
-      document.getElementById('dp-form').style.display = 'none';
-      document.getElementById('dp-success').style.display = 'block';
-      setCookie(COOKIE_KEY, '1', 365); // subscribed — don't show again for a year
-      setTimeout(dismiss, 3000);
+
+      var btn = document.getElementById('dp-submit-btn');
+      btn.disabled = true;
+      btn.textContent = 'Subscribing…';
+
+      MC.subscribe(
+        email,
+        function () {
+          // Success
+          document.getElementById('dp-form').style.display = 'none';
+          document.getElementById('dp-success').style.display = 'block';
+          setCookie(COOKIE_KEY, '1', 365); // subscribed — don't show again for a year
+          setTimeout(dismiss, 3000);
+        },
+        function (msg) {
+          // Error — show message inline
+          btn.disabled = false;
+          btn.textContent = 'Subscribe Free →';
+          var errDiv = document.createElement('p');
+          errDiv.style.cssText = 'color:#e53e3e;font-size:0.78rem;margin-top:0.4rem;text-align:center';
+          errDiv.textContent = msg;
+          // Remove any previous error
+          var prev = document.getElementById('dp-inline-err');
+          if (prev) prev.remove();
+          errDiv.id = 'dp-inline-err';
+          document.getElementById('dp-form').appendChild(errDiv);
+        }
+      );
     });
 
     // Animate in
