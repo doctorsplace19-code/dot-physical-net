@@ -154,6 +154,10 @@
             <input type="email" id="b-email" placeholder="jane@email.com" required>
           </div>
           <div class="form-group">
+            <label for="b-zip">ZIP Code *</label>
+            <input type="text" id="b-zip" placeholder="07601" maxlength="5" inputmode="numeric" pattern="[0-9]{5}" required>
+          </div>
+          <div class="form-group">
             <label for="b-dl">Driver's License # <span style="font-weight:400;color:var(--muted)">(CDL if applicable)</span></label>
             <input type="text" id="b-dl" placeholder="Optional">
           </div>
@@ -360,7 +364,9 @@
     const dob   = document.getElementById('b-dob').value
     const phone = document.getElementById('b-phone').value.trim()
     const email = document.getElementById('b-email').value.trim()
-    if (!first || !last || !dob || !phone || !email) return showError(1, 'Please fill in all required fields.')
+    const zip   = document.getElementById('b-zip').value.trim()
+    if (!first || !last || !dob || !phone || !email || !zip) return showError(1, 'Please fill in all required fields.')
+    if (!/^\d{5}$/.test(zip)) return showError(1, 'Please enter a valid 5-digit ZIP code.')
     if (!/\S+@\S+\.\S+/.test(email)) return showError(1, 'Please enter a valid email address.')
 
     const total = getTotal()
@@ -386,8 +392,10 @@
     const dob   = document.getElementById('b-dob').value
     const phone = document.getElementById('b-phone').value.trim()
     const email = document.getElementById('b-email').value.trim()
+    const zip   = document.getElementById('b-zip').value.trim()
     const dl    = document.getElementById('b-dl').value.trim()
-    const notes = document.getElementById('b-notes').value.trim()
+    const rawNotes = document.getElementById('b-notes').value.trim()
+    const notes = [rawNotes, zip ? `ZIP: ${zip}` : ''].filter(Boolean).join(' | ')
 
     try {
       // 1. Create Stripe customer + SetupIntent
