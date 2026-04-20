@@ -29,8 +29,9 @@
   .book-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:4rem;align-items:start}
   .section-title{font-family:'Manrope',sans-serif;font-size:clamp(1.4rem,2.5vw,1.9rem);font-weight:700;letter-spacing:-0.02em;line-height:1.1;margin-bottom:1.5rem;color:var(--heading)}
   .service-picker{display:flex;flex-direction:column;gap:0.75rem;margin-bottom:2rem}
-  .service-option{display:flex;align-items:center;justify-content:space-between;padding:1.25rem 1.5rem;background:var(--bg-white);border:2px solid var(--border);border-radius:var(--radius-sm);cursor:pointer;transition:border-color 0.2s,background 0.2s;text-decoration:none}
+  .service-option{display:flex;align-items:center;justify-content:space-between;padding:1.25rem 1.5rem;background:var(--bg-white);border:2px solid var(--border);border-radius:var(--radius-sm);cursor:pointer;transition:border-color 0.2s,background 0.2s;text-decoration:none;user-select:none}
   .service-option:hover,.service-option.selected{border-color:var(--accent);background:var(--accent-light)}
+  .service-option input[type="checkbox"]{width:18px;height:18px;accent-color:var(--accent);cursor:pointer;flex-shrink:0}
   .service-option-left{display:flex;align-items:center;gap:1rem}
   .service-option-icon{font-size:1.4rem}
   .service-option-name{font-family:'Manrope',sans-serif;font-weight:700;font-size:0.95rem;color:var(--heading)}
@@ -52,6 +53,12 @@
   .trust-items{display:flex;flex-direction:column;gap:0.5rem;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border)}
   .trust-item{display:flex;align-items:center;gap:0.6rem;color:var(--muted);font-size:0.8rem}
   .trust-item span{color:var(--teal)}
+  #stripe-card-element{background:var(--bg);border:1.5px solid var(--border-strong);border-radius:var(--radius-sm);padding:0.85rem 1rem;transition:border-color 0.2s,box-shadow 0.2s}
+  #stripe-card-element.StripeElement--focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(26,86,219,0.1)}
+  .step{display:none}.step.active{display:block}
+  .success-card{text-align:center;padding:2rem 0}
+  .success-icon{font-size:3rem;margin-bottom:1rem}
+  .order-summary-bar{background:var(--accent-light);border:1px solid var(--border-strong);border-radius:var(--radius-sm);padding:0.75rem 1rem;margin-bottom:1rem;font-size:0.85rem;color:var(--accent-dim);font-weight:600}
   .what-to-bring{background:var(--bg-white);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;margin-top:2rem}
   .what-to-bring h3{font-family:'Manrope',sans-serif;font-weight:700;font-size:1rem;color:var(--heading);margin-bottom:1rem}
   .bring-list{list-style:none;display:flex;flex-direction:column;gap:0.6rem}
@@ -97,68 +104,10 @@
 <div class="main">
   <div class="book-grid">
     <div>
-      <h2 class="section-title">Select a Service</h2>
-      <div class="service-picker">
-        <div class="service-option selected">
-          <div class="service-option-left">
-            <div class="service-option-icon">🩺</div>
-            <div>
-              <div class="service-option-name">DOT Physical Exam</div>
-              <div class="service-option-desc">FMCSA-certified exam &middot; Same-day certificate</div>
-            </div>
-          </div>
-          <div class="service-option-price">$110</div>
-        </div>
-        <div class="service-option">
-          <div class="service-option-left">
-            <div class="service-option-icon">🧪</div>
-            <div>
-              <div class="service-option-name">DOT Drug Test (5-Panel)</div>
-              <div class="service-option-desc">Per 49 CFR Part 40 &middot; MRO review included</div>
-            </div>
-          </div>
-          <div class="service-option-price">$69.99</div>
-        </div>
-        <div class="service-option">
-          <div class="service-option-left">
-            <div class="service-option-icon">📋</div>
-            <div>
-              <div class="service-option-name">DOT Physical + Drug Test</div>
-              <div class="service-option-desc">Both services &middot; Best value combo</div>
-            </div>
-          </div>
-          <div class="service-option-price">$169.99</div>
-        </div>
-        <div class="service-option">
-          <div class="service-option-left">
-            <div class="service-option-icon">🏢</div>
-            <div>
-              <div class="service-option-name">Pre-Employment Physical</div>
-              <div class="service-option-desc">Fitness-for-duty &middot; Clearance letter same day</div>
-            </div>
-          </div>
-          <div class="service-option-price">$110</div>
-        </div>
-        <div class="service-option">
-          <div class="service-option-left">
-            <div class="service-option-icon">🫁</div>
-            <div>
-              <div class="service-option-name">Respirator Fit Test</div>
-              <div class="service-option-desc">OSHA 1910.134 compliant</div>
-            </div>
-          </div>
-          <div class="service-option-price">$60</div>
-        </div>
-        <div class="service-option">
-          <div class="service-option-left">
-            <div class="service-option-icon">💉</div>
-            <div>
-              <div class="service-option-name">TB Skin Test (PPD)</div>
-              <div class="service-option-desc">2-visit test with reading included</div>
-            </div>
-          </div>
-          <div class="service-option-price">$45</div>
-        </div>
+      <h2 class="section-title">Select Your Services</h2>
+      <p style="color:var(--muted);font-size:0.875rem;margin-bottom:1.25rem;">Choose one or more — your card will be saved and charged only after your visit.</p>
+      <div class="service-picker" id="service-picker">
+        <div style="color:var(--muted);font-size:0.875rem;padding:1rem;text-align:center;">Loading services…</div>
       </div>
 
       <div class="what-to-bring">
@@ -176,54 +125,94 @@
 
     <div>
       <div class="form-card">
-        <h2>Book Your Appointment</h2>
-        <p>Complete the form and we'll confirm your time slot within minutes.</p>
 
-        <div class="form-group">
-          <label for="b-name">Full Name</label>
-          <input type="text" id="b-name" name="name" placeholder="Jane Smith" required>
-        </div>
-        <div class="form-group">
-          <label for="b-phone">Phone Number</label>
-          <input type="tel" id="b-phone" name="phone" placeholder="201-555-0100" required>
-        </div>
-        <div class="form-group">
-          <label for="b-email">Email Address</label>
-          <input type="email" id="b-email" name="email" placeholder="jane@email.com" required>
-        </div>
-        <div class="form-group">
-          <label for="b-zip">Your ZIP Code</label>
-          <input type="text" id="b-zip" name="zip" placeholder="07601" maxlength="5">
-        </div>
-        <div class="form-group">
-          <label for="b-service">Service Needed</label>
-          <select id="b-service" name="service">
-            <option>DOT Physical Exam — $110</option>
-            <option>DOT Drug Test (5-Panel) — $69.99</option>
-            <option>DOT Physical + Drug Test — $169.99</option>
-            <option>Pre-Employment Physical — $110</option>
-            <option>Respirator Fit Test — $60</option>
-            <option>TB Skin Test — $45</option>
-            <option>Other / Not Sure</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="b-date">Preferred Date</label>
-          <input type="date" id="b-date" name="date">
+        <!-- Step 1: Patient Info -->
+        <div class="step active" id="step-1">
+          <h2>Your Information</h2>
+          <p>We'll contact you to confirm your appointment time and location.</p>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
+            <div class="form-group" style="margin-bottom:0">
+              <label for="b-first">First Name *</label>
+              <input type="text" id="b-first" placeholder="Jane" required>
+            </div>
+            <div class="form-group" style="margin-bottom:0">
+              <label for="b-last">Last Name *</label>
+              <input type="text" id="b-last" placeholder="Smith" required>
+            </div>
+          </div>
+          <div class="form-group" style="margin-top:0.75rem">
+            <label for="b-dob">Date of Birth *</label>
+            <input type="date" id="b-dob" required>
+          </div>
+          <div class="form-group">
+            <label for="b-phone">Phone Number *</label>
+            <input type="tel" id="b-phone" placeholder="201-555-0100" required>
+          </div>
+          <div class="form-group">
+            <label for="b-email">Email Address *</label>
+            <input type="email" id="b-email" placeholder="jane@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="b-dl">Driver's License # <span style="font-weight:400;color:var(--muted)">(CDL if applicable)</span></label>
+            <input type="text" id="b-dl" placeholder="Optional">
+          </div>
+          <div class="form-group">
+            <label for="b-notes">Notes <span style="font-weight:400;color:var(--muted)">(preferred location, date, etc.)</span></label>
+            <input type="text" id="b-notes" placeholder="e.g. Prefer weekday mornings, NJ area">
+          </div>
+
+          <div id="step1-error" style="display:none;color:#dc2626;font-size:0.825rem;margin-bottom:0.75rem;padding:0.6rem 0.9rem;background:#fef2f2;border-radius:8px;"></div>
+
+          <button class="btn-primary" id="step1-btn" type="button">
+            Continue to Payment &rarr;
+          </button>
+
+          <div class="divider">or</div>
+          <a href="tel:2013455803" class="phone-cta">📞 Call 201-345-5803 to Book</a>
+
+          <div class="trust-items">
+            <div class="trust-item"><span>✓</span> Card charged only after your visit</div>
+            <div class="trust-item"><span>✓</span> Same-day availability at most locations</div>
+            <div class="trust-item"><span>✓</span> Certificate issued same day</div>
+            <div class="trust-item"><span>✓</span> Walk-ins accepted at Hackensack HQ</div>
+          </div>
         </div>
 
-        <button type="submit" class="btn-primary">Request Appointment &rarr;</button>
+        <!-- Step 2: Card Entry -->
+        <div class="step" id="step-2">
+          <h2>Save Your Card</h2>
+          <p>Your card will <strong>not</strong> be charged now. We'll charge it after your appointment is complete.</p>
 
-        <div class="divider">or</div>
+          <div id="order-summary-bar" class="order-summary-bar"></div>
 
-        <a href="tel:2013455803" class="phone-cta">📞 Call 201-345-5803 to Book</a>
+          <div class="form-group">
+            <label>Card Details</label>
+            <div id="stripe-card-element"></div>
+          </div>
 
-        <div class="trust-items">
-          <div class="trust-item"><span>✓</span> Same-day availability at most locations</div>
-          <div class="trust-item"><span>✓</span> Walk-ins accepted at Hackensack HQ</div>
-          <div class="trust-item"><span>✓</span> Certificate issued same day</div>
-          <div class="trust-item"><span>✓</span> Employer billing available</div>
+          <div id="step2-error" style="display:none;color:#dc2626;font-size:0.825rem;margin-bottom:0.75rem;padding:0.6rem 0.9rem;background:#fef2f2;border-radius:8px;"></div>
+
+          <button class="btn-primary" id="step2-btn" type="button">
+            Confirm Booking &rarr;
+          </button>
+          <button type="button" id="back-btn" style="background:none;border:none;color:var(--muted);font-size:0.85rem;cursor:pointer;margin-top:0.75rem;width:100%;text-align:center;">
+            ← Back
+          </button>
         </div>
+
+        <!-- Step 3: Success -->
+        <div class="step" id="step-3">
+          <div class="success-card">
+            <div class="success-icon">✅</div>
+            <h2 style="margin-bottom:0.5rem;">Booking Received!</h2>
+            <p>We've emailed your confirmation. Our staff will contact you within 1 business hour (Mon–Fri 9am–5pm ET) to confirm your appointment.</p>
+            <p style="margin-top:1rem;font-size:0.8rem;color:var(--muted);">Your card will not be charged until after your visit is complete.</p>
+            <div class="divider" style="margin:1.5rem 0;"></div>
+            <a href="tel:2013455803" class="phone-cta">📞 Questions? Call 201-345-5803</a>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -267,7 +256,186 @@
     <p>FMCSA Certified &middot; DOT Compliant &middot; Nationwide</p>
   </div>
 </footer>
+<script src="https://js.stripe.com/v3/"></script>
 <script src="mailchimp.js"></script>
 <script src="newsletter-popup.js"></script>
+<script>
+(function() {
+  const PORTAL = 'https://portal.dot-physical.net'
+  const STRIPE_PK = 'pk_live_51IXSBTFDYvYMwJBvHVxzAycGENh1YLV3GjyKmFf6g6iLcEDxZlcDJDskDwjd8QCuThPKLvRjMf0DiJ3eu1bDXUxG00c2kLux2r'
+
+  // ── Load services from portal ──────────────────────────
+  const ICONS = {
+    physical: '🩺', drug_test: '🧪', lab: '🔬', consortium: '📋', vaccine: '💉',
+  }
+  let allServices = []
+  let selectedIds = new Set()
+
+  async function loadServices() {
+    const picker = document.getElementById('service-picker')
+    try {
+      const res = await fetch(`${PORTAL}/api/services`)
+      allServices = await res.json()
+      picker.innerHTML = ''
+      allServices.forEach(svc => {
+        const icon = ICONS[svc.category] ?? '🏥'
+        const el = document.createElement('div')
+        el.className = 'service-option'
+        el.dataset.id = svc.id
+        el.dataset.price = svc.price
+        el.innerHTML = `
+          <div class="service-option-left">
+            <input type="checkbox" data-id="${svc.id}" id="svc-${svc.id}">
+            <label for="svc-${svc.id}" style="cursor:pointer;display:flex;align-items:center;gap:0.75rem;">
+              <span class="service-option-icon">${icon}</span>
+              <span>
+                <div class="service-option-name">${svc.name}</div>
+                ${svc.description ? `<div class="service-option-desc">${svc.description}</div>` : ''}
+              </span>
+            </label>
+          </div>
+          <div class="service-option-price">$${Number(svc.price).toFixed(2)}</div>
+        `
+        el.addEventListener('click', (e) => {
+          const cb = el.querySelector('input[type="checkbox"]')
+          if (e.target !== cb) cb.checked = !cb.checked
+          toggleService(svc.id, cb.checked, el)
+        })
+        picker.appendChild(el)
+      })
+    } catch (e) {
+      picker.innerHTML = '<p style="color:#dc2626;font-size:0.875rem;">Could not load services. Please call 201-345-5803 to book.</p>'
+    }
+  }
+
+  function toggleService(id, checked, el) {
+    if (checked) { selectedIds.add(id); el.classList.add('selected') }
+    else { selectedIds.delete(id); el.classList.remove('selected') }
+  }
+
+  function getTotal() {
+    return allServices
+      .filter(s => selectedIds.has(s.id))
+      .reduce((sum, s) => sum + Number(s.price), 0)
+  }
+
+  function getServiceNames() {
+    return allServices.filter(s => selectedIds.has(s.id)).map(s => s.name).join(', ')
+  }
+
+  // ── Step navigation ────────────────────────────────────
+  function showStep(n) {
+    document.querySelectorAll('.step').forEach(s => s.classList.remove('active'))
+    document.getElementById('step-' + n).classList.add('active')
+  }
+
+  function showError(stepN, msg) {
+    const el = document.getElementById('step' + stepN + '-error')
+    el.textContent = msg
+    el.style.display = msg ? 'block' : 'none'
+  }
+
+  // ── Stripe setup ───────────────────────────────────────
+  const stripe = Stripe(STRIPE_PK)
+  const elements = stripe.elements()
+  let cardElement = null
+
+  function mountCard() {
+    if (cardElement) return
+    cardElement = elements.create('card', {
+      style: {
+        base: { fontFamily: '"DM Sans", sans-serif', fontSize: '15px', color: '#0C1B3A', '::placeholder': { color: '#7A8FB8' } },
+        invalid: { color: '#dc2626' },
+      },
+    })
+    cardElement.mount('#stripe-card-element')
+  }
+
+  // ── Step 1 → Step 2 ────────────────────────────────────
+  document.getElementById('step1-btn').addEventListener('click', async () => {
+    showError(1, '')
+    if (selectedIds.size === 0) return showError(1, 'Please select at least one service.')
+    const first = document.getElementById('b-first').value.trim()
+    const last  = document.getElementById('b-last').value.trim()
+    const dob   = document.getElementById('b-dob').value
+    const phone = document.getElementById('b-phone').value.trim()
+    const email = document.getElementById('b-email').value.trim()
+    if (!first || !last || !dob || !phone || !email) return showError(1, 'Please fill in all required fields.')
+    if (!/\S+@\S+\.\S+/.test(email)) return showError(1, 'Please enter a valid email address.')
+
+    const total = getTotal()
+    const names = getServiceNames()
+    document.getElementById('order-summary-bar').textContent =
+      `${names} — Total: $${total.toFixed(2)} (charged after visit)`
+
+    showStep(2)
+    mountCard()
+  })
+
+  document.getElementById('back-btn').addEventListener('click', () => showStep(1))
+
+  // ── Step 2 → Submit ────────────────────────────────────
+  document.getElementById('step2-btn').addEventListener('click', async () => {
+    showError(2, '')
+    const btn = document.getElementById('step2-btn')
+    btn.disabled = true
+    btn.textContent = 'Processing…'
+
+    const first = document.getElementById('b-first').value.trim()
+    const last  = document.getElementById('b-last').value.trim()
+    const dob   = document.getElementById('b-dob').value
+    const phone = document.getElementById('b-phone').value.trim()
+    const email = document.getElementById('b-email').value.trim()
+    const dl    = document.getElementById('b-dl').value.trim()
+    const notes = document.getElementById('b-notes').value.trim()
+
+    try {
+      // 1. Create Stripe customer + SetupIntent
+      const initRes = await fetch(`${PORTAL}/api/public/book`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ firstName: first, lastName: last, email, phone }),
+      })
+      const init = await initRes.json()
+      if (!initRes.ok) throw new Error(init.error ?? 'Could not start booking')
+
+      // 2. Confirm card with Stripe
+      const { error: stripeErr, setupIntent } = await stripe.confirmCardSetup(
+        init.clientSecret,
+        { payment_method: { card: cardElement, billing_details: { name: `${first} ${last}`, email, phone } } }
+      )
+      if (stripeErr) throw new Error(stripeErr.message)
+
+      // 3. Create order in portal
+      const ids = Array.from(selectedIds)
+      const confirmRes = await fetch(`${PORTAL}/api/public/book/confirm`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          setupIntentId:        setupIntent.id,
+          customerId:           init.customerId,
+          firstName: first, lastName: last,
+          dateOfBirth:          dob,
+          email, phone,
+          driverLicenseNumber:  dl || undefined,
+          primaryServiceId:     ids[0],
+          additionalServiceIds: ids.slice(1),
+          notes:                notes || undefined,
+        }),
+      })
+      const confirmed = await confirmRes.json()
+      if (!confirmRes.ok) throw new Error(confirmed.error ?? 'Could not confirm booking')
+
+      showStep(3)
+    } catch (err) {
+      showError(2, err.message ?? 'Something went wrong. Please try again or call 201-345-5803.')
+      btn.disabled = false
+      btn.textContent = 'Confirm Booking →'
+    }
+  })
+
+  loadServices()
+})()
+</script>
 </body>
 </html>
