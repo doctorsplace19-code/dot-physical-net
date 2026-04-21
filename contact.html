@@ -137,7 +137,7 @@
     <div class="form-card">
       <h2>Send Us a Message</h2>
       <p>For general inquiries, employer account setup, or compliance questions.</p>
-      <form action="#" method="POST">
+      <form id="contact-form">
         <div class="form-row">
           <div class="form-group">
             <label for="fname">First Name</label>
@@ -181,8 +181,49 @@
           <label for="message">Message</label>
           <textarea id="message" name="message" placeholder="Tell us how we can help…" required></textarea>
         </div>
-        <button type="submit" class="btn-primary">Send Message &rarr;</button>
+        <div id="contact-error" style="display:none;color:#dc2626;font-size:0.875rem;margin-bottom:0.75rem"></div>
+        <div id="contact-success" style="display:none;background:#f0fdf4;border:1px solid #86efac;border-radius:10px;padding:1rem 1.25rem;color:#166534;font-size:0.9rem;margin-bottom:0.75rem">
+          ✓ Message sent! We'll get back to you within one business day.
+        </div>
+        <button type="submit" id="contact-submit" class="btn-primary">Send Message &rarr;</button>
       </form>
+      <script>
+        document.getElementById('contact-form').addEventListener('submit', async function(e) {
+          e.preventDefault()
+          const btn = document.getElementById('contact-submit')
+          const errEl = document.getElementById('contact-error')
+          const sucEl = document.getElementById('contact-success')
+          btn.disabled = true
+          btn.textContent = 'Sending…'
+          errEl.style.display = 'none'
+          sucEl.style.display = 'none'
+          try {
+            const res = await fetch('https://portal.dot-physical.net/api/public/contact', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                firstName: document.getElementById('fname').value.trim(),
+                lastName:  document.getElementById('lname').value.trim(),
+                email:     document.getElementById('email').value.trim(),
+                phone:     document.getElementById('phone').value.trim() || undefined,
+                company:   document.getElementById('company').value.trim() || undefined,
+                subject:   document.getElementById('subject').value || undefined,
+                message:   document.getElementById('message').value.trim(),
+              }),
+            })
+            const json = await res.json()
+            if (!res.ok) throw new Error(json.error ?? 'Failed to send')
+            sucEl.style.display = 'block'
+            this.reset()
+          } catch(err) {
+            errEl.textContent = err.message || 'Something went wrong. Please try again or email us directly.'
+            errEl.style.display = 'block'
+          } finally {
+            btn.disabled = false
+            btn.textContent = 'Send Message →'
+          }
+        })
+      </script>
     </div>
   </div>
 </div>
