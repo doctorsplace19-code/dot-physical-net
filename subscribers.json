@@ -1,0 +1,7 @@
+[
+  { "firstName": "John",   "lastName": "Doe",      "email": "john_demo@wix.com" },
+  { "firstName": "Liz",    "lastName": "Fordham",   "email": "liz_demo@wix.com" },
+  { "firstName": "Daniel", "lastName": "Jones",     "email": "daniel_demo@wix.com" },
+  { "firstName": "Sam",    "lastName": "Jackson",   "email": "sam_demo@wix.com" },
+  { "firstName": "Katie",  "lastName": "Carlson",   "email": "katie_demo@wix.com" }
+]

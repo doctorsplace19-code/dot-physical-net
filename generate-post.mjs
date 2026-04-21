@@ -1,6 +1,6 @@
 // generate-post.mjs
 // Called by GitHub Actions weekly to create a new DOT compliance blog post.
-// Requires: ANTHROPIC_API_KEY environment variable
+// Requires: ANTHROPIC_API_KEY, POSTMARK_API_TOKEN environment variables
 
 import fs from 'fs'
 import path from 'path'
@@ -10,6 +10,11 @@ if (!ANTHROPIC_API_KEY) {
   console.error('Missing ANTHROPIC_API_KEY')
   process.exit(1)
 }
+
+const POSTMARK_API_TOKEN = process.env.POSTMARK_API_TOKEN
+const SITE_URL = 'https://www.dot-physical.net'
+const FROM_EMAIL = 'info@dot-physical.net'
+const FROM_NAME = 'DOT Physical'
 
 // Topics that rotate to keep content fresh — Claude picks the angle within each
 const TOPIC_POOL = [
@@ -360,6 +365,104 @@ function updateBlogHtml(post, dateStr, slug) {
   console.log(`Updated blog.html with new card for "${post.title}"`)
 }
 
+// Send blog notification email to all subscribers via Postmark
+async function sendBlogEmails(post, slug, dateStr) {
+  if (!POSTMARK_API_TOKEN) {
+    console.log('No POSTMARK_API_TOKEN — skipping email send')
+    return
+  }
+
+  const subscribers = JSON.parse(fs.readFileSync('subscribers.json', 'utf8'))
+  if (!subscribers.length) {
+    console.log('No subscribers — skipping email send')
+    return
+  }
+
+  const postUrl = `${SITE_URL}/${slug}.html`
+
+  console.log(`Sending blog email to ${subscribers.length} subscriber(s)...`)
+
+  const results = await Promise.allSettled(
+    subscribers.map(async (sub) => {
+      const htmlBody = `<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="margin:0;padding:0;background:#F4F7FF;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">
+  <div style="max-width:600px;margin:0 auto;background:#fff;border-radius:16px;overflow:hidden;margin-top:32px;margin-bottom:32px;box-shadow:0 4px 24px rgba(26,86,219,0.08)">
+
+    <!-- HEADER -->
+    <div style="background:#0C1B3A;padding:28px 36px;display:flex;align-items:center">
+      <span style="width:10px;height:10px;border-radius:50%;background:#1A56DB;display:inline-block;margin-right:10px"></span>
+      <span style="font-size:1.15rem;font-weight:800;color:#fff;letter-spacing:-0.02em">DOT Physical</span>
+    </div>
+
+    <!-- LABEL -->
+    <div style="padding:28px 36px 0">
+      <span style="display:inline-block;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#0694A2;background:#E0F7FA;padding:4px 12px;border-radius:100px">${post.category}</span>
+    </div>
+
+    <!-- TITLE -->
+    <div style="padding:16px 36px 20px">
+      <h1 style="margin:0 0 12px;font-size:1.6rem;font-weight:800;color:#0C1B3A;line-height:1.15;letter-spacing:-0.02em">${post.title}</h1>
+      <p style="margin:0;color:#3D5280;font-size:0.95rem;line-height:1.7">${post.excerpt}</p>
+    </div>
+
+    <!-- META -->
+    <div style="padding:0 36px 24px;display:flex;gap:16px;align-items:center">
+      <span style="font-size:0.8rem;color:#7A8FB8">${dateStr}</span>
+      <span style="width:4px;height:4px;border-radius:50%;background:rgba(26,86,219,0.22);display:inline-block"></span>
+      <span style="font-size:0.8rem;color:#7A8FB8">${post.readTime}</span>
+    </div>
+
+    <!-- CTA -->
+    <div style="padding:0 36px 36px">
+      <a href="${postUrl}" style="display:inline-block;background:#1A56DB;color:#fff;font-weight:600;font-size:0.95rem;padding:14px 28px;border-radius:100px;text-decoration:none">Read the Full Article →</a>
+    </div>
+
+    <hr style="border:none;border-top:1px solid rgba(26,86,219,0.08);margin:0 36px">
+
+    <!-- FOOTER -->
+    <div style="padding:24px 36px;background:#F4F7FF">
+      <p style="margin:0 0 8px;font-size:0.8rem;color:#7A8FB8">Need a DOT physical or drug test? <a href="${SITE_URL}/book.html" style="color:#1A56DB;text-decoration:underline">Book online</a> — same-week appointments available.</p>
+      <p style="margin:0;font-size:0.72rem;color:#aab4cc">You're receiving this because you subscribed to the DOT Physical blog. <a href="mailto:${FROM_EMAIL}?subject=Unsubscribe" style="color:#aab4cc">Unsubscribe</a></p>
+    </div>
+  </div>
+</body>
+</html>`
+
+      const res = await fetch('https://api.postmarkapp.com/email', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+          'X-Postmark-Server-Token': POSTMARK_API_TOKEN,
+        },
+        body: JSON.stringify({
+          From: `${FROM_NAME} <${FROM_EMAIL}>`,
+          To: `${sub.firstName} ${sub.lastName} <${sub.email}>`,
+          Subject: `New Article: ${post.title}`,
+          HtmlBody: htmlBody,
+          TextBody: `${post.title}\n\n${post.excerpt}\n\nRead the full article: ${postUrl}\n\n---\nDOT Physical | ${SITE_URL}\nUnsubscribe: reply with "unsubscribe"`,
+          MessageStream: 'broadcast',
+        }),
+      })
+
+      if (!res.ok) {
+        const err = await res.text()
+        throw new Error(`Postmark error for ${sub.email}: ${err}`)
+      }
+
+      console.log(`  Sent to ${sub.email}`)
+    })
+  )
+
+  const failed = results.filter(r => r.status === 'rejected')
+  if (failed.length) {
+    failed.forEach(r => console.error('  Failed:', r.reason))
+  }
+  console.log(`Email send complete: ${results.length - failed.length}/${results.length} delivered`)
+}
+
 // Main
 async function main() {
   console.log('Picking topic...')
@@ -385,6 +488,8 @@ async function main() {
 
   console.log('Updating blog.html...')
   updateBlogHtml(post, dateStr, slug)
+
+  await sendBlogEmails(post, slug, dateStr)
 
   console.log('Done!')
 }
