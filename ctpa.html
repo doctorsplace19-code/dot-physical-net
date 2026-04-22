@@ -77,6 +77,24 @@
   .btn-white:hover{transform:translateY(-2px)}
   .btn-outline-white{color:#fff;border:1.5px solid rgba(255,255,255,0.45);padding:0.85rem 2rem;border-radius:100px;font-weight:500;font-size:0.95rem;text-decoration:none;transition:border-color 0.2s,background 0.2s}
   .btn-outline-white:hover{border-color:#fff;background:rgba(255,255,255,0.1)}
+  .step-row{display:flex;gap:1.5rem;align-items:flex-start;margin-bottom:2rem}
+  .step-num{width:40px;height:40px;border-radius:50%;background:var(--accent);color:#fff;font-family:'Manrope',sans-serif;font-weight:800;font-size:1rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+  .step-body h4{font-family:'Manrope',sans-serif;font-weight:700;font-size:1rem;color:var(--heading);margin-bottom:0.35rem}
+  .step-body p{color:var(--body);font-size:0.9rem;line-height:1.65}
+  .rate-box{background:var(--heading);border-radius:var(--radius);padding:2rem;color:#fff;margin-bottom:1.25rem}
+  .rate-box h4{font-family:'Manrope',sans-serif;font-weight:700;font-size:0.85rem;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:1rem}
+  .rate-row{display:flex;justify-content:space-between;align-items:center;padding:0.75rem 0;border-bottom:1px solid rgba(255,255,255,0.08)}
+  .rate-row:last-child{border-bottom:none}
+  .rate-label{font-size:0.9rem;color:rgba(255,255,255,0.75)}
+  .rate-val{font-family:'Manrope',sans-serif;font-weight:800;font-size:1.1rem;color:#fff}
+  .alert-box{background:#FFF7ED;border:1.5px solid #FCD34D;border-radius:var(--radius);padding:1.5rem 2rem;display:flex;gap:1rem;align-items:flex-start;margin-bottom:1.25rem}
+  .alert-icon{font-size:1.5rem;flex-shrink:0}
+  .alert-box h4{font-family:'Manrope',sans-serif;font-weight:700;font-size:0.95rem;color:#92400E;margin-bottom:0.3rem}
+  .alert-box p{font-size:0.875rem;color:#78350F;line-height:1.65}
+  .price-example{background:var(--bg-white);border:1px solid var(--border);border-radius:var(--radius);padding:1.75rem;margin-top:1.25rem}
+  .price-example h4{font-family:'Manrope',sans-serif;font-weight:700;font-size:0.9rem;color:var(--heading);margin-bottom:1rem;padding-bottom:0.75rem;border-bottom:1px solid var(--border)}
+  .price-line{display:flex;justify-content:space-between;font-size:0.875rem;color:var(--body);padding:0.4rem 0}
+  .price-line.total{font-family:'Manrope',sans-serif;font-weight:700;color:var(--heading);font-size:1rem;padding-top:0.75rem;border-top:1px solid var(--border);margin-top:0.35rem}
   footer{background:var(--heading);padding:3.5rem 4rem;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem}
   .footer-brand p{color:rgba(255,255,255,0.4);font-size:0.875rem;line-height:1.7;margin-top:0.75rem;max-width:260px}
   .footer-contact{margin-top:1.25rem}
@@ -119,82 +137,207 @@
 </div>
 
 <div class="main">
-  <div class="two-col">
-    <div>
-      <div class="section-label">What We Do as Your C/TPA</div>
-      <h2 class="section-title">Full Program Management</h2>
-      <p class="section-sub">A C/TPA acts as the intermediary between your company, the collection sites, labs, and MRO. We manage the entire chain so nothing falls through the cracks.</p>
-      <ul class="check-list">
-        <li>Enroll your drivers in a DOT-compliant random testing consortium</li>
-        <li>Manage all random selection and notifications</li>
-        <li>Coordinate collections at 10,000+ nationwide locations</li>
-        <li>Manage laboratory relationships and chain-of-custody</li>
-        <li>Transmit specimens for SAMHSA-certified analysis</li>
-        <li>MRO review of all results before employer notification</li>
-        <li>Maintain required records in your DQ file</li>
-        <li>Generate DOT-compliant management information system (MIS) reports</li>
-        <li>Alert you to positive, refusal, and non-negative results immediately</li>
-        <li>Support for FMCSA audit preparation</li>
-      </ul>
-    </div>
-    <div>
-      <div class="info-card">
-        <h4>Who Needs a C/TPA?</h4>
-        <p>Any employer subject to DOT drug and alcohol testing regulations (FMCSA, FAA, FTA, PHMSA, FRA) needs either an in-house program administrator or an outside C/TPA. Most small-to-mid-size employers use a C/TPA like us because it's more cost-effective and reliably compliant.</p>
+
+  <!-- WHY YOU NEED A CONSORTIUM -->
+  <div style="max-width:900px;margin:0 auto 5rem">
+    <div class="section-label">Federal Requirement</div>
+    <h2 class="section-title">Every DOT-Regulated Driver Must Be in a Random Testing Program</h2>
+    <p class="section-sub">Under <strong>49 CFR Part 382</strong>, any employer with CDL drivers operating commercial motor vehicles in interstate commerce is required by federal law to maintain a DOT-compliant drug and alcohol random testing program. This is not optional — and it applies to fleets of every size, including owner-operators with a single truck.</p>
+
+    <div class="alert-box">
+      <div class="alert-icon">⚠️</div>
+      <div>
+        <h4>Non-Compliance Carries Serious Consequences</h4>
+        <p>Operating without an active random testing program is a federal violation. During an FMCSA compliance review or audit, missing consortium enrollment records can result in fines, a conditional or unsatisfactory safety rating, and — in serious cases — an out-of-service order. Most violations are discovered when employers cannot produce their annual MIS report or proof of consortium enrollment.</p>
       </div>
-      <div class="card" style="border-color:var(--accent);box-shadow:var(--shadow-md)">
-        <div class="icon-box ib-blue">💰</div>
-        <h3>Consortium Enrollment Pricing</h3>
-        <div style="margin:1rem 0;display:flex;flex-direction:column;gap:0.75rem">
-          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.9rem 1rem;background:var(--accent-light);border-radius:var(--radius-sm)">
-            <div>
-              <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:0.9rem;color:var(--heading)">First Driver</div>
-              <div style="font-size:0.78rem;color:var(--muted);margin-top:2px">Annual consortium enrollment</div>
-            </div>
-            <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:1.4rem;color:var(--accent)">$49</div>
-          </div>
-          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.9rem 1rem;background:var(--teal-light);border-radius:var(--radius-sm)">
-            <div>
-              <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:0.9rem;color:var(--heading)">Each Additional Driver</div>
-              <div style="font-size:0.78rem;color:var(--muted);margin-top:2px">Same company — per driver, per year</div>
-            </div>
-            <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:1.4rem;color:var(--teal)">$20</div>
-          </div>
+    </div>
+
+    <div class="two-col" style="margin-top:2rem">
+      <div class="rate-box">
+        <h4>FMCSA Annual Testing Minimums</h4>
+        <div class="rate-row"><span class="rate-label">Random Drug Testing Rate</span><span class="rate-val">50% of drivers/yr</span></div>
+        <div class="rate-row"><span class="rate-label">Random Alcohol Testing Rate</span><span class="rate-val">10% of drivers/yr</span></div>
+        <div class="rate-row"><span class="rate-label">Regulation</span><span class="rate-val">49 CFR § 382.305</span></div>
+        <div class="rate-row"><span class="rate-label">Applies To</span><span class="rate-val">All FMCSA CDL drivers</span></div>
+      </div>
+      <div>
+        <div class="info-card">
+          <h4>What Is a Consortium?</h4>
+          <p>A random testing consortium pools drivers from multiple employers into a single testing pool. Each calendar year, a scientifically valid random process selects the required percentage of drivers for testing. As your C/TPA, DOT Physical manages the entire pool — selections, notifications, collections, and reporting — on your behalf.</p>
         </div>
-        <p style="font-size:0.8rem;color:var(--muted);margin-bottom:1rem">Annual fee covers random pool enrollment, all selections, and federal reporting. Individual test fees billed separately per use.</p>
-        <a href="contact.html" class="btn-primary" style="font-size:0.875rem;padding:0.6rem 1.25rem;width:100%;justify-content:center;">Enroll Now &rarr;</a>
+        <div class="info-card" style="background:var(--teal-light);border-color:rgba(6,148,162,0.25)">
+          <h4>Owner-Operators: You Are Not Exempt</h4>
+          <p>If you are an owner-operator with your own DOT authority, you are required to be enrolled in a consortium. You cannot self-select for random testing. DOT Physical enrolls owner-operators directly — one driver, one affordable annual fee.</p>
+        </div>
       </div>
     </div>
   </div>
 
-  <div style="margin-top:4rem;">
-    <div class="section-label">Regulated Industries</div>
-    <h2 class="section-title">We Serve All DOT Agencies</h2>
-    <div class="grid-3" style="margin-top:2rem;">
-      <div class="card"><div class="icon-box ib-blue">🚛</div><h3>FMCSA (Trucking)</h3><p>CDL drivers operating commercial motor vehicles. Most common DOT testing requirement.</p></div>
-      <div class="card"><div class="icon-box ib-teal">✈️</div><h3>FAA (Aviation)</h3><p>Flight crew, air traffic controllers, and aviation safety-sensitive employees.</p></div>
-      <div class="card"><div class="icon-box ib-indigo">🚌</div><h3>FTA (Transit)</h3><p>Public transit operators, mechanics, controllers, and dispatchers.</p></div>
-      <div class="card"><div class="icon-box ib-amber">🚂</div><h3>FRA (Railroad)</h3><p>Train operators, signal employees, and dispatchers subject to FRA testing.</p></div>
-      <div class="card"><div class="icon-box ib-blue">🛢️</div><h3>PHMSA (Pipeline)</h3><p>Pipeline operations and hazardous materials transportation employees.</p></div>
-      <div class="card"><div class="icon-box ib-teal">⚓</div><h3>USCG (Maritime)</h3><p>Merchant marine officers and crewmembers subject to Coast Guard testing rules.</p></div>
+  <!-- PRICING -->
+  <div style="background:linear-gradient(135deg,#0C1B3A 0%,#1A3A6B 100%);border-radius:24px;padding:3.5rem 4rem;margin-bottom:5rem">
+    <div style="text-align:center;margin-bottom:2.5rem">
+      <div style="display:inline-block;font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:0.75rem">Consortium Enrollment Pricing</div>
+      <h2 style="font-family:'Manrope',sans-serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:800;color:#fff;letter-spacing:-0.02em;margin-bottom:0.75rem">Simple. Transparent. Affordable.</h2>
+      <p style="color:rgba(255,255,255,0.55);font-size:0.95rem;max-width:520px;margin:0 auto">One annual fee per driver. No monthly charges, no hidden fees. Covers full consortium enrollment, random pool management, selections, and federal reporting.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.25rem;margin-bottom:2rem">
+      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius);padding:2rem;text-align:center">
+        <div style="font-size:2.5rem;margin-bottom:0.5rem">🚗</div>
+        <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:0.9rem;color:rgba(255,255,255,0.6);margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.06em">First Driver</div>
+        <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:3rem;color:#fff;line-height:1">$49</div>
+        <div style="font-size:0.8rem;color:rgba(255,255,255,0.4);margin-top:0.4rem">per year</div>
+      </div>
+      <div style="background:rgba(26,86,219,0.35);border:1.5px solid rgba(26,86,219,0.6);border-radius:var(--radius);padding:2rem;text-align:center;position:relative">
+        <div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--teal);color:#fff;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:3px 12px;border-radius:100px">Best Value</div>
+        <div style="font-size:2.5rem;margin-bottom:0.5rem">🚛</div>
+        <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:0.9rem;color:rgba(255,255,255,0.6);margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.06em">Each Additional Driver</div>
+        <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:3rem;color:#fff;line-height:1">$20</div>
+        <div style="font-size:0.8rem;color:rgba(255,255,255,0.4);margin-top:0.4rem">per driver, per year</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius);padding:2rem;text-align:center">
+        <div style="font-size:2.5rem;margin-bottom:0.5rem">🏢</div>
+        <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:0.9rem;color:rgba(255,255,255,0.6);margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.06em">50+ Drivers</div>
+        <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:3rem;color:#fff;line-height:1">Call</div>
+        <div style="font-size:0.8rem;color:rgba(255,255,255,0.4);margin-top:0.4rem">custom fleet pricing</div>
+      </div>
+    </div>
+
+    <!-- Example calculations -->
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-bottom:2rem">
+      <div style="background:rgba(255,255,255,0.05);border-radius:var(--radius-sm);padding:1.25rem">
+        <div style="font-size:0.75rem;font-weight:600;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.75rem">Owner-Operator</div>
+        <div style="font-size:0.85rem;color:rgba(255,255,255,0.6);display:flex;justify-content:space-between;margin-bottom:0.4rem"><span>1 driver</span><span>$49</span></div>
+        <div style="font-size:0.85rem;color:#fff;font-weight:600;display:flex;justify-content:space-between;padding-top:0.5rem;border-top:1px solid rgba(255,255,255,0.1)"><span>Annual total</span><span>$49</span></div>
+      </div>
+      <div style="background:rgba(255,255,255,0.05);border-radius:var(--radius-sm);padding:1.25rem">
+        <div style="font-size:0.75rem;font-weight:600;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.75rem">Small Fleet (5 drivers)</div>
+        <div style="font-size:0.85rem;color:rgba(255,255,255,0.6);display:flex;justify-content:space-between;margin-bottom:0.4rem"><span>First driver</span><span>$49</span></div>
+        <div style="font-size:0.85rem;color:rgba(255,255,255,0.6);display:flex;justify-content:space-between;margin-bottom:0.4rem"><span>4 additional × $20</span><span>$80</span></div>
+        <div style="font-size:0.85rem;color:#fff;font-weight:600;display:flex;justify-content:space-between;padding-top:0.5rem;border-top:1px solid rgba(255,255,255,0.1)"><span>Annual total</span><span>$129</span></div>
+      </div>
+      <div style="background:rgba(255,255,255,0.05);border-radius:var(--radius-sm);padding:1.25rem">
+        <div style="font-size:0.75rem;font-weight:600;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.75rem">Mid-Size Fleet (20 drivers)</div>
+        <div style="font-size:0.85rem;color:rgba(255,255,255,0.6);display:flex;justify-content:space-between;margin-bottom:0.4rem"><span>First driver</span><span>$49</span></div>
+        <div style="font-size:0.85rem;color:rgba(255,255,255,0.6);display:flex;justify-content:space-between;margin-bottom:0.4rem"><span>19 additional × $20</span><span>$380</span></div>
+        <div style="font-size:0.85rem;color:#fff;font-weight:600;display:flex;justify-content:space-between;padding-top:0.5rem;border-top:1px solid rgba(255,255,255,0.1)"><span>Annual total</span><span>$429</span></div>
+      </div>
+    </div>
+
+    <div style="text-align:center">
+      <p style="font-size:0.8rem;color:rgba(255,255,255,0.35);margin-bottom:1.5rem">Annual fees cover consortium enrollment only. Individual drug test and physical exam fees are billed separately per use.</p>
+      <a href="contact.html" class="btn-white">Enroll Your Fleet Today &rarr;</a>
     </div>
   </div>
 
-  <div style="margin-top:4rem;max-width:760px;">
-    <div class="section-label">FAQ</div>
-    <h2 class="section-title">C/TPA Questions</h2>
-    <div style="margin-top:2rem;">
-      <div class="faq"><h4>What's the difference between a consortium and a TPA?</h4><p>A consortium pools multiple employers' drivers together for random testing rate purposes (common for owner-operators). A TPA simply manages your program. We offer both arrangements.</p></div>
-      <div class="faq"><h4>Can owner-operators use your consortium?</h4><p>Yes. Owner-operators are required to participate in a consortium for random testing. We enroll owner-operators directly and handle all notifications and testing coordination.</p></div>
-      <div class="faq"><h4>How do we switch from our current C/TPA?</h4><p>Switching is straightforward. We handle the transfer of records and ensure there's no gap in testing coverage during the transition. Contact us to start the process.</p></div>
+  <!-- HOW IT WORKS -->
+  <div class="two-col" style="margin-bottom:5rem">
+    <div>
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title">From Enrollment to Audit-Ready</h2>
+      <p style="color:var(--body);font-size:1rem;line-height:1.75;font-weight:300;margin-bottom:2rem">Once you enroll, we handle everything. Here's exactly what happens from start to finish.</p>
+
+      <div class="step-row">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h4>You Enroll — We Do the Rest</h4>
+          <p>Contact us with your driver count and DOT number. We set up your account, add your drivers to our random testing pool, and issue your enrollment confirmation. The whole process takes one business day.</p>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h4>Random Selections Run Automatically</h4>
+          <p>Throughout the year, our system uses a scientifically valid random process to select drivers for testing, meeting FMCSA's 50% drug and 10% alcohol annual minimums. Selections are unannounced and unpredictable — as required by law.</p>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h4>You Receive Immediate Notification</h4>
+          <p>When a driver is selected, you are notified immediately by phone or email. You then inform the driver, who must proceed directly to the collection site without going home first. Federal rules prohibit advance notice to the driver.</p>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h4>Collection, Lab & MRO Review</h4>
+          <p>The driver reports to one of our 10,000+ nationwide collection sites. We manage the chain of custody, laboratory submission, and MRO review of every specimen. You receive results directly — negative results typically within 24 hours.</p>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">5</div>
+        <div class="step-body">
+          <h4>Annual MIS Report — Done Automatically</h4>
+          <p>At year end, we generate your DOT Management Information System (MIS) report — a federal requirement that summarizes your testing program results. It's ready when you need it, including during an FMCSA audit.</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="card" style="border-color:var(--accent);box-shadow:var(--shadow-md);margin-bottom:1.25rem">
+        <div class="icon-box ib-blue">📋</div>
+        <h3>Everything We Handle For You</h3>
+        <ul class="check-list" style="margin-top:1rem;margin-bottom:0">
+          <li>Consortium pool enrollment and management</li>
+          <li>Scientifically valid random driver selection</li>
+          <li>Immediate notification when a driver is selected</li>
+          <li>Collection site coordination at 10,000+ locations</li>
+          <li>Chain-of-custody documentation</li>
+          <li>SAMHSA-certified laboratory submission</li>
+          <li>Certified MRO review of all results</li>
+          <li>Positive, refusal &amp; non-negative result alerts</li>
+          <li>Driver DQ file record maintenance</li>
+          <li>Annual MIS report generation</li>
+          <li>FMCSA audit support and documentation</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h4>What Happens After a Positive Result?</h4>
+        <p>If a driver tests positive, we notify you immediately. The driver is removed from safety-sensitive duties and must complete the DOT Return to Duty process — including evaluation by a Substance Abuse Professional (SAP), treatment, and a return-to-duty test — before resuming CDL driving. We support you through every step of this process.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHO NEEDS IT -->
+  <div style="margin-bottom:5rem">
+    <div class="section-label">Who Must Enroll</div>
+    <h2 class="section-title">Required for All DOT Agencies</h2>
+    <p class="section-sub">Random testing consortium requirements apply across all six DOT agencies. If your employees perform safety-sensitive functions under any of these agencies, you need a program.</p>
+    <div class="grid-3" style="margin-top:2rem">
+      <div class="card"><div class="icon-box ib-blue">🚛</div><h3>FMCSA — Trucking</h3><p>CDL drivers operating CMVs in interstate commerce. Includes all trucking companies, owner-operators, and any employer with DOT-regulated drivers.</p></div>
+      <div class="card"><div class="icon-box ib-teal">✈️</div><h3>FAA — Aviation</h3><p>Flight crew, air traffic controllers, flight instructors, aircraft dispatchers, and all aviation safety-sensitive employees.</p></div>
+      <div class="card"><div class="icon-box ib-indigo">🚌</div><h3>FTA — Transit</h3><p>Public transit operators, vehicle mechanics, controllers, dispatchers, and armed security at transit agencies.</p></div>
+      <div class="card"><div class="icon-box ib-amber">🚂</div><h3>FRA — Railroad</h3><p>Train operators, conductors, signal employees, dispatchers, and employees who operate roadway maintenance machines.</p></div>
+      <div class="card"><div class="icon-box ib-blue">🛢️</div><h3>PHMSA — Pipeline</h3><p>Operators of natural gas, hazardous liquid, and liquefied natural gas pipelines performing operations and maintenance.</p></div>
+      <div class="card"><div class="icon-box ib-teal">⚓</div><h3>USCG — Maritime</h3><p>Merchant mariners holding USCG-issued credentials and crewmembers on inspected vessels subject to Coast Guard regulations.</p></div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div style="max-width:780px;margin:0 auto 5rem">
+    <div class="section-label">Common Questions</div>
+    <h2 class="section-title">Consortium FAQ</h2>
+    <div style="margin-top:2rem;display:flex;flex-direction:column;gap:0.75rem">
+      <div class="faq"><h4>What's the difference between a consortium and a C/TPA?</h4><p>A consortium is the random testing pool your drivers belong to. A C/TPA (Consortium/Third-Party Administrator) is the company that manages the pool on your behalf. DOT Physical acts as both — we run the consortium and administer your entire program.</p></div>
+      <div class="faq"><h4>Can a single owner-operator enroll?</h4><p>Yes — and you are required to. Owner-operators with their own DOT authority cannot self-administer a random testing program. You must join a consortium. At $49/year, our enrollment is the most affordable way to stay compliant.</p></div>
+      <div class="faq"><h4>How quickly does a driver need to report after being selected?</h4><p>FMCSA requires that selected drivers report for testing immediately and proceed directly to the collection site. The driver cannot go home, make stops, or delay — this is a federal requirement designed to prevent tampering. Employers should have a clear internal policy that drivers go directly after being notified.</p></div>
+      <div class="faq"><h4>What if a selected driver is out of town or on a long haul?</h4><p>With 10,000+ collection sites nationwide, drivers can test wherever they are. We provide collection site locator support for any driver who needs to test away from their home base. The driver must still test within the required timeframe.</p></div>
+      <div class="faq"><h4>Do new drivers need to be added to the consortium?</h4><p>Yes. Any new driver performing safety-sensitive functions must be enrolled in the random pool before or immediately upon starting. Contact us and we'll add them to your roster — the process takes one business day.</p></div>
+      <div class="faq"><h4>What is a MIS report and do I really need it?</h4><p>The Management Information System (MIS) report is an annual summary of your drug and alcohol testing program results, required under 49 CFR Part 382. During an FMCSA audit, an inspector will ask for this report. We generate it automatically at year end and it is available to you immediately on request.</p></div>
+      <div class="faq"><h4>How do we switch from our current C/TPA?</h4><p>Switching is simple. Contact us and we'll coordinate the transfer of your testing records from your current provider and ensure there is zero gap in your consortium coverage. Most transfers are completed within 3–5 business days.</p></div>
+      <div class="faq"><h4>Are drug test fees included in the consortium enrollment price?</h4><p>No — the annual enrollment fee covers consortium membership, random pool management, selections, and federal reporting. Individual drug tests are billed separately at our standard rate of $69.99 per test. You are only billed for tests that are actually performed.</p></div>
     </div>
   </div>
 
   <div class="cta-banner">
-    <div><h2>Let us handle your entire testing program.</h2><p>Enroll today and be compliant before your next audit.</p></div>
+    <div>
+      <h2>Don't wait for an audit to find out you're out of compliance.</h2>
+      <p>Enroll today — $49 for your first driver, $20 for each additional. We handle everything.</p>
+    </div>
     <div class="cta-actions">
-      <a href="contact.html" class="btn-white">Get Started</a>
-      <a href="cost-of-services.html" class="btn-outline-white">View Pricing</a>
+      <a href="contact.html" class="btn-white">Enroll Now &rarr;</a>
+      <a href="tel:2013455803" class="btn-outline-white">📞 201-345-5803</a>
     </div>
   </div>
 </div>
