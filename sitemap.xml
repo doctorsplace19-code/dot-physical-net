@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Core pages -->
   <url><loc>https://www.dot-physical.net/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://www.dot-physical.net/services.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.dot-physical.net/drug-testing.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
@@ -14,6 +16,9 @@
   <url><loc>https://www.dot-physical.net/about.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://www.dot-physical.net/contact.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.dot-physical.net/blog.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/who-we-serve.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Blog posts -->
   <url><loc>https://www.dot-physical.net/post-dot-physical-exam.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://www.dot-physical.net/post-prescription-meds.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://www.dot-physical.net/post-compliance-audit.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
@@ -22,4 +27,58 @@
   <url><loc>https://www.dot-physical.net/post-owner-operator-compliance.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://www.dot-physical.net/post-clearinghouse-guide.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://www.dot-physical.net/post-medical-certificate.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- State landing pages -->
+  <url><loc>https://www.dot-physical.net/dot-physical-alabama.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-alaska.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-arizona.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-arkansas.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-california.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-colorado.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-connecticut.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-delaware.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-florida.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-georgia.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-hawaii.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-idaho.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-illinois.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-indiana.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-iowa.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-kansas.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-kentucky.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-louisiana.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-maine.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-maryland.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-massachusetts.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-michigan.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-minnesota.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-mississippi.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-missouri.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-montana.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-nebraska.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-nevada.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-new-hampshire.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-new-jersey.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-new-mexico.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-new-york.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-north-carolina.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-north-dakota.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-ohio.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-oklahoma.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-oregon.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-pennsylvania.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-rhode-island.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-south-carolina.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-south-dakota.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-tennessee.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-texas.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-utah.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-vermont.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-virginia.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-washington.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-west-virginia.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-wisconsin.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-wyoming.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-puerto-rico.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
 </urlset>
