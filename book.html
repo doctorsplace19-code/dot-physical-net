@@ -105,7 +105,7 @@
   <div class="book-grid">
     <div>
       <h2 class="section-title">Select Your Services</h2>
-      <p style="color:var(--muted);font-size:0.875rem;margin-bottom:1.25rem;">Choose one or more — your card will be saved and charged only after your visit.</p>
+      <p style="color:var(--muted);font-size:0.875rem;margin-bottom:1.25rem;">Choose one or more — your card is charged securely at the time of booking.</p>
       <div class="service-picker" id="service-picker">
         <div style="color:var(--muted);font-size:0.875rem;padding:1rem;text-align:center;">Loading services…</div>
       </div>
@@ -176,7 +176,7 @@
           <a href="tel:2013455803" class="phone-cta">📞 Call 201-345-5803 to Book</a>
 
           <div class="trust-items">
-            <div class="trust-item"><span>✓</span> Card charged only after your visit</div>
+            <div class="trust-item"><span>✓</span> Charged securely at time of booking</div>
             <div class="trust-item"><span>✓</span> Same-day availability at most locations</div>
             <div class="trust-item"><span>✓</span> Certificate issued same day</div>
             <div class="trust-item"><span>✓</span> Walk-ins accepted at Hackensack HQ</div>
@@ -185,8 +185,8 @@
 
         <!-- Step 2: Card Entry -->
         <div class="step" id="step-2">
-          <h2>Save Your Card</h2>
-          <p>Your card will <strong>not</strong> be charged now. We'll charge it after your appointment is complete.</p>
+          <h2>Payment</h2>
+          <p>Your card will be charged now to confirm your booking.</p>
 
           <div id="order-summary-bar" class="order-summary-bar"></div>
 
@@ -198,7 +198,7 @@
           <div id="step2-error" style="display:none;color:#dc2626;font-size:0.825rem;margin-bottom:0.75rem;padding:0.6rem 0.9rem;background:#fef2f2;border-radius:8px;"></div>
 
           <button class="btn-primary" id="step2-btn" type="button">
-            Confirm Booking &rarr;
+            Pay &amp; Confirm Booking &rarr;
           </button>
           <button type="button" id="back-btn" style="background:none;border:none;color:var(--muted);font-size:0.85rem;cursor:pointer;margin-top:0.75rem;width:100%;text-align:center;">
             ← Back
@@ -211,7 +211,7 @@
             <div class="success-icon">✅</div>
             <h2 style="margin-bottom:0.5rem;">Booking Received!</h2>
             <p>We've emailed your confirmation. Our staff will contact you within 1 business hour (Mon–Fri 9am–5pm ET) to confirm your appointment.</p>
-            <p style="margin-top:1rem;font-size:0.8rem;color:var(--muted);">Your card will not be charged until after your visit is complete.</p>
+            <p style="margin-top:1rem;font-size:0.8rem;color:var(--muted);">Your card has been charged. Questions? Call 201-345-5803.</p>
             <div class="divider" style="margin:1.5rem 0;"></div>
             <a href="tel:2013455803" class="phone-cta">📞 Questions? Call 201-345-5803</a>
           </div>
@@ -279,7 +279,9 @@
     const picker = document.getElementById('service-picker')
     try {
       const res = await fetch(`${PORTAL}/api/services`)
-      allServices = await res.json()
+      const data = await res.json()
+      if (!res.ok || !Array.isArray(data)) throw new Error(data?.error ?? 'Could not load services')
+      allServices = data
       picker.innerHTML = ''
       allServices.forEach(svc => {
         const icon = ICONS[svc.category] ?? '🏥'
@@ -372,7 +374,7 @@
     const total = getTotal()
     const names = getServiceNames()
     document.getElementById('order-summary-bar').textContent =
-      `${names} — Total: $${total.toFixed(2)} (charged after visit)`
+      `${names} — Total: $${total.toFixed(2)} (charged now)`
 
     showStep(2)
     mountCard()
@@ -385,7 +387,7 @@
     showError(2, '')
     const btn = document.getElementById('step2-btn')
     btn.disabled = true
-    btn.textContent = 'Processing…'
+    btn.textContent = 'Processing payment…'
 
     const first = document.getElementById('b-first').value.trim()
     const last  = document.getElementById('b-last').value.trim()
@@ -398,29 +400,30 @@
     const notes = [rawNotes, zip ? `ZIP: ${zip}` : ''].filter(Boolean).join(' | ')
 
     try {
-      // 1. Create Stripe customer + SetupIntent
+      const ids = Array.from(selectedIds)
+
+      // 1. Create Stripe customer + PaymentIntent (charges immediately on confirm)
       const initRes = await fetch(`${PORTAL}/api/public/book`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ firstName: first, lastName: last, email, phone }),
+        body: JSON.stringify({ firstName: first, lastName: last, email, phone, serviceIds: ids }),
       })
       const init = await initRes.json()
       if (!initRes.ok) throw new Error(init.error ?? 'Could not start booking')
 
-      // 2. Confirm card with Stripe
-      const { error: stripeErr, setupIntent } = await stripe.confirmCardSetup(
+      // 2. Confirm card + charge with Stripe
+      const { error: stripeErr, paymentIntent } = await stripe.confirmCardPayment(
         init.clientSecret,
         { payment_method: { card: cardElement, billing_details: { name: `${first} ${last}`, email, phone } } }
       )
       if (stripeErr) throw new Error(stripeErr.message)
 
       // 3. Create order in portal
-      const ids = Array.from(selectedIds)
       const confirmRes = await fetch(`${PORTAL}/api/public/book/confirm`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          setupIntentId:        setupIntent.id,
+          paymentIntentId:      paymentIntent.id,
           customerId:           init.customerId,
           firstName: first, lastName: last,
           dateOfBirth:          dob,
@@ -438,7 +441,7 @@
     } catch (err) {
       showError(2, err.message ?? 'Something went wrong. Please try again or call 201-345-5803.')
       btn.disabled = false
-      btn.textContent = 'Confirm Booking →'
+      btn.textContent = 'Pay & Confirm Booking →'
     }
   })
 
