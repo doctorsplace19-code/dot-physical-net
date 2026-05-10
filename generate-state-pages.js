@@ -1281,7 +1281,7 @@ ${citiesHtml}
   </div>
   <div class="cta-actions">
     <a href="book.html" class="btn-white">Order Now &mdash; Any ${state.abbr} City</a>
-    <a href="tel:2013455803" class="btn-outline-white">Call 201-345-5803</a>
+    <a href="tel:8882334567" class="btn-outline-white">Call 888-233-4567</a>
   </div>
 </div>
 
@@ -1290,7 +1290,7 @@ ${citiesHtml}
     <a href="index.html" class="nav-logo" style="color:#fff;"><span class="logo-dot"></span>Doctors Place</a>
     <p>A Doctors Place company. Providing fast, reliable, FMCSA-compliant DOT physicals and drug testing services nationwide &mdash; including all of ${state.name}.</p>
     <div class="footer-contact">
-      <a href="tel:2013455803">📞 201-345-5803</a>
+      <a href="tel:8882334567">📞 888-233-4567</a>
       <a href="contact.html">📍 75 Summit Ave, Hackensack, NJ 07601</a>
     </div>
   </div>
