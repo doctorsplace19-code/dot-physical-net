@@ -76,6 +76,15 @@
   .footer-bottom p{color:rgba(255,255,255,0.28);font-size:0.8rem}
   @media(max-width:1024px){nav{padding:1.1rem 2rem}.page-hero{padding:7rem 2rem 3rem}.main{padding:4rem 2rem 5rem}.two-col,.grid-3{grid-template-columns:1fr}.cta-banner{padding:2.5rem;flex-direction:column}footer{grid-template-columns:1fr 1fr;padding:3rem 2rem}}
   @media(max-width:640px){.nav-links{display:none}footer{grid-template-columns:1fr}}
+
+  .nav-has-dropdown{position:relative}
+  .nav-dropdown-toggle{display:flex;align-items:center;gap:4px;cursor:pointer}
+  .nav-dropdown{display:none;position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%);background:#fff;border:1px solid rgba(26,86,219,0.12);border-radius:12px;box-shadow:0 8px 32px rgba(26,86,219,0.13);padding:0.5rem;min-width:160px;list-style:none;z-index:200}
+  .nav-dropdown li a{display:block;padding:0.6rem 1rem;color:var(--body,#3D5280);font-size:0.875rem;text-decoration:none;border-radius:8px;white-space:nowrap;transition:background 0.15s,color 0.15s}
+  .nav-dropdown li a:hover{background:var(--accent-light,#EBF0FF);color:var(--accent,#1A56DB)}
+  .nav-has-dropdown:hover .nav-dropdown{display:block}
+  .nav-book{background:var(--accent-light,#EBF0FF)!important;color:var(--accent,#1A56DB)!important;padding:0.5rem 1.2rem!important;border-radius:100px!important;font-weight:600!important}
+  /* nav-dropdown-injected */
 </style>
 </head>
 <body>
@@ -85,10 +94,15 @@
     <li><a href="services.html">Services</a></li>
     <li><a href="employers.html">Employers</a></li>
     <li><a href="who-we-serve.html">Locations</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="blog.html">Blog</a></li>
-    <li><a href="contact.html">Contact Us</a></li>
-    <li><a href="book.html">Book Now</a></li>
+    <li class="nav-has-dropdown">
+      <a href="#" class="nav-dropdown-toggle" onclick="return false;">Company <svg width="10" height="6" viewBox="0 0 10 6" fill="none" style="display:inline-block;vertical-align:middle;margin-left:2px;"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <ul class="nav-dropdown">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </li>
+    <li><a href="book.html" class="nav-book">Book Now</a></li>
     <li><a href="http://portal.dot-physical.net" class="nav-cta" target="_blank" rel="noopener">Employer Portal</a></li>
   </ul>
 </nav>
