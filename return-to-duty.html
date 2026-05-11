@@ -211,8 +211,8 @@
           </label>
           <label id="step6-card" style="cursor:pointer;border:2px solid var(--border);border-radius:14px;padding:1.25rem;transition:border-color 0.2s,background 0.2s;position:relative;">
             <input type="radio" name="rtd_step" value="step6" style="position:absolute;opacity:0;width:0;height:0;">
-            <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:1.1rem;color:var(--teal);margin-bottom:0.25rem;">Step 6 — TPA Enrollment</div>
-            <div style="font-size:0.825rem;color:var(--body);line-height:1.5;">Random follow-up testing program per SAP plan via Doctors Place TPA Services</div>
+            <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:1.1rem;color:var(--teal);margin-bottom:0.25rem;">Step 6 — $135 / test</div>
+            <div style="font-size:0.825rem;color:var(--body);line-height:1.5;">Random follow-up testing per SAP plan via Doctors Place TPA Services</div>
           </label>
         </div>
       </div>
@@ -322,7 +322,7 @@ document.querySelectorAll('input[name="rtd_step"]').forEach(radio => {
     document.getElementById('summary-label').textContent = this.value === 'step5'
       ? 'Step 5 — Return-to-Duty Drug Test'
       : 'Step 6 — TPA Follow-Up Testing Enrollment'
-    document.getElementById('summary-price').textContent = this.value === 'step5' ? '$159.95' : 'Contact for pricing'
+    document.getElementById('summary-price').textContent = this.value === 'step5' ? '$159.95' : '$135 / test'
     document.getElementById('rtd-submit-btn').textContent = this.value === 'step5'
       ? 'Submit & Request Payment Link →'
       : 'Submit & Enroll in TPA →'
@@ -339,7 +339,7 @@ document.getElementById('rtd-booking-form').addEventListener('submit', async fun
 
   const fd = new FormData(this)
   const step = fd.get('rtd_step')
-  const stepLabel = step === 'step5' ? 'Step 5 — Return-to-Duty Drug Test ($159.95)' : 'Step 6 — TPA Follow-Up Testing Enrollment'
+  const stepLabel = step === 'step5' ? 'Step 5 — Return-to-Duty Drug Test ($159.95)' : 'Step 6 — TPA Follow-Up Testing ($135/test)'
   const sapOrg = fd.get('sapOrg') ? ` | SAP Organization: ${fd.get('sapOrg')}` : ''
 
   const message = `RTD REQUEST — ${stepLabel}
