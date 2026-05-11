@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Appointment — Doctors Place Flyer</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Manrope', sans-serif;
+    background: #e8ecf5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 40px 20px;
+  }
+
+  /* ── Print controls (hidden on print) ── */
+  .print-bar {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #1A56DB;
+    padding: 10px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  }
+  .print-bar span { color: rgba(255,255,255,0.8); font-size: 0.85rem; }
+  .print-btn {
+    background: #fff;
+    color: #1A56DB;
+    border: none;
+    padding: 8px 24px;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-family: 'Manrope', sans-serif;
+    transition: opacity 0.2s;
+  }
+  .print-btn:hover { opacity: 0.85; }
+
+  /* ── Flyer card ── */
+  .flyer {
+    width: 8.5in;
+    min-height: 11in;
+    background: #fff;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    margin-top: 52px;
+  }
+
+  /* Top accent bar */
+  .top-bar {
+    height: 10px;
+    background: linear-gradient(90deg, #1A56DB 0%, #0694A2 100%);
+  }
+
+  /* Header */
+  .header {
+    background: #0C1B3A;
+    padding: 36px 60px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo-area {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .logo-dot-wrap {
+    width: 48px;
+    height: 48px;
+    background: #1A56DB;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo-dot-wrap svg { width: 26px; height: 26px; }
+  .logo-text { color: #fff; }
+  .logo-text .brand { font-size: 1.35rem; font-weight: 800; letter-spacing: -0.02em; }
+  .logo-text .sub   { font-size: 0.75rem; color: rgba(255,255,255,0.45); font-weight: 400; margin-top: 2px; }
+  .header-contact { text-align: right; }
+  .header-contact .phone { color: #93c5fd; font-size: 1.05rem; font-weight: 700; letter-spacing: 0.02em; }
+  .header-contact .address { color: rgba(255,255,255,0.4); font-size: 0.75rem; margin-top: 4px; }
+
+  /* Hero */
+  .hero {
+    background: linear-gradient(160deg, #EDF1FF 0%, #E4EDFF 50%, #fff 100%);
+    padding: 52px 60px 44px;
+    text-align: center;
+    position: relative;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(26,86,219,0.04) 1px,transparent 1px),
+                      linear-gradient(90deg,rgba(26,86,219,0.04) 1px,transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 10%, transparent 100%);
+  }
+  .hero-inner { position: relative; z-index: 1; }
+  .eyebrow {
+    display: inline-block;
+    background: #1A56DB;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 16px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+  }
+  .book-title {
+    font-size: 4.2rem;
+    font-weight: 900;
+    color: #0C1B3A;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .book-title span { color: #1A56DB; }
+  .book-sub {
+    font-size: 1rem;
+    color: #3D5280;
+    font-weight: 400;
+    margin-top: 12px;
+    line-height: 1.6;
+  }
+
+  /* QR section */
+  .qr-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 44px 60px 40px;
+    flex: 1;
+  }
+  .qr-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #7A8FB8;
+    margin-bottom: 20px;
+  }
+  .qr-frame {
+    background: #fff;
+    border: 3px solid #1A56DB;
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 12px 48px rgba(26,86,219,0.18), 0 2px 8px rgba(26,86,219,0.08);
+    position: relative;
+  }
+  /* Corner accents */
+  .qr-frame::before,
+  .qr-frame::after {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border-color: #0694A2;
+    border-style: solid;
+  }
+  .qr-frame::before {
+    top: -3px; left: -3px;
+    border-width: 4px 0 0 4px;
+    border-radius: 24px 0 0 0;
+  }
+  .qr-frame::after {
+    bottom: -3px; right: -3px;
+    border-width: 0 4px 4px 0;
+    border-radius: 0 0 24px 0;
+  }
+  .qr-frame img {
+    display: block;
+    width: 360px;
+    height: 360px;
+    border-radius: 8px;
+  }
+  .qr-url {
+    margin-top: 18px;
+    font-size: 0.85rem;
+    color: #1A56DB;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+  .qr-instruction {
+    margin-top: 8px;
+    font-size: 0.8rem;
+    color: #7A8FB8;
+    text-align: center;
+  }
+
+  /* Services strip */
+  .services-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+    margin: 0 60px;
+  }
+  .service-item {
+    padding: 18px 16px;
+    text-align: center;
+    border-right: 1px solid #e2e8f0;
+  }
+  .service-item:last-child { border-right: none; }
+  .service-icon { font-size: 1.4rem; margin-bottom: 6px; }
+  .service-name { font-size: 0.78rem; font-weight: 700; color: #0C1B3A; line-height: 1.3; }
+  .service-note { font-size: 0.68rem; color: #7A8FB8; margin-top: 2px; }
+
+  /* Footer */
+  .footer {
+    background: #0C1B3A;
+    padding: 24px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 32px;
+  }
+  .footer-left { color: rgba(255,255,255,0.45); font-size: 0.75rem; line-height: 1.6; }
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+  }
+  .footer-right .website { color: #93c5fd; font-weight: 700; font-size: 0.85rem; }
+  .footer-right .tagline { color: rgba(255,255,255,0.3); font-size: 0.7rem; }
+  .bottom-bar {
+    height: 8px;
+    background: linear-gradient(90deg, #0694A2 0%, #1A56DB 100%);
+  }
+
+  /* ── PRINT STYLES ── */
+  @media print {
+    body { background: #fff; padding: 0; }
+    .print-bar { display: none; }
+    .flyer {
+      width: 100%;
+      min-height: auto;
+      margin: 0;
+      box-shadow: none;
+    }
+    @page { size: letter; margin: 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Print bar -->
+<div class="print-bar">
+  <span>Doctors Place — Book Appointment Flyer</span>
+  <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+</div>
+
+<!-- Flyer -->
+<div class="flyer">
+  <div class="top-bar"></div>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="logo-area">
+      <div class="logo-dot-wrap">
+        <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="13" cy="13" r="5" fill="#fff"/>
+          <circle cx="13" cy="4"  r="2.5" fill="rgba(255,255,255,0.5)"/>
+          <circle cx="13" cy="22" r="2.5" fill="rgba(255,255,255,0.5)"/>
+          <circle cx="4"  cy="13" r="2.5" fill="rgba(255,255,255,0.5)"/>
+          <circle cx="22" cy="13" r="2.5" fill="rgba(255,255,255,0.5)"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <div class="brand">Doctors Place</div>
+        <div class="sub">Occupational Health &amp; Workforce Testing</div>
+      </div>
+    </div>
+    <div class="header-contact">
+      <div class="phone">📞 (888) 233-4567</div>
+      <div class="address">75 Summit Ave, Ste 200 · Hackensack, NJ 07601</div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Online &amp; Walk-In Available</div>
+      <div class="book-title">Book Your<br><span>Appointment</span></div>
+      <div class="book-sub">DOT Physicals · Drug Testing · Occupational Health · All 50 States</div>
+    </div>
+  </div>
+
+  <!-- QR Section -->
+  <div class="qr-section">
+    <div class="qr-label">Scan to Schedule Online</div>
+    <div class="qr-frame">
+      <!-- QR code generated via qrserver.com API pointing to booking page -->
+      <img
+        src="https://api.qrserver.com/v1/create-qr-code/?size=360x360&data=https%3A%2F%2Fwww.dot-physical.net%2Fbook.html&color=0C1B3A&bgcolor=FFFFFF&qzone=1&format=png"
+        alt="QR Code — Book Appointment at dot-physical.net/book.html"
+        width="360" height="360"
+      >
+    </div>
+    <div class="qr-url">www.dot-physical.net/book.html</div>
+    <div class="qr-instruction">Point your phone camera at the code to open the scheduling page instantly</div>
+  </div>
+
+  <!-- Services strip -->
+  <div class="services-strip">
+    <div class="service-item">
+      <div class="service-icon">🚛</div>
+      <div class="service-name">DOT Physical Exam</div>
+      <div class="service-note">FMCSA · FAA · FRA · FTA</div>
+    </div>
+    <div class="service-item">
+      <div class="service-icon">🧪</div>
+      <div class="service-name">Drug &amp; Alcohol Testing</div>
+      <div class="service-note">DOT &amp; Non-DOT</div>
+    </div>
+    <div class="service-item">
+      <div class="service-icon">💉</div>
+      <div class="service-name">Titers &amp; Vaccines</div>
+      <div class="service-note">TB, MMR, Hep B &amp; more</div>
+    </div>
+    <div class="service-item">
+      <div class="service-icon">🔬</div>
+      <div class="service-name">Occupational Health</div>
+      <div class="service-note">Pre-employment &amp; annual</div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer-left">
+      Doctors Place Medical<br>
+      75 Summit Ave, Ste 200 · Hackensack, NJ 07601<br>
+      (888) 233-4567 · occmed@doctors-place.com
+    </div>
+    <div class="footer-right">
+      <div class="website">www.dot-physical.net</div>
+      <div class="tagline">Any Industry · Any Test · Nationwide</div>
+    </div>
+  </div>
+  <div class="bottom-bar"></div>
+</div>
+
+</body>
+</html>
