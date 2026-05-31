@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Doctors Place Flyer</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+
+  *{margin:0;padding:0;box-sizing:border-box}
+
+  body{
+    font-family:'Inter',sans-serif;
+    background:#0f172a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:24px;
+  }
+
+  .flyer{
+    width:1080px;
+    height:1080px;
+    position:relative;
+    overflow:hidden;
+    background:linear-gradient(160deg,#0f1e3d 0%,#1a3a6b 40%,#0f1e3d 100%);
+    border-radius:0px;
+    display:flex;
+    flex-direction:column;
+  }
+
+  /* Road stripe at bottom */
+  .road{
+    position:absolute;
+    bottom:0;left:0;right:0;
+    height:220px;
+    background:linear-gradient(180deg,transparent 0%,#0a1628 100%);
+  }
+  .road-line{
+    position:absolute;
+    bottom:60px;left:0;right:0;
+    height:6px;
+    background:repeating-linear-gradient(90deg,#f59e0b 0px,#f59e0b 80px,transparent 80px,transparent 140px);
+    opacity:.6;
+  }
+
+  /* Horizon glow */
+  .glow{
+    position:absolute;
+    bottom:180px;left:50%;
+    transform:translateX(-50%);
+    width:900px;height:180px;
+    background:radial-gradient(ellipse,rgba(37,99,235,.35) 0%,transparent 70%);
+  }
+
+  /* Truck SVG silhouette */
+  .truck-wrap{
+    position:absolute;
+    bottom:48px;
+    left:-20px;
+    opacity:.18;
+  }
+  .truck-wrap svg{
+    width:720px;
+    fill:#ffffff;
+  }
+
+  /* Stars */
+  .stars{
+    position:absolute;
+    top:0;left:0;right:0;bottom:0;
+    background-image:
+      radial-gradient(1.5px 1.5px at 10% 15%,rgba(255,255,255,.7),transparent),
+      radial-gradient(1px 1px at 25% 8%,rgba(255,255,255,.5),transparent),
+      radial-gradient(2px 2px at 42% 20%,rgba(255,255,255,.6),transparent),
+      radial-gradient(1px 1px at 58% 5%,rgba(255,255,255,.4),transparent),
+      radial-gradient(1.5px 1.5px at 75% 12%,rgba(255,255,255,.7),transparent),
+      radial-gradient(1px 1px at 88% 22%,rgba(255,255,255,.5),transparent),
+      radial-gradient(2px 2px at 5% 35%,rgba(255,255,255,.3),transparent),
+      radial-gradient(1px 1px at 92% 40%,rgba(255,255,255,.4),transparent),
+      radial-gradient(1.5px 1.5px at 35% 30%,rgba(255,255,255,.3),transparent);
+  }
+
+  /* Content */
+  .content{
+    position:relative;
+    z-index:10;
+    display:flex;
+    flex-direction:column;
+    height:100%;
+    padding:52px 64px 52px;
+  }
+
+  /* Logo / Brand */
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:36px;
+  }
+  .brand-dot{
+    width:44px;height:44px;
+    background:linear-gradient(135deg,#2563eb,#3b82f6);
+    border-radius:10px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:22px;font-weight:900;color:#fff;
+    box-shadow:0 0 20px rgba(37,99,235,.5);
+  }
+  .brand-name{
+    font-size:1.2rem;font-weight:700;color:#94a3b8;
+    letter-spacing:.05em;text-transform:uppercase;
+  }
+
+  /* Badge */
+  .badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:rgba(245,158,11,.15);
+    border:1px solid rgba(245,158,11,.4);
+    color:#fbbf24;
+    font-size:.85rem;
+    font-weight:700;
+    padding:6px 16px;
+    border-radius:100px;
+    margin-bottom:20px;
+    width:fit-content;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+  }
+  .badge-dot{width:7px;height:7px;background:#f59e0b;border-radius:50%}
+
+  /* Headline */
+  .headline{
+    font-size:4rem;
+    font-weight:900;
+    line-height:1.05;
+    color:#ffffff;
+    margin-bottom:8px;
+    letter-spacing:-.02em;
+  }
+  .headline span{
+    color:#f59e0b;
+  }
+
+  /* Sub headline */
+  .subhead{
+    font-size:1.35rem;
+    color:#93c5fd;
+    font-weight:600;
+    margin-bottom:36px;
+  }
+
+  /* Feature cards */
+  .features{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:16px;
+    margin-bottom:36px;
+  }
+  .feature{
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:14px;
+    padding:22px 20px;
+    backdrop-filter:blur(10px);
+  }
+  .feature-icon{font-size:1.8rem;margin-bottom:10px}
+  .feature-label{
+    font-size:.78rem;
+    font-weight:700;
+    color:#64748b;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    margin-bottom:4px;
+  }
+  .feature-value{
+    font-size:1.2rem;
+    font-weight:800;
+    color:#ffffff;
+    line-height:1.2;
+  }
+  .feature-value .highlight{color:#f59e0b}
+  .feature-sub{
+    font-size:.82rem;
+    color:#94a3b8;
+    margin-top:4px;
+  }
+
+  /* Big price callout */
+  .price-row{
+    display:flex;
+    align-items:center;
+    gap:24px;
+    background:linear-gradient(135deg,rgba(245,158,11,.2),rgba(245,158,11,.05));
+    border:1px solid rgba(245,158,11,.3);
+    border-radius:16px;
+    padding:22px 28px;
+    margin-bottom:28px;
+  }
+  .price-badge{
+    background:#f59e0b;
+    color:#0f1e3d;
+    font-size:2.6rem;
+    font-weight:900;
+    padding:10px 22px;
+    border-radius:12px;
+    white-space:nowrap;
+    line-height:1;
+  }
+  .price-badge sup{font-size:1.2rem;vertical-align:super}
+  .price-badge sub{font-size:1rem;font-weight:700}
+  .price-text h3{font-size:1.2rem;font-weight:800;color:#fbbf24;margin-bottom:4px}
+  .price-text p{font-size:.92rem;color:#cbd5e1;line-height:1.5}
+
+  /* CTA */
+  .cta-area{
+    display:flex;
+    align-items:center;
+    gap:24px;
+    margin-top:auto;
+    padding-top:8px;
+  }
+  .cta-btn{
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+    color:#fff;
+    font-size:1.05rem;
+    font-weight:800;
+    padding:16px 36px;
+    border-radius:12px;
+    text-decoration:none;
+    box-shadow:0 8px 32px rgba(37,99,235,.4);
+    letter-spacing:.01em;
+  }
+  .portal-url{
+    font-size:1.1rem;
+    font-weight:700;
+    color:#93c5fd;
+  }
+  .portal-url span{color:#60a5fa;font-size:.85rem;display:block;font-weight:500}
+
+  /* Bottom strip */
+  .bottom-strip{
+    position:absolute;
+    bottom:0;left:0;right:0;
+    height:6px;
+    background:linear-gradient(90deg,#2563eb,#f59e0b,#2563eb);
+  }
+
+  /* Driver figure (CSS art) */
+  .driver{
+    position:absolute;
+    right:52px;
+    bottom:44px;
+    z-index:5;
+  }
+  .driver svg{
+    width:280px;
+    opacity:.92;
+  }
+</style>
+</head>
+<body>
+<div class="flyer">
+  <!-- Background elements -->
+  <div class="stars"></div>
+  <div class="glow"></div>
+  <div class="road">
+    <div class="road-line"></div>
+  </div>
+
+  <!-- Truck silhouette -->
+  <div class="truck-wrap">
+    <svg viewBox="0 0 900 280" xmlns="http://www.w3.org/2000/svg">
+      <!-- Trailer -->
+      <rect x="0" y="60" width="580" height="160" rx="8"/>
+      <!-- Cab -->
+      <path d="M580 100 L580 220 L760 220 L760 130 L720 100 L650 60 L600 60 L580 60 Z"/>
+      <!-- Cab window -->
+      <path d="M605 65 L645 65 L700 100 L605 100 Z" fill="#0f1e3d" opacity="0.5"/>
+      <!-- Wheels -->
+      <circle cx="120" cy="228" r="32"/>
+      <circle cx="240" cy="228" r="32"/>
+      <circle cx="620" cy="228" r="32"/>
+      <circle cx="720" cy="228" r="32"/>
+      <!-- Exhaust stack -->
+      <rect x="755" y="30" width="14" height="80" rx="4"/>
+    </svg>
+  </div>
+
+  <!-- Driver figure -->
+  <div class="driver">
+    <svg viewBox="0 0 220 380" xmlns="http://www.w3.org/2000/svg" fill="none">
+      <!-- Shadow -->
+      <ellipse cx="110" cy="370" rx="70" ry="12" fill="rgba(0,0,0,0.3)"/>
+      <!-- Legs -->
+      <path d="M80 260 L70 360 L90 360 L100 280 L120 280 L130 360 L150 360 L140 260 Z" fill="#1e3a5f"/>
+      <!-- Boots -->
+      <path d="M68 355 L68 372 L95 372 L95 355 Z" fill="#0f1e3d"/>
+      <path d="M128 355 L128 372 L155 372 L155 355 Z" fill="#0f1e3d"/>
+      <!-- Body / jacket -->
+      <path d="M65 160 L60 265 L160 265 L155 160 C155 140 140 128 110 128 C80 128 65 140 65 160Z" fill="#1d4ed8"/>
+      <!-- Hi-vis stripe -->
+      <path d="M62 195 L65 210 L160 210 L158 195 Z" fill="#f59e0b" opacity="0.85"/>
+      <!-- Arms -->
+      <path d="M65 165 L30 240 L45 248 L78 178 Z" fill="#1d4ed8"/>
+      <path d="M155 165 L192 228 L178 238 L142 175 Z" fill="#1d4ed8"/>
+      <!-- Hands -->
+      <ellipse cx="36" cy="245" rx="12" ry="10" fill="#c9a07a"/>
+      <ellipse cx="186" cy="234" rx="12" ry="10" fill="#c9a07a"/>
+      <!-- Neck -->
+      <rect x="100" y="115" width="22" height="20" rx="6" fill="#c9a07a"/>
+      <!-- Head -->
+      <ellipse cx="111" cy="95" rx="38" ry="42" fill="#c9a07a"/>
+      <!-- Hard hat / cap -->
+      <path d="M73 85 C73 50 150 50 150 85 L155 88 L68 88 Z" fill="#1d4ed8"/>
+      <rect x="65" y="84" width="92" height="10" rx="5" fill="#1e40af"/>
+      <!-- Eyes -->
+      <ellipse cx="98" cy="96" rx="5" ry="5.5" fill="#1a1a1a"/>
+      <ellipse cx="124" cy="96" rx="5" ry="5.5" fill="#1a1a1a"/>
+      <ellipse cx="99.5" cy="94.5" rx="2" ry="2" fill="white"/>
+      <ellipse cx="125.5" cy="94.5" rx="2" ry="2" fill="white"/>
+      <!-- Smile -->
+      <path d="M97 110 Q111 122 126 110" stroke="#7a4a2a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <!-- Thumbs up on right hand -->
+      <path d="M178 220 L172 210 L168 212 L175 225 Z" fill="#c9a07a"/>
+      <path d="M172 210 L174 200 L180 201 L179 212 Z" fill="#c9a07a"/>
+    </svg>
+  </div>
+
+  <!-- Main content -->
+  <div class="content">
+    <div class="brand">
+      <div class="brand-dot">D</div>
+      <div class="brand-name">Doctors Place</div>
+    </div>
+
+    <div class="badge"><div class="badge-dot"></div> Nationwide DOT Compliance</div>
+
+    <div class="headline">
+      Stay Compliant.<br>
+      Stay on the <span>Road.</span>
+    </div>
+
+    <div class="subhead">Everything your CDL career needs — all in one place.</div>
+
+    <!-- Feature cards -->
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">&#127963;</div>
+        <div class="feature-label">DOT Physical</div>
+        <div class="feature-value">from <span class="highlight">$110</span></div>
+        <div class="feature-sub">FMCSA-certified · Same day cert</div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">&#128299;</div>
+        <div class="feature-label">Urine Drug Screen</div>
+        <div class="feature-value">from <span class="highlight">$69.99</span></div>
+        <div class="feature-sub">MRO-reviewed · 15,000+ sites</div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">&#127758;</div>
+        <div class="feature-label">Coverage</div>
+        <div class="feature-value"><span class="highlight">Nationwide</span></div>
+        <div class="feature-sub">All 50 states · Walk-in welcome</div>
+      </div>
+    </div>
+
+    <!-- Consortium price -->
+    <div class="price-row">
+      <div class="price-badge"><sup>$</sup>49<sub>/yr</sub></div>
+      <div class="price-text">
+        <h3>DOT Consortium Enrollment</h3>
+        <p>Stay FMCSA-compliant with random drug &amp; alcohol testing. Owner-operators and small fleets — enroll online today. No contracts. Certificates issued instantly.</p>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-area">
+      <div>
+        <div class="portal-url">
+          <span>Book online 24/7 at</span>
+          portal.dot-physical.net
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-strip"></div>
+</div>
+</body>
+</html>
