@@ -82,4 +82,35 @@
   <url><loc>https://www.dot-physical.net/dot-physical-wyoming.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.dot-physical.net/dot-physical-puerto-rico.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
+  <!-- City pages -->
+  <url><loc>https://www.dot-physical.net/cities/houston-tx.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.dot-physical.net/cities/dallas-tx.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.dot-physical.net/cities/san-antonio-tx.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.dot-physical.net/cities/fort-worth-tx.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.dot-physical.net/cities/miami-fl.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.dot-physical.net/cities/tampa-fl.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.dot-physical.net/cities/orlando-fl.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.dot-physical.net/cities/jacksonville-fl.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.dot-physical.net/cities/chicago-il.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.dot-physical.net/cities/atlanta-ga.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.dot-physical.net/cities/los-angeles-ca.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.dot-physical.net/cities/san-diego-ca.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.dot-physical.net/cities/phoenix-az.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.dot-physical.net/cities/denver-co.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.dot-physical.net/cities/nashville-tn.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.dot-physical.net/cities/memphis-tn.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.dot-physical.net/cities/philadelphia-pa.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.dot-physical.net/cities/columbus-oh.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.dot-physical.net/cities/cleveland-oh.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.dot-physical.net/cities/charlotte-nc.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.dot-physical.net/cities/seattle-wa.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.dot-physical.net/cities/las-vegas-nv.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.dot-physical.net/cities/detroit-mi.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.dot-physical.net/cities/minneapolis-mn.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.dot-physical.net/cities/kansas-city-mo.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.dot-physical.net/cities/indianapolis-in.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.dot-physical.net/cities/newark-nj.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.dot-physical.net/cities/new-york-city-ny.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.dot-physical.net/cities/new-orleans-la.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+
 </urlset>
