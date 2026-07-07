@@ -129,7 +129,7 @@
   ]
 }
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
@@ -142,10 +142,10 @@
     --radius: 16px; --radius-sm: 10px;
   }
   html { scroll-behavior: smooth; }
-  body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--heading); overflow-x: hidden; }
+  body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--heading); overflow-x: hidden; }
   /* NAV */
   nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.1rem 4rem; background: rgba(255,255,255,0.92); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
-  .nav-logo { font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 1.35rem; letter-spacing: -0.02em; display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--heading); }
+  .nav-logo { font-family: 'Inter', sans-serif; font-weight: 800; font-size: 1.35rem; letter-spacing: -0.02em; display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--heading); }
   .logo-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); display: inline-block; }
   .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
   .nav-links a { color: var(--body); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
@@ -158,7 +158,7 @@
   .hero-grid { position: absolute; inset: 0; z-index: 0; background-image: linear-gradient(rgba(26,86,219,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(26,86,219,0.04) 1px, transparent 1px); background-size: 60px 60px; mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 100%); }
   .hero-content { position: relative; z-index: 1; }
   .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--accent-light); border: 1px solid var(--border-strong); color: var(--accent); padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1.5rem; }
-  .hero h1 { font-family: 'Manrope', sans-serif; font-size: clamp(2.8rem, 5vw, 4.2rem); font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; color: var(--heading); margin-bottom: 1.5rem; }
+  .hero h1 { font-family: 'Inter', sans-serif; font-size: clamp(2.8rem, 5vw, 4.2rem); font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; color: var(--heading); margin-bottom: 1.5rem; }
   .hero h1 em { font-style: normal; color: var(--accent); }
   .hero-sub { color: var(--body); font-size: 1.1rem; line-height: 1.7; max-width: 480px; margin-bottom: 2.5rem; font-weight: 300; }
   .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
@@ -170,7 +170,7 @@
   .stat-card { background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem 2rem; box-shadow: var(--shadow); position: relative; overflow: hidden; }
   .stat-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--accent); }
   .stat-card.teal::before { background: var(--teal); }
-  .stat-num { font-family: 'Manrope', sans-serif; font-size: 2.6rem; font-weight: 800; line-height: 1; color: var(--heading); margin-bottom: 0.25rem; }
+  .stat-num { font-family: 'Inter', sans-serif; font-size: 2.6rem; font-weight: 800; line-height: 1; color: var(--heading); margin-bottom: 0.25rem; }
   .stat-num span { color: var(--accent); }
   .stat-card.teal .stat-num span { color: var(--teal); }
   .stat-label { color: var(--muted); font-size: 0.9rem; }
@@ -182,7 +182,7 @@
   /* SECTIONS */
   section { padding: 6rem 4rem; }
   .section-label { display: inline-block; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); margin-bottom: 1rem; }
-  .section-title { font-family: 'Manrope', sans-serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 1.25rem; color: var(--heading); }
+  .section-title { font-family: 'Inter', sans-serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 1.25rem; color: var(--heading); }
   .section-sub { color: var(--body); font-size: 1.05rem; line-height: 1.7; max-width: 560px; font-weight: 300; }
   /* SERVICES GRID */
   .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 3.5rem; }
@@ -190,10 +190,10 @@
   .service-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: var(--shadow-md); }
   .service-icon { width: 48px; height: 48px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; font-size: 1.4rem; }
   .icon-blue { background: var(--accent-light); } .icon-teal { background: var(--teal-light); } .icon-indigo { background: #EEF2FF; }
-  .service-card h3 { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 1.05rem; margin-bottom: 0.75rem; color: var(--heading); }
+  .service-card h3 { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 1.05rem; margin-bottom: 0.75rem; color: var(--heading); }
   .service-card p { color: var(--body); font-size: 0.9rem; line-height: 1.65; }
   .service-price { margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
-  .price-tag { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 1.3rem; color: var(--accent); }
+  .price-tag { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 1.3rem; color: var(--accent); }
   .price-book { font-size: 0.8rem; color: var(--teal); text-decoration: none; font-weight: 500; transition: color 0.2s; }
   .price-book:hover { color: var(--accent); }
   /* EMPLOYER */
@@ -202,12 +202,12 @@
   .employer-features { display: flex; flex-direction: column; gap: 1rem; }
   .feature-row { display: flex; gap: 1.25rem; align-items: flex-start; padding: 1.25rem 1.5rem; background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--radius-sm); transition: border-color 0.2s, box-shadow 0.2s; }
   .feature-row:hover { border-color: rgba(6,148,162,0.3); box-shadow: 0 2px 12px rgba(6,148,162,0.08); }
-  .feature-num { flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%; background: var(--teal-light); color: var(--teal); display: flex; align-items: center; justify-content: center; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 0.8rem; }
+  .feature-num { flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%; background: var(--teal-light); color: var(--teal); display: flex; align-items: center; justify-content: center; font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.8rem; }
   .feature-row h4 { font-weight: 500; font-size: 0.95rem; margin-bottom: 0.3rem; color: var(--heading); }
   .feature-row p { color: var(--body); font-size: 0.875rem; line-height: 1.6; }
   .portal-card { background: linear-gradient(135deg, #0C1B3A 0%, #1A3060 100%); border: 1px solid rgba(26,86,219,0.3); border-radius: 24px; padding: 2.5rem; position: relative; overflow: hidden; box-shadow: 0 8px 40px rgba(12,27,58,0.18); }
   .portal-card::after { content: ''; position: absolute; width: 300px; height: 300px; background: radial-gradient(circle, rgba(6,148,162,0.15) 0%, transparent 70%); top: -100px; right: -100px; pointer-events: none; }
-  .portal-card h3 { font-family: 'Manrope', sans-serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem; color: #fff; }
+  .portal-card h3 { font-family: 'Inter', sans-serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem; color: #fff; }
   .portal-card p { color: rgba(255,255,255,0.6); font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem; font-weight: 300; }
   .portal-features-list { list-style: none; margin-bottom: 2rem; }
   .portal-features-list li { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.8); font-size: 0.9rem; padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
@@ -219,8 +219,8 @@
   .how-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-top: 3.5rem; }
   .how-step { background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem 1.75rem; transition: box-shadow 0.2s; }
   .how-step:hover { box-shadow: var(--shadow-md); }
-  .step-num { font-family: 'Manrope', sans-serif; font-size: 3rem; font-weight: 800; color: rgba(26,86,219,0.09); line-height: 1; margin-bottom: 1rem; }
-  .how-step h4 { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; color: var(--heading); }
+  .step-num { font-family: 'Inter', sans-serif; font-size: 3rem; font-weight: 800; color: rgba(26,86,219,0.09); line-height: 1; margin-bottom: 1rem; }
+  .how-step h4 { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; color: var(--heading); }
   .how-step p { color: var(--body); font-size: 0.875rem; line-height: 1.6; }
   /* COVERAGE */
   .coverage-section { background: var(--bg-white); }
@@ -230,7 +230,7 @@
   .coverage-inner p { color: rgba(255,255,255,0.6); font-size: 1rem; line-height: 1.7; margin: 1rem 0 2rem; font-weight: 300; }
   .coverage-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
   .cov-stat { background: rgba(255,255,255,0.07); border-radius: var(--radius-sm); padding: 1.5rem; text-align: center; border: 1px solid rgba(255,255,255,0.1); }
-  .cov-num { font-family: 'Manrope', sans-serif; font-size: 2rem; font-weight: 800; color: #fff; margin-bottom: 0.3rem; }
+  .cov-num { font-family: 'Inter', sans-serif; font-size: 2rem; font-weight: 800; color: #fff; margin-bottom: 0.3rem; }
   .cov-label { color: rgba(255,255,255,0.5); font-size: 0.85rem; }
   /* INDUSTRIES */
   .industries-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 3rem; }
@@ -239,7 +239,7 @@
   .chip-icon { font-size: 1.5rem; } .chip-text { font-size: 0.9rem; color: var(--body); }
   /* CTA BANNER */
   .cta-banner { background: linear-gradient(135deg, var(--accent) 0%, #1447C0 100%); border-radius: 24px; padding: 4rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; margin: 0 4rem 6rem; box-shadow: 0 8px 40px rgba(26,86,219,0.3); }
-  .cta-banner h2 { font-family: 'Manrope', sans-serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 800; color: #fff; letter-spacing: -0.03em; max-width: 500px; line-height: 1.15; }
+  .cta-banner h2 { font-family: 'Inter', sans-serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 800; color: #fff; letter-spacing: -0.03em; max-width: 500px; line-height: 1.15; }
   .cta-banner p { color: rgba(255,255,255,0.7); font-size: 1rem; margin-top: 0.5rem; }
   .cta-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
   .btn-white { background: #fff; color: var(--accent); padding: 0.85rem 2rem; border-radius: 100px; font-weight: 600; font-size: 0.95rem; text-decoration: none; transition: transform 0.15s; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
@@ -252,7 +252,7 @@
   .footer-contact { margin-top: 1.25rem; }
   .footer-contact a { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.4); text-decoration: none; font-size: 0.875rem; margin-bottom: 0.5rem; transition: color 0.2s; }
   .footer-contact a:hover { color: #fff; }
-  .footer-col h5 { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.28); margin-bottom: 1rem; }
+  .footer-col h5 { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.28); margin-bottom: 1rem; }
   .footer-col a { display: block; color: rgba(255,255,255,0.52); text-decoration: none; font-size: 0.875rem; margin-bottom: 0.6rem; transition: color 0.2s; }
   .footer-col a:hover { color: #fff; }
   .footer-bottom { grid-column: 1 / -1; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.07); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
@@ -314,7 +314,7 @@
       </ul>
     </li>
     <li><a href="/order" class="nav-cta">Order Now</a></li>
-    <li><a href="http://portal.dot-physical.net" class="nav-book" target="_blank" rel="noopener">Employer Portal</a></li>
+    <li><a href="https://portal.dot-physical.net" class="nav-book" target="_blank" rel="noopener">Employer Portal</a></li>
   </ul>
 </nav>
 
@@ -380,13 +380,13 @@
 <section style="background:var(--bg-white);padding:4rem 4rem;">
   <div style="text-align:center;margin-bottom:2.5rem;">
     <div class="section-label">Who This Is For</div>
-    <h2 style="font-family:'Manrope',sans-serif;font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:700;letter-spacing:-0.02em;color:var(--heading);">We serve individuals <em style="font-style:normal;color:var(--teal);">and</em> any business</h2>
+    <h2 style="font-family:'Inter',sans-serif;font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:700;letter-spacing:-0.02em;color:var(--heading);">We serve individuals <em style="font-style:normal;color:var(--teal);">and</em> any business</h2>
   </div>
   <div class="audience-split" style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;max-width:900px;margin:0 auto;">
     <!-- Driver card -->
     <div style="background:linear-gradient(135deg,#EDF1FF 0%,#E4EDFF 100%);border:2px solid var(--border-strong);border-radius:20px;padding:2.5rem;display:flex;flex-direction:column;gap:1rem;">
       <div style="font-size:2.5rem;">🚛</div>
-      <h3 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:1.3rem;color:var(--heading);">CDL Driver or Owner-Operator</h3>
+      <h3 style="font-family:'Inter',sans-serif;font-weight:800;font-size:1.3rem;color:var(--heading);">CDL Driver or Owner-Operator</h3>
       <p style="color:var(--body);font-size:0.95rem;line-height:1.65;">Need your DOT physical card renewed? Book directly — no employer needed. We find a certified examiner near you in any state.</p>
       <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem;">
         <li style="display:flex;align-items:center;gap:8px;font-size:0.875rem;color:var(--body);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>DOT Physical Exam — $110</li>
@@ -399,7 +399,7 @@
     <!-- Employer card -->
     <div style="background:linear-gradient(135deg,#E0F7FA 0%,#E8F5E9 100%);border:2px solid rgba(6,148,162,0.25);border-radius:20px;padding:2.5rem;display:flex;flex-direction:column;gap:1rem;">
       <div style="font-size:2.5rem;">🏢</div>
-      <h3 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:1.3rem;color:var(--heading);">Any Business or Organization</h3>
+      <h3 style="font-family:'Inter',sans-serif;font-weight:800;font-size:1.3rem;color:var(--heading);">Any Business or Organization</h3>
       <p style="color:var(--body);font-size:0.95rem;line-height:1.65;">Trucking company, hospital, construction crew, school, staffing agency — if your employees need testing, we handle it all in one portal.</p>
       <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem;">
         <li style="display:flex;align-items:center;gap:8px;font-size:0.875rem;color:var(--body);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Drug screens, physicals &amp; titer tests</li>
@@ -458,7 +458,7 @@
           <li><span class="check">✓</span> MRO result review &amp; SAP referrals</li>
           <li><span class="check">✓</span> Audit-ready records — DOT, OSHA, JCAHO &amp; more</li>
         </ul>
-        <a href="http://portal.dot-physical.net" class="portal-cta" target="_blank" rel="noopener">Access Employer Portal <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="https://portal.dot-physical.net" class="portal-cta" target="_blank" rel="noopener">Access Employer Portal <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
       <div style="margin-top:1.25rem;padding:1.25rem 1.5rem;background:var(--bg-white);border:1px solid var(--border);border-radius:var(--radius-sm);">
         <p style="font-size:0.875rem;color:var(--muted);margin-bottom:0.5rem;">Questions about enrollment?</p>
@@ -486,7 +486,7 @@
       <div style="display:inline-block;font-size:0.75rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#4EEDC4;margin-bottom:1rem;">National Reach</div>
       <h2 class="section-title">Coast-to-coast coverage for any workforce</h2>
       <p>Whether your employees are in New Jersey or Nevada, our 15,000-location clinic network means testing is always within reach — for any service, any industry.</p>
-      <a href="http://portal.dot-physical.net/order" class="btn-primary" target="_blank" rel="noopener">Order Through Us →</a>
+      <a href="https://portal.dot-physical.net/order" class="btn-primary" target="_blank" rel="noopener">Order Through Us →</a>
     </div>
     <div class="coverage-stats">
       <div class="cov-stat"><div class="cov-num">15,000+</div><div class="cov-label">Partner Clinics</div></div>
@@ -544,7 +544,7 @@
   </div>
   <div class="footer-col">
     <h5>Employers</h5>
-    <a href="http://portal.dot-physical.net" target="_blank" rel="noopener">Employer Portal</a>
+    <a href="https://portal.dot-physical.net" target="_blank" rel="noopener">Employer Portal</a>
     <a href="ctpa.html">C/TPA Services</a>
     <a href="random-pool.html">Random Pool Program</a>
     <a href="mro.html">MRO Services</a>

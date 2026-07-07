@@ -32,7 +32,7 @@
   }
 }
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
@@ -45,9 +45,9 @@
     --radius: 16px; --radius-sm: 10px;
   }
   html { scroll-behavior: smooth; }
-  body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--heading); overflow-x: hidden; }
+  body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--heading); overflow-x: hidden; }
   nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.1rem 4rem; background: rgba(255,255,255,0.92); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
-  .nav-logo { font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 1.35rem; letter-spacing: -0.02em; display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--heading); }
+  .nav-logo { font-family: 'Inter', sans-serif; font-weight: 800; font-size: 1.35rem; letter-spacing: -0.02em; display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--heading); }
   .logo-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); display: inline-block; }
   .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
   .nav-links a { color: var(--body); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
@@ -58,7 +58,7 @@
   .hero-bg { position: absolute; inset: 0; z-index: 0; background: radial-gradient(ellipse 55% 65% at 88% 40%, rgba(6,148,162,0.07) 0%, transparent 70%); }
   .hero-content { position: relative; z-index: 1; max-width: 780px; }
   .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--accent-light); border: 1px solid var(--border-strong); color: var(--accent); padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1.5rem; }
-  .hero h1 { font-family: 'Manrope', sans-serif; font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; color: var(--heading); margin-bottom: 1.25rem; }
+  .hero h1 { font-family: 'Inter', sans-serif; font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; color: var(--heading); margin-bottom: 1.25rem; }
   .hero h1 em { font-style: normal; color: var(--accent); }
   .hero-sub { color: var(--body); font-size: 1.1rem; line-height: 1.7; max-width: 600px; margin-bottom: 2rem; font-weight: 300; }
   .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; margin-bottom: 2rem; }
@@ -73,34 +73,34 @@
   .trust-item strong { color: var(--heading); font-weight: 500; }
   section { padding: 5rem 4rem; }
   .section-label { display: inline-block; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); margin-bottom: 1rem; }
-  .section-title { font-family: 'Manrope', sans-serif; font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 1.25rem; color: var(--heading); }
+  .section-title { font-family: 'Inter', sans-serif; font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 1.25rem; color: var(--heading); }
   .section-sub { color: var(--body); font-size: 1.05rem; line-height: 1.7; max-width: 560px; font-weight: 300; }
   .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 3rem; }
   .service-card { background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; transition: border-color 0.3s, transform 0.2s, box-shadow 0.3s; }
   .service-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: var(--shadow-md); }
   .service-icon { width: 48px; height: 48px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; font-size: 1.4rem; }
   .icon-blue { background: var(--accent-light); } .icon-teal { background: var(--teal-light); } .icon-indigo { background: #EEF2FF; }
-  .service-card h3 { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 1.05rem; margin-bottom: 0.75rem; color: var(--heading); }
+  .service-card h3 { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 1.05rem; margin-bottom: 0.75rem; color: var(--heading); }
   .service-card p { color: var(--body); font-size: 0.9rem; line-height: 1.65; }
   .service-price { margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
-  .price-tag { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 1.3rem; color: var(--accent); }
+  .price-tag { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 1.3rem; color: var(--accent); }
   .price-book { font-size: 0.8rem; color: var(--teal); text-decoration: none; font-weight: 500; }
   .cities-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-top: 2.5rem; }
   .city-card { background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem 1.5rem; transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s; text-decoration: none; display: block; }
   .city-card:hover { border-color: var(--accent); box-shadow: var(--shadow); transform: translateY(-2px); }
-  .city-name { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 1rem; color: var(--heading); margin-bottom: 0.25rem; }
+  .city-name { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 1rem; color: var(--heading); margin-bottom: 0.25rem; }
   .city-sites { font-size: 0.8rem; color: var(--muted); }
   .how-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-top: 3rem; }
   .how-step { background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem 1.75rem; }
-  .step-num { font-family: 'Manrope', sans-serif; font-size: 3rem; font-weight: 800; color: rgba(26,86,219,0.09); line-height: 1; margin-bottom: 1rem; }
-  .how-step h4 { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; color: var(--heading); }
+  .step-num { font-family: 'Inter', sans-serif; font-size: 3rem; font-weight: 800; color: rgba(26,86,219,0.09); line-height: 1; margin-bottom: 1rem; }
+  .how-step h4 { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; color: var(--heading); }
   .how-step p { color: var(--body); font-size: 0.875rem; line-height: 1.6; }
   .faq-list { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1rem; max-width: 800px; }
   .faq-item { background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 1.5rem; }
-  .faq-q { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--heading); margin-bottom: 0.5rem; }
+  .faq-q { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--heading); margin-bottom: 0.5rem; }
   .faq-a { color: var(--body); font-size: 0.9rem; line-height: 1.65; }
   .cta-banner { background: linear-gradient(135deg, var(--accent) 0%, #1447C0 100%); border-radius: 24px; padding: 4rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; margin: 0 4rem 6rem; box-shadow: 0 8px 40px rgba(26,86,219,0.3); }
-  .cta-banner h2 { font-family: 'Manrope', sans-serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 800; color: #fff; letter-spacing: -0.03em; max-width: 500px; line-height: 1.15; }
+  .cta-banner h2 { font-family: 'Inter', sans-serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 800; color: #fff; letter-spacing: -0.03em; max-width: 500px; line-height: 1.15; }
   .cta-banner p { color: rgba(255,255,255,0.7); font-size: 1rem; margin-top: 0.5rem; }
   .cta-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
   .btn-white { background: #fff; color: var(--accent); padding: 0.85rem 2rem; border-radius: 100px; font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
@@ -109,7 +109,7 @@
   .footer-brand p { color: rgba(255,255,255,0.4); font-size: 0.875rem; line-height: 1.7; margin-top: 0.75rem; max-width: 260px; }
   .footer-contact { margin-top: 1.25rem; }
   .footer-contact a { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.4); text-decoration: none; font-size: 0.875rem; margin-bottom: 0.5rem; }
-  .footer-col h5 { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.28); margin-bottom: 1rem; }
+  .footer-col h5 { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.28); margin-bottom: 1rem; }
   .footer-col a { display: block; color: rgba(255,255,255,0.52); text-decoration: none; font-size: 0.875rem; margin-bottom: 0.6rem; }
   .footer-bottom { grid-column: 1 / -1; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.07); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
   .footer-bottom p { color: rgba(255,255,255,0.28); font-size: 0.8rem; }
@@ -153,7 +153,7 @@
       </ul>
     </li>
     <li><a href="/order" class="nav-cta">Order Now</a></li>
-    <li><a href="http://portal.dot-physical.net" class="nav-book" target="_blank" rel="noopener">Employer Portal</a></li>
+    <li><a href="https://portal.dot-physical.net" class="nav-book" target="_blank" rel="noopener">Employer Portal</a></li>
   </ul>
 </nav>
 
@@ -172,7 +172,7 @@
     <p class="hero-sub">DOT physicals, drug testing, titer tests, TB tests, respirator fit testing, and more — available at 300+ collection sites across Tennessee. Order online in minutes.</p>
     <div class="hero-actions">
       <a href="/order" class="btn-primary">Order in Tennessee Now <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-      <a href="http://portal.dot-physical.net" class="btn-secondary" target="_blank" rel="noopener">Employer Portal</a>
+      <a href="https://portal.dot-physical.net" class="btn-secondary" target="_blank" rel="noopener">Employer Portal</a>
     </div>
     <div style="display:flex;gap:1.5rem;flex-wrap:wrap;">
       <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;color:var(--muted);">
@@ -372,7 +372,7 @@
     <h5>Employers</h5>
     <a href="employers.html">Employer Overview</a>
     <a href="ctpa.html">C/TPA Program</a>
-    <a href="http://portal.dot-physical.net" target="_blank" rel="noopener">Employer Portal</a>
+    <a href="https://portal.dot-physical.net" target="_blank" rel="noopener">Employer Portal</a>
     <a href="cost-of-services.html">Pricing</a>
   </div>
   <div class="footer-col">

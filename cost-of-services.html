@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pricing & Cost of Services | Doctors Place</title>
 <meta name="description" content="Transparent pricing for DOT physicals, drug tests, consortium enrollment, titer testing, and more. No hidden fees. Doctors Place — affordable nationwide occupational health services.">
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
   :root{--bg:#F4F7FF;--bg-white:#FFFFFF;--accent:#1A56DB;--accent-dim:#1447C0;--accent-light:#EBF0FF;--teal:#0694A2;--teal-light:#E0F7FA;--heading:#0C1B3A;--body:#3D5280;--muted:#7A8FB8;--border:rgba(26,86,219,0.1);--border-strong:rgba(26,86,219,0.22);--shadow:0 2px 16px rgba(26,86,219,0.08);--shadow-md:0 6px 32px rgba(26,86,219,0.13);--radius:16px;--radius-sm:10px}
   html{scroll-behavior:smooth}
-  body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--heading);overflow-x:hidden}
+  body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--heading);overflow-x:hidden}
   nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 4rem;background:rgba(255,255,255,0.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
-  .nav-logo{font-family:'Manrope',sans-serif;font-weight:800;font-size:1.35rem;letter-spacing:-0.02em;display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--heading)}
+  .nav-logo{font-family:'Inter',sans-serif;font-weight:800;font-size:1.35rem;letter-spacing:-0.02em;display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--heading)}
   .logo-dot{width:10px;height:10px;border-radius:50%;background:var(--accent);display:inline-block}
   .nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
   .nav-links a{color:var(--body);text-decoration:none;font-size:0.9rem;transition:color 0.2s}
@@ -23,7 +23,7 @@
   .hero-grid{position:absolute;inset:0;z-index:0;background-image:linear-gradient(rgba(26,86,219,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(26,86,219,0.04) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 90% 90% at 50% 50%,black 10%,transparent 100%)}
   .page-hero-inner{position:relative;z-index:1;max-width:700px}
   .section-label{display:inline-block;font-size:0.75rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);margin-bottom:1rem}
-  .page-hero h1{font-family:'Manrope',sans-serif;font-size:clamp(2.2rem,4vw,3.4rem);font-weight:800;letter-spacing:-0.03em;color:var(--heading);margin-bottom:1rem;line-height:1.08}
+  .page-hero h1{font-family:'Inter',sans-serif;font-size:clamp(2.2rem,4vw,3.4rem);font-weight:800;letter-spacing:-0.03em;color:var(--heading);margin-bottom:1rem;line-height:1.08}
   .page-hero p{color:var(--body);font-size:1.05rem;line-height:1.7;font-weight:300;max-width:580px;margin-bottom:1.75rem}
   .hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
   .btn-primary{background:var(--accent);color:#fff;padding:0.85rem 2rem;border-radius:100px;font-weight:600;font-size:0.95rem;text-decoration:none;transition:transform 0.15s,background 0.2s;display:inline-flex;align-items:center;gap:8px;box-shadow:0 4px 16px rgba(26,86,219,0.3)}
@@ -31,17 +31,17 @@
   .btn-outline{color:var(--accent);border:1.5px solid var(--border-strong);padding:0.85rem 2rem;border-radius:100px;font-weight:500;font-size:0.95rem;text-decoration:none;transition:border-color 0.2s,background 0.2s;display:inline-flex;align-items:center;gap:8px}
   .btn-outline:hover{border-color:var(--accent);background:var(--accent-light)}
   .main{padding:5rem 4rem 6rem}
-  .section-title{font-family:'Manrope',sans-serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:700;letter-spacing:-0.02em;line-height:1.1;margin-bottom:1.25rem;color:var(--heading)}
+  .section-title{font-family:'Inter',sans-serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:700;letter-spacing:-0.02em;line-height:1.1;margin-bottom:1.25rem;color:var(--heading)}
   .section-sub{color:var(--body);font-size:1rem;line-height:1.75;max-width:600px;font-weight:300;margin-bottom:2rem}
   .price-table{width:100%;border-collapse:collapse;background:var(--bg-white);border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);margin-bottom:3rem}
-  .price-table th{background:var(--heading);color:rgba(255,255,255,0.85);font-family:'Manrope',sans-serif;font-size:0.8rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:1.1rem 1.5rem;text-align:left}
+  .price-table th{background:var(--heading);color:rgba(255,255,255,0.85);font-family:'Inter',sans-serif;font-size:0.8rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:1.1rem 1.5rem;text-align:left}
   .price-table td{padding:1rem 1.5rem;font-size:0.9rem;color:var(--body);border-top:1px solid var(--border);vertical-align:middle}
   .price-table tr:hover td{background:var(--bg)}
-  .price-table .price-col{font-family:'Manrope',sans-serif;font-weight:700;color:var(--accent);font-size:1rem;white-space:nowrap}
-  .price-table .cat-row td{background:var(--accent-light);font-family:'Manrope',sans-serif;font-weight:700;font-size:0.8rem;letter-spacing:0.05em;text-transform:uppercase;color:var(--accent);padding:0.7rem 1.5rem;border-top:2px solid var(--border-strong)}
+  .price-table .price-col{font-family:'Inter',sans-serif;font-weight:700;color:var(--accent);font-size:1rem;white-space:nowrap}
+  .price-table .cat-row td{background:var(--accent-light);font-family:'Inter',sans-serif;font-weight:700;font-size:0.8rem;letter-spacing:0.05em;text-transform:uppercase;color:var(--accent);padding:0.7rem 1.5rem;border-top:2px solid var(--border-strong)}
   .note{font-size:0.8rem;color:var(--muted);margin-bottom:2rem;line-height:1.6}
   .cta-banner{background:linear-gradient(135deg,var(--accent) 0%,#1447C0 100%);border-radius:24px;padding:3.5rem 4rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-top:4rem;box-shadow:0 8px 40px rgba(26,86,219,0.3)}
-  .cta-banner h2{font-family:'Manrope',sans-serif;font-size:clamp(1.5rem,2.5vw,2rem);font-weight:800;color:#fff;letter-spacing:-0.03em;max-width:450px;line-height:1.15}
+  .cta-banner h2{font-family:'Inter',sans-serif;font-size:clamp(1.5rem,2.5vw,2rem);font-weight:800;color:#fff;letter-spacing:-0.03em;max-width:450px;line-height:1.15}
   .cta-banner p{color:rgba(255,255,255,0.7);font-size:0.95rem;margin-top:0.4rem}
   .cta-actions{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
   .btn-white{background:#fff;color:var(--accent);padding:0.85rem 2rem;border-radius:100px;font-weight:600;font-size:0.95rem;text-decoration:none;transition:transform 0.15s;display:inline-flex;align-items:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,0.12)}
@@ -53,7 +53,7 @@
   .footer-contact{margin-top:1.25rem}
   .footer-contact a{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.4);text-decoration:none;font-size:0.875rem;margin-bottom:0.5rem;transition:color 0.2s}
   .footer-contact a:hover{color:#fff}
-  .footer-col h5{font-family:'Manrope',sans-serif;font-weight:700;font-size:0.8rem;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:1rem}
+  .footer-col h5{font-family:'Inter',sans-serif;font-weight:700;font-size:0.8rem;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:1rem}
   .footer-col a{display:block;color:rgba(255,255,255,0.52);text-decoration:none;font-size:0.875rem;margin-bottom:0.6rem;transition:color 0.2s}
   .footer-col a:hover{color:#fff}
   .footer-bottom{grid-column:1/-1;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.07);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
@@ -88,7 +88,7 @@
       </ul>
     </li>
     <li><a href="/order" class="nav-cta">Order Now</a></li>
-    <li><a href="http://portal.dot-physical.net" class="nav-book" target="_blank" rel="noopener">Employer Portal</a></li>
+    <li><a href="https://portal.dot-physical.net" class="nav-book" target="_blank" rel="noopener">Employer Portal</a></li>
   </ul>
 </nav>
 
@@ -182,7 +182,7 @@
   </div>
   <div class="footer-col">
     <h5>Employers</h5>
-    <a href="http://portal.dot-physical.net" target="_blank" rel="noopener">Employer Portal</a>
+    <a href="https://portal.dot-physical.net" target="_blank" rel="noopener">Employer Portal</a>
     <a href="ctpa.html">C/TPA Services</a>
     <a href="random-pool.html">Random Pool Program</a>
     <a href="mro.html">MRO Services</a>
