@@ -42,53 +42,62 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","AW-18074042476");</script>
   <link rel="stylesheet" href="../style.css" />
   <style>
-    .city-hero{background:linear-gradient(135deg,#1a3a5c 0%,#2563eb 100%);color:#fff;padding:72px 24px 56px;text-align:center}
+    .city-hero{background:linear-gradient(135deg,#0f172a 0%,#1d4ed8 100%);color:#fff;padding:72px 24px 56px;text-align:center}
     .city-hero h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;margin-bottom:16px;line-height:1.2}
     .city-hero p{font-size:1.15rem;max-width:640px;margin:0 auto 32px;opacity:.92}
     .city-hero .cta-btn{display:inline-block;background:#f59e0b;color:#1a1a1a;font-weight:700;font-size:1.1rem;padding:16px 40px;border-radius:8px;text-decoration:none;transition:background .2s}
     .city-hero .cta-btn:hover{background:#d97706}
     .trust-bar{background:#f0f9ff;border-bottom:1px solid #bae6fd;padding:20px 24px;display:flex;flex-wrap:wrap;gap:24px;justify-content:center;text-align:center}
     .trust-item{font-size:.95rem;color:#1e40af;font-weight:600}
-    .trust-item span{display:block;font-size:1.4rem;font-weight:800;color:#1a3a5c}
+    .trust-item span{display:block;font-size:1.4rem;font-weight:800;color:#0f172a}
     .section{padding:56px 24px;max-width:1100px;margin:0 auto}
-    .section h2{font-size:1.9rem;font-weight:800;color:#1a3a5c;margin-bottom:8px}
+    .section h2{font-size:1.9rem;font-weight:800;color:#0f172a;margin-bottom:8px}
     .section .sub{color:#64748b;margin-bottom:36px;font-size:1.05rem}
     .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
     .service-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:28px 24px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
-    .service-card h3{font-size:1.15rem;font-weight:700;color:#1a3a5c;margin-bottom:8px}
-    .service-card .price{font-size:1.5rem;font-weight:800;color:#2563eb;margin-bottom:8px}
+    .service-card h3{font-size:1.15rem;font-weight:700;color:#0f172a;margin-bottom:8px}
+    .service-card .price{font-size:1.5rem;font-weight:800;color:#1d4ed8;margin-bottom:8px}
     .service-card p{color:#64748b;font-size:.92rem;line-height:1.5}
     .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
     .why-card{background:#f8fafc;border-radius:12px;padding:28px 24px}
     .why-card .icon{font-size:2rem;margin-bottom:12px}
-    .why-card h3{font-size:1.05rem;font-weight:700;color:#1a3a5c;margin-bottom:6px}
+    .why-card h3{font-size:1.05rem;font-weight:700;color:#0f172a;margin-bottom:6px}
     .why-card p{color:#64748b;font-size:.9rem;line-height:1.5}
     .faq{max-width:780px;margin:0 auto}
     .faq-item{border-bottom:1px solid #e2e8f0;padding:20px 0}
-    .faq-item h3{font-size:1.05rem;font-weight:700;color:#1a3a5c;margin-bottom:8px}
+    .faq-item h3{font-size:1.05rem;font-weight:700;color:#0f172a;margin-bottom:8px}
     .faq-item p{color:#4b5563;font-size:.95rem;line-height:1.6}
-    .cta-banner{background:linear-gradient(135deg,#1a3a5c,#2563eb);color:#fff;padding:56px 24px;text-align:center;border-radius:16px;margin:40px 24px}
+    .cta-banner{background:linear-gradient(135deg,#0f172a,#1d4ed8);color:#fff;padding:56px 24px;text-align:center;border-radius:16px;margin:40px 24px}
     .cta-banner h2{font-size:1.9rem;font-weight:800;margin-bottom:12px}
     .cta-banner p{opacity:.9;margin-bottom:28px;font-size:1.05rem}
     .cta-banner a{display:inline-block;background:#f59e0b;color:#1a1a1a;font-weight:700;padding:16px 44px;border-radius:8px;text-decoration:none;font-size:1.05rem}
     .breadcrumb{background:#f8fafc;padding:12px 24px;font-size:.9rem;color:#64748b}
-    .breadcrumb a{color:#2563eb;text-decoration:none}
+    .breadcrumb a{color:#1d4ed8;text-decoration:none}
     .breadcrumb a:hover{text-decoration:underline}
     @media(max-width:600px){.trust-bar{gap:16px}}
   </style>
+<style id="wom-theme">
+  nav{background:#0d1b2a !important;backdrop-filter:none !important;border-bottom:none !important}
+  .nav-logo{color:#fff !important;gap:12px !important}
+  .nav-links a{color:#e2e8f0}
+  .nav-links a:hover{color:#fff}
+  .logo-badge{width:38px;height:38px;background:#fff;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;color:#0d1b2a;flex-shrink:0;letter-spacing:0}
+  .logo-text{display:flex;flex-direction:column;line-height:1.1;font-weight:800;letter-spacing:-0.01em;font-size:1.15rem}
+  .logo-tag{font-size:10.5px;font-weight:500;color:#93c5fd;letter-spacing:0}
+</style>
 </head>
 <body>
   <!-- Nav -->
   <nav class="site-nav">
     <div class="nav-inner">
       <a href="../index.html" class="nav-logo">
-        <img src="../dp-logo.png" alt="Doctors Place" height="38" />
+        <span class="logo-badge">DP</span><span class="logo-text">DOT Physical</span>
       </a>
       <ul class="nav-links">
         <li><a href="../services.html">Services</a></li>
         <li><a href="../states.html">Locations</a></li>
         <li><a href="../titers.html">Titer Tests</a></li>
-        <li><a href="https://portal.dot-physical.net/order" class="nav-cta">Order Now</a></li>
+        <li><a href="https://portal.workoccmed.com/order" class="nav-cta">Order Now</a></li>
       </ul>
     </div>
   </nav>
@@ -105,7 +114,7 @@
   <div class="city-hero">
     <h1>DOT Physical &amp; Drug Testing<br>in Nashville, TN</h1>
     <p>FMCSA-certified medical examiners serving Nashville's automotive parts, healthcare, and distribution sectors. Walk-in welcome â€” online booking available 24/7 with same-day results.</p>
-    <a href="https://portal.dot-physical.net/order" class="cta-btn">Book Your Appointment &rarr;</a>
+    <a href="https://portal.workoccmed.com/order" class="cta-btn">Book Your Appointment &rarr;</a>
   </div>
 
   <!-- Trust bar -->
@@ -202,7 +211,7 @@
     <div class="faq">
       <div class="faq-item">
         <h3>Where can I get a DOT physical near Nashville, </h3>
-        <p>Doctors Place has multiple collection and exam sites serving the Nashville area, including locations accessible from I-24, I-40, I-65. Book online at portal.dot-physical.net to find the nearest open slot.</p>
+        <p>Doctors Place has multiple collection and exam sites serving the Nashville area, including locations accessible from I-24, I-40, I-65. Book online at portal.workoccmed.com to find the nearest open slot.</p>
       </div>
       <div class="faq-item">
         <h3>How much does a DOT physical cost in </h3>
@@ -227,7 +236,7 @@
   <div class="cta-banner">
     <h2>Ready to Book in Nashville, </h2>
     <p>Join thousands of CDL drivers who trust Doctors Place for fast, compliant DOT physicals.</p>
-    <a href="https://portal.dot-physical.net/order">Order Now — It Only Takes 2 Minutes</a>
+    <a href="https://portal.workoccmed.com/order">Order Now — It Only Takes 2 Minutes</a>
   </div>
 
   <!-- Footer -->

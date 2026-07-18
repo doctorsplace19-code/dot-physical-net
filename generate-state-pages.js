@@ -1288,7 +1288,7 @@ ${citiesHtml}
 <footer>
   <div class="footer-brand">
     <a href="index.html" class="nav-logo" style="color:#fff;"><span class="logo-dot"></span>Doctors Place</a>
-    <p>A Doctors Place company. Providing fast, reliable, FMCSA-compliant DOT physicals and drug testing services nationwide &mdash; including all of ${state.name}.</p>
+    <p>DOT Physical and WorkOccMed are services provided by Doctors Place, LLC. FMCSA-compliant DOT physicals and drug testing services nationwide &mdash; including all of ${state.name}.</p>
     <div class="footer-contact">
       <a href="tel:8882334567">📞 888-233-4567</a>
       <a href="contact.html">📍 75 Summit Ave, Hackensack, NJ 07601</a>
@@ -1320,7 +1320,7 @@ ${citiesHtml}
     <a href="who-we-serve.html">All States &rarr;</a>
   </div>
   <div class="footer-bottom">
-    <p>&copy; 2025 Doctors Place. All rights reserved.</p>
+    <p>&copy; 2026 DOT Physical &middot; DOT Physical and WorkOccMed are services provided by Doctors Place, LLC.</p>
     <p>DOT physicals &amp; drug testing nationwide &mdash; including ${state.cities.slice(0,3).map(c => c.name).join(', ')}, and all of ${state.name}.</p>
   </div>
 </footer>

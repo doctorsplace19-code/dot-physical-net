@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  :root{--bg:#F4F7FF;--bg-white:#FFFFFF;--accent:#1A56DB;--accent-dim:#1447C0;--accent-light:#EBF0FF;--teal:#0694A2;--teal-light:#E0F7FA;--heading:#0C1B3A;--body:#3D5280;--muted:#7A8FB8;--border:rgba(26,86,219,0.1);--border-strong:rgba(26,86,219,0.22);--shadow:0 2px 16px rgba(26,86,219,0.08);--shadow-md:0 6px 32px rgba(26,86,219,0.13);--radius:16px;--radius-sm:10px}
+  :root{--bg:#f8fafc;--bg-white:#FFFFFF;--accent:#1d4ed8;--accent-dim:#1e40af;--accent-light:#dbeafe;--teal:#1d4ed8;--teal-light:#dbeafe;--heading:#0f172a;--body:#374151;--muted:#6b7280;--border:rgba(29,78,216,0.1);--border-strong:rgba(29,78,216,0.22);--shadow:0 2px 16px rgba(29,78,216,0.08);--shadow-md:0 6px 32px rgba(29,78,216,0.13);--radius:16px;--radius-sm:10px}
   body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--heading);min-height:100vh;display:flex;flex-direction:column}
   nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 4rem;background:rgba(255,255,255,0.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
   .nav-logo{font-family:'Inter',sans-serif;font-weight:800;font-size:1.35rem;letter-spacing:-0.02em;display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--heading)}
@@ -17,13 +17,13 @@
   .nav-links a{color:var(--body);text-decoration:none;font-size:0.9rem;transition:color 0.2s}
   .nav-cta{background:var(--accent)!important;color:#fff!important;padding:0.55rem 1.4rem;border-radius:100px;font-weight:600!important;font-size:0.875rem!important}
   .main{flex:1;display:flex;align-items:center;justify-content:center;padding:8rem 2rem 4rem;position:relative;overflow:hidden}
-  .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(26,86,219,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(26,86,219,0.04) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 10%,transparent 100%)}
+  .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(29,78,216,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(29,78,216,0.04) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 10%,transparent 100%)}
   .inner{position:relative;z-index:1;text-align:center;max-width:600px}
   .four-oh-four{font-family:'Inter',sans-serif;font-size:clamp(7rem,18vw,12rem);font-weight:800;line-height:1;letter-spacing:-0.05em;background:linear-gradient(135deg,var(--accent),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:0}
   .inner h1{font-family:'Inter',sans-serif;font-size:clamp(1.5rem,3vw,2.2rem);font-weight:700;color:var(--heading);letter-spacing:-0.02em;margin-bottom:1rem}
   .inner p{color:var(--body);font-size:1rem;line-height:1.7;font-weight:300;margin-bottom:2.5rem;max-width:440px;margin-left:auto;margin-right:auto}
   .btn-group{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:3.5rem}
-  .btn-primary{background:var(--accent);color:#fff;padding:0.85rem 2rem;border-radius:100px;font-weight:600;font-size:0.95rem;text-decoration:none;transition:transform 0.15s,background 0.2s;display:inline-flex;align-items:center;gap:8px;box-shadow:0 4px 16px rgba(26,86,219,0.3)}
+  .btn-primary{background:var(--accent);color:#fff;padding:0.85rem 2rem;border-radius:100px;font-weight:600;font-size:0.95rem;text-decoration:none;transition:transform 0.15s,background 0.2s;display:inline-flex;align-items:center;gap:8px;box-shadow:0 4px 16px rgba(29,78,216,0.3)}
   .btn-primary:hover{transform:translateY(-2px);background:var(--accent-dim)}
   .btn-outline{color:var(--accent);border:1.5px solid var(--border-strong);padding:0.85rem 2rem;border-radius:100px;font-weight:500;font-size:0.95rem;text-decoration:none;transition:border-color 0.2s,background 0.2s;display:inline-flex;align-items:center;gap:8px}
   .btn-outline:hover{border-color:var(--accent);background:var(--accent-light)}
@@ -43,18 +43,27 @@
 
   .nav-has-dropdown{position:relative}
   .nav-dropdown-toggle{display:flex;align-items:center;gap:4px;cursor:pointer}
-  .nav-dropdown{display:none;position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%);background:#fff;border:1px solid rgba(26,86,219,0.12);border-radius:12px;box-shadow:0 8px 32px rgba(26,86,219,0.13);padding:0.5rem;min-width:160px;list-style:none;z-index:200}
-  .nav-dropdown li a{display:block;padding:0.6rem 1rem;color:var(--body,#3D5280);font-size:0.875rem;text-decoration:none;border-radius:8px;white-space:nowrap;transition:background 0.15s,color 0.15s}
-  .nav-dropdown li a:hover{background:var(--accent-light,#EBF0FF);color:var(--accent,#1A56DB)}
+  .nav-dropdown{display:none;position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%);background:#fff;border:1px solid rgba(29,78,216,0.12);border-radius:12px;box-shadow:0 8px 32px rgba(29,78,216,0.13);padding:0.5rem;min-width:160px;list-style:none;z-index:200}
+  .nav-dropdown li a{display:block;padding:0.6rem 1rem;color:var(--body,#374151);font-size:0.875rem;text-decoration:none;border-radius:8px;white-space:nowrap;transition:background 0.15s,color 0.15s}
+  .nav-dropdown li a:hover{background:var(--accent-light,#dbeafe);color:var(--accent,#1d4ed8)}
   .nav-has-dropdown:hover .nav-dropdown{display:block}
-  .nav-book{background:var(--accent-light,#EBF0FF)!important;color:var(--accent,#1A56DB)!important;padding:0.5rem 1.2rem!important;border-radius:100px!important;font-weight:600!important}
+  .nav-book{background:var(--accent-light,#dbeafe)!important;color:var(--accent,#1d4ed8)!important;padding:0.5rem 1.2rem!important;border-radius:100px!important;font-weight:600!important}
   /* nav-dropdown-injected */
 </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18074042476"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","AW-18074042476");</script>
+<style id="wom-theme">
+  nav{background:#0d1b2a !important;backdrop-filter:none !important;border-bottom:none !important}
+  .nav-logo{color:#fff !important;gap:12px !important}
+  .nav-links a{color:#e2e8f0}
+  .nav-links a:hover{color:#fff}
+  .logo-badge{width:38px;height:38px;background:#fff;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;color:#0d1b2a;flex-shrink:0;letter-spacing:0}
+  .logo-text{display:flex;flex-direction:column;line-height:1.1;font-weight:800;letter-spacing:-0.01em;font-size:1.15rem}
+  .logo-tag{font-size:10.5px;font-weight:500;color:#93c5fd;letter-spacing:0}
+</style>
 </head>
 <body>
 <nav>
-  <a href="index.html" class="nav-logo"><span class="logo-dot"></span>Doctors Place</a>
+  <a href="index.html" class="nav-logo"><span class="logo-badge">DP</span><span class="logo-text">DOT Physical</span></a>
   <ul class="nav-links">
     <li><a href="services.html">Services</a></li>
     <li><a href="/order">For Drivers</a></li><li><a href="employers.html">For Employers</a></li>
@@ -67,8 +76,8 @@
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
     </li>
-    <li><a href="/order" class="nav-cta">Order Now</a></li>
-    <li><a href="https://portal.dot-physical.net" class="nav-book" target="_blank" rel="noopener">Employer Portal</a></li>
+    <li><a href="virtual-urgent-care.html" style="color:#60a5fa;font-weight:600;">Virtual Care</a></li><li><a href="/order" class="nav-cta">Order Now</a></li>
+    <li><a href="https://portal.workoccmed.com" class="nav-book" target="_blank" rel="noopener">Employer Portal</a></li>
   </ul>
 </nav>
 
@@ -98,7 +107,7 @@
 
 <footer>
   <div class="footer-left">
-    <a href="index.html" class="nav-logo" style="color:#fff;font-size:1rem;"><span class="logo-dot"></span>Doctors Place</a>
+    <a href="index.html" class="nav-logo" style="color:#fff;font-size:1rem;"><span class="logo-badge">DP</span><span class="logo-text">DOT Physical</span></a>
     <p>&copy; 2025 Doctors Place. All rights reserved.</p>
   </div>
   <div class="footer-links">
