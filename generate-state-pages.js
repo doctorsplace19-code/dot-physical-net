@@ -984,7 +984,7 @@ const states = [
 ]
 
 function generatePage(state) {
-  const citiesHtml = state.cities.map(c => `    <a href="book.html" class="city-card">
+  const citiesHtml = state.cities.map(c => `    <a href="https://portal.workoccmed.com/order" class="city-card">
       <div class="city-name">${c.name}</div>
       <div class="city-sites">${c.sites} collection sites</div>
     </a>`).join('\n')
@@ -1127,15 +1127,15 @@ function generatePage(state) {
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo"><span class="logo-dot"></span>Doctors Place</a>
+  <a href="index.html" class="nav-logo"><span class="logo-dot"></span>DOT Physical</a>
   <ul class="nav-links">
     <li><a href="services.html">Services</a></li>
     <li><a href="employers.html">Employers</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="blog.html">Blog</a></li>
     <li><a href="contact.html">Contact Us</a></li>
-    <li><a href="book.html">Book Now</a></li>
-    <li><a href="http://portal.dot-physical.net" class="nav-cta" target="_blank" rel="noopener">Employer Portal</a></li>
+    <li><a href="https://portal.workoccmed.com/order">Book Now</a></li>
+    <li><a href="https://portal.workoccmed.com" class="nav-cta" target="_blank" rel="noopener">Employer Portal</a></li>
   </ul>
 </nav>
 
@@ -1153,8 +1153,8 @@ function generatePage(state) {
     <h1>Drug Testing &amp; Occupational Health<br>in <em>${state.name}</em> &mdash; Order Online</h1>
     <p class="hero-sub">DOT physicals, drug testing, titer tests, TB tests, respirator fit testing, and more — available at ${state.sites} collection sites across ${state.name}. Order online in minutes.</p>
     <div class="hero-actions">
-      <a href="book.html" class="btn-primary">Order in ${state.name} Now <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-      <a href="http://portal.dot-physical.net" class="btn-secondary" target="_blank" rel="noopener">Employer Portal</a>
+      <a href="https://portal.workoccmed.com/order" class="btn-primary">Order in ${state.name} Now <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="https://portal.workoccmed.com" class="btn-secondary" target="_blank" rel="noopener">Employer Portal</a>
     </div>
     <div style="display:flex;gap:1.5rem;flex-wrap:wrap;">
       <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;color:var(--muted);">
@@ -1189,13 +1189,13 @@ function generatePage(state) {
       <div class="service-icon icon-blue">🚛</div>
       <h3>DOT Physical Exam &mdash; ${state.name}</h3>
       <p>FMCSA-certified medical exams for CDL holders anywhere in ${state.name}. Same-day medical certificate.</p>
-      <div class="service-price"><span class="price-tag">$110</span><a href="book.html" class="price-book">Order Now &rarr;</a></div>
+      <div class="service-price"><span class="price-tag">$110</span><a href="https://portal.workoccmed.com/order" class="price-book">Order Now &rarr;</a></div>
     </div>
     <div class="service-card">
       <div class="service-icon icon-teal">🔬</div>
       <h3>DOT &amp; Non-DOT Drug Screens &mdash; ${state.abbr}</h3>
       <p>5-panel DOT urine test (49 CFR Part 40) or company-policy non-DOT panels. MRO-reviewed. Results in 24 hours.</p>
-      <div class="service-price"><span class="price-tag">From $55</span><a href="book.html" class="price-book">Order Now &rarr;</a></div>
+      <div class="service-price"><span class="price-tag">From $55</span><a href="https://portal.workoccmed.com/order" class="price-book">Order Now &rarr;</a></div>
     </div>
     <div class="service-card">
       <div class="service-icon icon-indigo">🧫</div>
@@ -1207,13 +1207,13 @@ function generatePage(state) {
       <div class="service-icon icon-blue">💉</div>
       <h3>TB / PPD Skin Test &mdash; ${state.abbr}</h3>
       <p>TB skin test placement and 48–72 hour reading for pre-employment and annual occupational health requirements in ${state.name}.</p>
-      <div class="service-price"><span class="price-tag">$65</span><a href="book.html" class="price-book">Order Now &rarr;</a></div>
+      <div class="service-price"><span class="price-tag">$65</span><a href="https://portal.workoccmed.com/order" class="price-book">Order Now &rarr;</a></div>
     </div>
     <div class="service-card">
       <div class="service-icon icon-teal">😷</div>
       <h3>Respirator Fit Testing &mdash; ${state.abbr}</h3>
       <p>OSHA-compliant qualitative and quantitative fit testing for healthcare workers, first responders, and industrial employees in ${state.name}.</p>
-      <div class="service-price"><span class="price-tag">$60</span><a href="book.html" class="price-book">Order Now &rarr;</a></div>
+      <div class="service-price"><span class="price-tag">$60</span><a href="https://portal.workoccmed.com/order" class="price-book">Order Now &rarr;</a></div>
     </div>
     <div class="service-card">
       <div class="service-icon icon-indigo">🏥</div>
@@ -1280,14 +1280,14 @@ ${citiesHtml}
     <p>${state.sites} ${state.name} sites. Any service. Any city. Order in minutes.</p>
   </div>
   <div class="cta-actions">
-    <a href="book.html" class="btn-white">Order Now &mdash; Any ${state.abbr} City</a>
+    <a href="https://portal.workoccmed.com/order" class="btn-white">Order Now &mdash; Any ${state.abbr} City</a>
     <a href="tel:8882334567" class="btn-outline-white">Call 888-233-4567</a>
   </div>
 </div>
 
 <footer>
   <div class="footer-brand">
-    <a href="index.html" class="nav-logo" style="color:#fff;"><span class="logo-dot"></span>Doctors Place</a>
+    <a href="index.html" class="nav-logo" style="color:#fff;"><span class="logo-dot"></span>DOT Physical</a>
     <p>DOT Physical and WorkOccMed are services provided by Doctors Place, LLC. FMCSA-compliant DOT physicals and drug testing services nationwide &mdash; including all of ${state.name}.</p>
     <div class="footer-contact">
       <a href="tel:8882334567">📞 888-233-4567</a>
@@ -1307,7 +1307,7 @@ ${citiesHtml}
     <h5>Employers</h5>
     <a href="employers.html">Employer Overview</a>
     <a href="ctpa.html">C/TPA Program</a>
-    <a href="http://portal.dot-physical.net" target="_blank" rel="noopener">Employer Portal</a>
+    <a href="https://portal.workoccmed.com" target="_blank" rel="noopener">Employer Portal</a>
     <a href="cost-of-services.html">Pricing</a>
   </div>
   <div class="footer-col">
