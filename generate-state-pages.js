@@ -1,4 +1,4 @@
-/**
+﻿/**
  * State landing page generator for Doctors Place / dot-physical.net
  *
  * Run with: node generate-state-pages.js
@@ -51,7 +51,7 @@ const states = [
       { name: 'Lakeland', sites: '20+' },
       { name: 'All Other FL Cities', sites: 'Statewide coverage' },
     ],
-    faqExtra: 'Florida\'s port cities — Miami, Jacksonville, and Tampa — are among the busiest truck corridors in the Southeast. We cover every I-95 and I-75 corridor stop.',
+    faqExtra: 'Florida\'s port cities â€” Miami, Jacksonville, and Tampa â€” are among the busiest truck corridors in the Southeast. We cover every I-95 and I-75 corridor stop.',
   },
   {
     slug: 'illinois',
@@ -114,7 +114,7 @@ const states = [
       { name: 'Mansfield', sites: '10+' },
       { name: 'All Other OH Cities', sites: 'Statewide coverage' },
     ],
-    faqExtra: 'Ohio sits at the crossroads of I-70, I-71, I-75, and I-80 — making it one of the highest-traffic freight states in the Midwest. We cover all major Ohio trucking corridors.',
+    faqExtra: 'Ohio sits at the crossroads of I-70, I-71, I-75, and I-80 â€” making it one of the highest-traffic freight states in the Midwest. We cover all major Ohio trucking corridors.',
   },
   {
     slug: 'pennsylvania',
@@ -429,7 +429,7 @@ const states = [
       { name: 'Moorhead', sites: '6+' },
       { name: 'All Other MN Cities', sites: 'Statewide coverage' },
     ],
-    faqExtra: 'Minnesota is a major agricultural freight and healthcare employment state. The Twin Cities metro is one of the largest healthcare employer markets in the upper Midwest — a key market for titer tests and occupational physicals.',
+    faqExtra: 'Minnesota is a major agricultural freight and healthcare employment state. The Twin Cities metro is one of the largest healthcare employer markets in the upper Midwest â€” a key market for titer tests and occupational physicals.',
   },
   {
     slug: 'louisiana',
@@ -597,7 +597,7 @@ const states = [
       { name: 'Hot Springs', sites: '5+' },
       { name: 'All Other AR Cities', sites: 'Statewide coverage' },
     ],
-    faqExtra: 'Northwest Arkansas — home to Walmart headquarters and a dense supplier network — is one of the fastest-growing logistics markets in the US. The state is also a major trucking corridor between the Midwest and Gulf Coast.',
+    faqExtra: 'Northwest Arkansas â€” home to Walmart headquarters and a dense supplier network â€” is one of the fastest-growing logistics markets in the US. The state is also a major trucking corridor between the Midwest and Gulf Coast.',
   },
   {
     slug: 'mississippi',
@@ -786,7 +786,7 @@ const states = [
       { name: 'Bristol', sites: '4+' },
       { name: 'All Other CT Cities', sites: 'Statewide coverage' },
     ],
-    faqExtra: 'Connecticut\'s dense healthcare workforce — anchored by Yale New Haven Health and Hartford HealthCare — creates strong demand for titer tests, TB screenings, and pre-employment physicals alongside DOT compliance.',
+    faqExtra: 'Connecticut\'s dense healthcare workforce â€” anchored by Yale New Haven Health and Hartford HealthCare â€” creates strong demand for titer tests, TB screenings, and pre-employment physicals alongside DOT compliance.',
   },
   {
     slug: 'new-jersey',
@@ -886,7 +886,7 @@ const states = [
       { name: 'East Providence', sites: '4+' },
       { name: 'All Other RI Cities', sites: 'Statewide coverage' },
     ],
-    faqExtra: 'Rhode Island\'s dense healthcare and manufacturing workforce — along with its position on the I-95 Northeast freight corridor — drives demand for occupational health services including titer tests and pre-employment physicals.',
+    faqExtra: 'Rhode Island\'s dense healthcare and manufacturing workforce â€” along with its position on the I-95 Northeast freight corridor â€” drives demand for occupational health services including titer tests and pre-employment physicals.',
   },
   {
     slug: 'delaware',
@@ -901,7 +901,7 @@ const states = [
       { name: 'Smyrna', sites: '3+' },
       { name: 'All Other DE Cities', sites: 'Statewide coverage' },
     ],
-    faqExtra: 'Delaware sits on one of the busiest freight corridors in the US — the I-95 Northeast megaregion. Its pharmaceutical and chemical industries also create strong occupational health testing demand.',
+    faqExtra: 'Delaware sits on one of the busiest freight corridors in the US â€” the I-95 Northeast megaregion. Its pharmaceutical and chemical industries also create strong occupational health testing demand.',
   },
   {
     slug: 'south-dakota',
@@ -984,7 +984,7 @@ const states = [
 ]
 
 function generatePage(state) {
-  const citiesHtml = state.cities.map(c => `    <a href="https://portal.workoccmed.com/order" class="city-card">
+  const citiesHtml = state.cities.map(c => `    <a href="https://portal.dot-physical.net/order" class="city-card">
       <div class="city-name">${c.name}</div>
       <div class="city-sites">${c.sites} collection sites</div>
     </a>`).join('\n')
@@ -995,14 +995,14 @@ function generatePage(state) {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DOT Physicals, Drug Testing & Occupational Health in ${state.name} | Doctors Place</title>
-<meta name="description" content="Order DOT physicals, drug tests, titer tests, TB tests, and more anywhere in ${state.name}. ${state.sites} collection sites statewide. Serving CDL drivers, healthcare workers, and all employers. Results in 24–48 hours.">
+<meta name="description" content="Order DOT physicals, drug tests, titer tests, TB tests, and more anywhere in ${state.name}. ${state.sites} collection sites statewide. Serving CDL drivers, healthcare workers, and all employers. Results in 24â€“48 hours.">
 <meta name="keywords" content="DOT physical ${state.name}, DOT drug test ${state.name}, CDL physical ${state.abbr}, occupational health ${state.name}, MMR titer test ${state.name}, TB test ${state.name}, non-DOT drug screen ${state.name}, pre-employment physical ${state.name}, FMCSA physical ${state.name}">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.dot-physical.net/dot-physical-${state.slug}.html">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.dot-physical.net/dot-physical-${state.slug}.html">
 <meta property="og:title" content="DOT Physicals, Drug Testing & Occupational Health in ${state.name} | Doctors Place">
-<meta property="og:description" content="Order DOT physicals, drug tests, titer tests, TB tests, and more anywhere in ${state.name}. ${state.sites} collection sites statewide. Results in 24–48 hours.">
+<meta property="og:description" content="Order DOT physicals, drug tests, titer tests, TB tests, and more anywhere in ${state.name}. ${state.sites} collection sites statewide. Results in 24â€“48 hours.">
 <meta property="og:site_name" content="Doctors Place">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="DOT Physicals, Drug Testing & Occupational Health in ${state.name} | Doctors Place">
@@ -1134,8 +1134,8 @@ function generatePage(state) {
     <li><a href="about.html">About</a></li>
     <li><a href="blog.html">Blog</a></li>
     <li><a href="contact.html">Contact Us</a></li>
-    <li><a href="https://portal.workoccmed.com/order">Book Now</a></li>
-    <li><a href="https://portal.workoccmed.com" class="nav-cta" target="_blank" rel="noopener">Employer Portal</a></li>
+    <li><a href="https://portal.dot-physical.net/order">Book Now</a></li>
+    <li><a href="https://portal.dot-physical.net" class="nav-cta" target="_blank" rel="noopener">Employer Portal</a></li>
   </ul>
 </nav>
 
@@ -1151,10 +1151,10 @@ function generatePage(state) {
       ${state.name} &middot; Occupational Health &middot; ${state.sites} Sites
     </div>
     <h1>Drug Testing &amp; Occupational Health<br>in <em>${state.name}</em> &mdash; Order Online</h1>
-    <p class="hero-sub">DOT physicals, drug testing, titer tests, TB tests, respirator fit testing, and more — available at ${state.sites} collection sites across ${state.name}. Order online in minutes.</p>
+    <p class="hero-sub">DOT physicals, drug testing, titer tests, TB tests, respirator fit testing, and more â€” available at ${state.sites} collection sites across ${state.name}. Order online in minutes.</p>
     <div class="hero-actions">
-      <a href="https://portal.workoccmed.com/order" class="btn-primary">Order in ${state.name} Now <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-      <a href="https://portal.workoccmed.com" class="btn-secondary" target="_blank" rel="noopener">Employer Portal</a>
+      <a href="https://portal.dot-physical.net/order" class="btn-primary">Order in ${state.name} Now <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="https://portal.dot-physical.net" class="btn-secondary" target="_blank" rel="noopener">Employer Portal</a>
     </div>
     <div style="display:flex;gap:1.5rem;flex-wrap:wrap;">
       <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;color:var(--muted);">
@@ -1183,47 +1183,47 @@ function generatePage(state) {
 <section id="services" style="background:var(--bg-white);">
   <div class="section-label">Services in ${state.name}</div>
   <h2 class="section-title">Occupational health services for<br>${state.name} employers &amp; individuals</h2>
-  <p class="section-sub">We're not just DOT. From CDL exams and drug screens to titer tests, TB testing, and fit testing — all available at ${state.sites} ${state.name} collection sites.</p>
+  <p class="section-sub">We're not just DOT. From CDL exams and drug screens to titer tests, TB testing, and fit testing â€” all available at ${state.sites} ${state.name} collection sites.</p>
   <div class="services-grid">
     <div class="service-card">
-      <div class="service-icon icon-blue">🚛</div>
+      <div class="service-icon icon-blue">ðŸš›</div>
       <h3>DOT Physical Exam &mdash; ${state.name}</h3>
       <p>FMCSA-certified medical exams for CDL holders anywhere in ${state.name}. Same-day medical certificate.</p>
-      <div class="service-price"><span class="price-tag">$110</span><a href="https://portal.workoccmed.com/order" class="price-book">Order Now &rarr;</a></div>
+      <div class="service-price"><span class="price-tag">$110</span><a href="https://portal.dot-physical.net/order" class="price-book">Order Now &rarr;</a></div>
     </div>
     <div class="service-card">
-      <div class="service-icon icon-teal">🔬</div>
+      <div class="service-icon icon-teal">ðŸ”¬</div>
       <h3>DOT &amp; Non-DOT Drug Screens &mdash; ${state.abbr}</h3>
       <p>5-panel DOT urine test (49 CFR Part 40) or company-policy non-DOT panels. MRO-reviewed. Results in 24 hours.</p>
-      <div class="service-price"><span class="price-tag">From $55</span><a href="https://portal.workoccmed.com/order" class="price-book">Order Now &rarr;</a></div>
+      <div class="service-price"><span class="price-tag">From $55</span><a href="https://portal.dot-physical.net/order" class="price-book">Order Now &rarr;</a></div>
     </div>
     <div class="service-card">
-      <div class="service-icon icon-indigo">🧫</div>
+      <div class="service-icon icon-indigo">ðŸ§«</div>
       <h3>Titer Tests &mdash; ${state.name}</h3>
       <p>MMR, Varicella, and Hepatitis B immunity blood tests for healthcare workers, schools, and employers across ${state.name}.</p>
       <div class="service-price"><span class="price-tag">$75</span><a href="titers.html" class="price-book">Learn More &rarr;</a></div>
     </div>
     <div class="service-card">
-      <div class="service-icon icon-blue">💉</div>
+      <div class="service-icon icon-blue">ðŸ’‰</div>
       <h3>TB / PPD Skin Test &mdash; ${state.abbr}</h3>
-      <p>TB skin test placement and 48–72 hour reading for pre-employment and annual occupational health requirements in ${state.name}.</p>
-      <div class="service-price"><span class="price-tag">$65</span><a href="https://portal.workoccmed.com/order" class="price-book">Order Now &rarr;</a></div>
+      <p>TB skin test placement and 48â€“72 hour reading for pre-employment and annual occupational health requirements in ${state.name}.</p>
+      <div class="service-price"><span class="price-tag">$65</span><a href="https://portal.dot-physical.net/order" class="price-book">Order Now &rarr;</a></div>
     </div>
     <div class="service-card">
-      <div class="service-icon icon-teal">😷</div>
+      <div class="service-icon icon-teal">ðŸ˜·</div>
       <h3>Respirator Fit Testing &mdash; ${state.abbr}</h3>
       <p>OSHA-compliant qualitative and quantitative fit testing for healthcare workers, first responders, and industrial employees in ${state.name}.</p>
-      <div class="service-price"><span class="price-tag">$60</span><a href="https://portal.workoccmed.com/order" class="price-book">Order Now &rarr;</a></div>
+      <div class="service-price"><span class="price-tag">$60</span><a href="https://portal.dot-physical.net/order" class="price-book">Order Now &rarr;</a></div>
     </div>
     <div class="service-card">
-      <div class="service-icon icon-indigo">🏥</div>
+      <div class="service-icon icon-indigo">ðŸ¥</div>
       <h3>Pre-Employment Physical &mdash; ${state.abbr}</h3>
       <p>Comprehensive pre-hire health screening for CDL and non-CDL positions in ${state.name}. Same-day clearance letters available.</p>
       <div class="service-price"><span class="price-tag">$110</span><a href="pre-employment.html" class="price-book">Learn More &rarr;</a></div>
     </div>
   </div>
   <div style="text-align:center;margin-top:2rem;">
-    <a href="services.html" style="color:var(--accent);font-weight:600;font-size:0.9rem;text-decoration:none;">View all services — return-to-duty, breath alcohol, workers&apos; comp &amp; more &rarr;</a>
+    <a href="services.html" style="color:var(--accent);font-weight:600;font-size:0.9rem;text-decoration:none;">View all services â€” return-to-duty, breath alcohol, workers&apos; comp &amp; more &rarr;</a>
   </div>
 </section>
 
@@ -1269,7 +1269,7 @@ ${citiesHtml}
     </div>
     <div class="faq-item">
       <div class="faq-q">Do you offer non-DOT services like titer tests and TB tests in ${state.name}?</div>
-      <div class="faq-a">Yes — we are not DOT-only. We offer a full occupational health menu including MMR, Varicella, and Hepatitis B titer tests ($75 each), TB/PPD skin test placement and reading ($65), respirator fit testing ($60), non-DOT drug screens, and pre-employment physicals for non-CDL roles. All orderable online and available at ${state.sites} ${state.name} collection sites.</div>
+      <div class="faq-a">Yes â€” we are not DOT-only. We offer a full occupational health menu including MMR, Varicella, and Hepatitis B titer tests ($75 each), TB/PPD skin test placement and reading ($65), respirator fit testing ($60), non-DOT drug screens, and pre-employment physicals for non-CDL roles. All orderable online and available at ${state.sites} ${state.name} collection sites.</div>
     </div>
   </div>
 </section>
@@ -1280,7 +1280,7 @@ ${citiesHtml}
     <p>${state.sites} ${state.name} sites. Any service. Any city. Order in minutes.</p>
   </div>
   <div class="cta-actions">
-    <a href="https://portal.workoccmed.com/order" class="btn-white">Order Now &mdash; Any ${state.abbr} City</a>
+    <a href="https://portal.dot-physical.net/order" class="btn-white">Order Now &mdash; Any ${state.abbr} City</a>
     <a href="tel:8882334567" class="btn-outline-white">Call 888-233-4567</a>
   </div>
 </div>
@@ -1290,8 +1290,8 @@ ${citiesHtml}
     <a href="index.html" class="nav-logo" style="color:#fff;"><span class="logo-dot"></span>DOT Physical</a>
     <p>DOT Physical and WorkOccMed are services provided by Doctors Place, LLC. FMCSA-compliant DOT physicals and drug testing services nationwide &mdash; including all of ${state.name}.</p>
     <div class="footer-contact">
-      <a href="tel:8882334567">📞 888-233-4567</a>
-      <a href="contact.html">📍 75 Summit Ave, Hackensack, NJ 07601</a>
+      <a href="tel:8882334567">ðŸ“ž 888-233-4567</a>
+      <a href="contact.html">ðŸ“ 75 Summit Ave, Hackensack, NJ 07601</a>
     </div>
   </div>
   <div class="footer-col">
@@ -1307,7 +1307,7 @@ ${citiesHtml}
     <h5>Employers</h5>
     <a href="employers.html">Employer Overview</a>
     <a href="ctpa.html">C/TPA Program</a>
-    <a href="https://portal.workoccmed.com" target="_blank" rel="noopener">Employer Portal</a>
+    <a href="https://portal.dot-physical.net" target="_blank" rel="noopener">Employer Portal</a>
     <a href="cost-of-services.html">Pricing</a>
   </div>
   <div class="footer-col">
@@ -1334,8 +1334,9 @@ states.forEach(state => {
   const filename = `dot-physical-${state.slug}.html`
   const html = generatePage(state)
   fs.writeFileSync(path.join(__dirname, filename), html, 'utf8')
-  console.log(`✓ Generated ${filename}`)
+  console.log(`âœ“ Generated ${filename}`)
 })
 
 console.log(`\nDone! Generated ${states.length} state landing pages.`)
 console.log('\nNext: run "node generate-state-pages.js" then git add + commit + vercel --prod')
+
