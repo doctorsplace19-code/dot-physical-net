@@ -1018,7 +1018,7 @@ function generatePage(state) {
   "email": "info@dot-physical.net",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "75 Summit Ave",
+    "streetAddress": "226 State St #1018",
     "addressLocality": "Hackensack",
     "addressRegion": "NJ",
     "postalCode": "07601",
@@ -1291,7 +1291,7 @@ ${citiesHtml}
     <p>DOT Physical and WorkOccMed are services provided by Doctors Place, LLC. FMCSA-compliant DOT physicals and drug testing services nationwide &mdash; including all of ${state.name}.</p>
     <div class="footer-contact">
       <a href="tel:8882334567">ðŸ“ž 888-233-4567</a>
-      <a href="contact.html">ðŸ“ 75 Summit Ave, Hackensack, NJ 07601</a>
+      <a href="contact.html">ðŸ“ 226 State St #1018, Hackensack, NJ 07601</a>
     </div>
   </div>
   <div class="footer-col">
