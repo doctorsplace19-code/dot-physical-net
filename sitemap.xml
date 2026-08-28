@@ -91,6 +91,9 @@
 
   <!-- Informational articles -->
   <url><loc>https://www.dot-physical.net/dot-physical-blood-pressure-limits.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-medical-card</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.dot-physical.net/dot-physical-cost</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.dot-physical.net/fmcsa-clearinghouse</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
 
   <!-- City pages -->
   <url><loc>https://www.dot-physical.net/cities/aberdeen-sd.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
