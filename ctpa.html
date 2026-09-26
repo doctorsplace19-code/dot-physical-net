@@ -113,176 +113,114 @@
   </div>
 </section>
 
-<!-- PLANS -->
-<section style="background:#f8fafc;padding:32px 48px 64px;">
+<!-- HOW IT WORKS -->
+<section style="background:white;padding:40px 48px;border-bottom:1px solid #e5e7eb;">
   <div style="max-width:1100px;margin:0 auto;">
-    <div style="background:white;border:1px solid #e2e8f0;border-radius:16px;padding:20px 24px;margin-bottom:24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
-      <div style="display:flex;align-items:center;gap:12px;">
-        <span style="font-size:24px;" aria-hidden="true">&#128101;</span>
-        <span style="font-size:15px;font-weight:700;color:#0d1b2a;">How many drivers are in your fleet?</span>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;">
+      <div style="border:1px solid #e5e7eb;border-radius:14px;padding:22px 18px;">
+        <div style="font-size:15px;font-weight:800;color:#0d1b2a;margin-bottom:8px;">Enroll Your Company</div>
+        <div style="font-size:14px;color:#6b7280;line-height:1.55;">Call or email us. We collect your driver roster and assign each driver a unique ID in our DOT-compliant random pool.</div>
       </div>
-      <select id="fleetSizeSelect" style="border:1px solid #cbd5e1;border-radius:10px;padding:10px 14px;font-size:15px;min-width:230px;font-family:inherit;">
-        <option value="basic">1&ndash;4 drivers</option>
-        <option value="company">5&ndash;50 drivers</option>
-        <option value="enterprise">51&ndash;150 drivers</option>
-        <option value="fleet_151_300">151&ndash;300 drivers</option>
-        <option value="fleet_301_500">301&ndash;500 drivers</option>
-        <option value="fleet_501_1000">501&ndash;1,000 drivers</option>
-        <option value="fleet_1001_1500">1,001&ndash;1,500 drivers</option>
-        <option value="fleet_1501_2500">1,501&ndash;2,500 drivers</option>
-        <option value="2500+">2,500+ drivers</option>
-        <option value="premium">&#11088; Premium &mdash; 1 driver, all-inclusive</option>
-      </select>
+      <div style="border:1px solid #e5e7eb;border-radius:14px;padding:22px 18px;">
+        <div style="font-size:15px;font-weight:800;color:#0d1b2a;margin-bottom:8px;">We Run the Draws</div>
+        <div style="font-size:14px;color:#6b7280;line-height:1.55;">Each quarter we randomly select the required percentage using a scientifically valid method. You receive a notification with the names.</div>
+      </div>
+      <div style="border:1px solid #e5e7eb;border-radius:14px;padding:22px 18px;">
+        <div style="font-size:15px;font-weight:800;color:#0d1b2a;margin-bottom:8px;">Drivers Get Tested</div>
+        <div style="font-size:14px;color:#6b7280;line-height:1.55;">Selected drivers visit any of our 15,000+ clinic locations nationwide. Results go directly to our MRO for review.</div>
+      </div>
+      <div style="border:1px solid #e5e7eb;border-radius:14px;padding:22px 18px;">
+        <div style="font-size:15px;font-weight:800;color:#0d1b2a;margin-bottom:8px;">Results to Your DER</div>
+        <div style="font-size:14px;color:#6b7280;line-height:1.55;">Verified results are reported to you within 24 hours. Positive, refusal, or adulterated results trigger immediate DER notification.</div>
+      </div>
     </div>
-
-    <div id="planCardWrap" style="display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:start;"></div>
   </div>
 </section>
 
-<style>
-  @media (max-width:820px){ #planCardWrap{ grid-template-columns:1fr !important; } }
-</style>
+<!-- THREE PLAN CARDS -->
+<section style="background:#f8fafc;padding:48px 48px 64px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <h2 style="font-size:clamp(1.6rem,2.5vw,2rem);font-weight:800;color:#0d1b2a;margin-bottom:10px;letter-spacing:-0.01em;">Three Plans. One Program.</h2>
+    <p style="font-size:16px;color:#64748b;margin-bottom:32px;max-width:720px;">Basic for a single driver, Company for a fleet of 5&ndash;50 at a flat rate, or Premium for a fully all-inclusive program &mdash; random tests and Clearinghouse queries included.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;align-items:start;">
 
-<script>
-(function(){
-  var STD_FEATURES = ['Consortium pool management','Random selection scheduling (50% drug / 10% alcohol)','Driver notifications with clinic location instructions','Annual MIS report','FMCSA Clearinghouse violation reporting','DER guidance &amp; compliance support','Policy &amp; recordkeeping (49 CFR Part 382)','All six DOT agencies (FMCSA, FAA, FRA, FTA, PHMSA, USCG)'];
-  var STD_NOT_INCLUDED = ['Random drug tests &mdash; billed per test','Breath alcohol tests &mdash; billed per test','Clearinghouse queries &mdash; billed per query'];
-  var FLEET_FEATURES = ['Consortium pool management','Random testing scheduling','Driver notifications','Annual MIS reporting','FMCSA Clearinghouse reporting','DER compliance support'];
-
-  var TIERS = {
-    basic:           { name:'Starter',          range:'1&ndash;4 drivers',        price:'$49',   period:'/ driver / year',  icon:'&#128666;', badge:null,        features:STD_FEATURES, notIncluded:STD_NOT_INCLUDED },
-    company:         { name:'Company Fleet',    range:'5&ndash;50 drivers',       price:'$200',  period:'/ company / year', icon:'&#128667;', badge:'Flat Rate', features:STD_FEATURES, notIncluded:STD_NOT_INCLUDED },
-    enterprise:      { name:'Enterprise Fleet', range:'51&ndash;150 drivers',     price:'$300',  period:'/ company / year', icon:'&#127970;', badge:'Flat Rate', features:STD_FEATURES, notIncluded:STD_NOT_INCLUDED },
-    fleet_151_300:   { name:'Growth Fleet',     range:'151&ndash;300 drivers',    price:'$500',  period:'/ company / year', icon:'&#128200;', badge:null,        features:FLEET_FEATURES, notIncluded:STD_NOT_INCLUDED },
-    fleet_301_500:   { name:'Scale Fleet',      range:'301&ndash;500 drivers',    price:'$750',  period:'/ company / year', icon:'&#128200;', badge:null,        features:FLEET_FEATURES, notIncluded:STD_NOT_INCLUDED },
-    fleet_501_1000:  { name:'Regional Fleet',   range:'501&ndash;1,000 drivers',  price:'$1,250',period:'/ company / year', icon:'&#128200;', badge:null,        features:FLEET_FEATURES, notIncluded:STD_NOT_INCLUDED },
-    fleet_1001_1500: { name:'National Fleet',   range:'1,001&ndash;1,500 drivers',price:'$1,750',period:'/ company / year', icon:'&#128200;', badge:null,        features:FLEET_FEATURES, notIncluded:STD_NOT_INCLUDED },
-    fleet_1501_2500: { name:'Corporate Fleet',  range:'1,501&ndash;2,500 drivers',price:'$2,500',period:'/ company / year', icon:'&#128200;', badge:null,        features:FLEET_FEATURES, notIncluded:STD_NOT_INCLUDED },
-    premium:         { name:'Premium', range:'1 driver, all-inclusive &mdash; not a company/fleet plan', price:'$220', period:'first year, per driver &mdash; then $150/driver/yr', icon:'&#11088;', badge:'All-Inclusive',
-      features:['Everything in Basic &mdash; full C/TPA suite','Consortium pool management','Random selection scheduling (50% drug / 10% alcohol)','Driver notifications with clinic location instructions','Annual MIS report','FMCSA Clearinghouse violation reporting','DER guidance &amp; compliance support','All six DOT agencies covered','Random drug tests &mdash; INCLUDED','Breath alcohol tests (BAT) &mdash; INCLUDED','Clearinghouse queries &mdash; INCLUDED'],
-      notIncluded:[] }
-  };
-  var ORDER = ['basic','company','enterprise','fleet_151_300','fleet_301_500','fleet_501_1000','fleet_1001_1500','fleet_1501_2500'];
-
-  var select = document.getElementById('fleetSizeSelect');
-  var wrap = document.getElementById('planCardWrap');
-
-  function shortPeriod(period){
-    return period.indexOf('company') > -1 ? '/yr' : '/driver/yr';
-  }
-
-  function render(){
-    var key = select.value;
-    var leftHtml, rightHtml;
-
-    if (key === '2500+') {
-      leftHtml = ''
-        + '<div style="background:white;border:2px solid #1d4ed8;border-radius:16px;padding:28px;">'
-        + '<div style="display:flex;align-items:center;gap:12px;">'
-        + '<div style="width:48px;height:48px;border-radius:50%;background:#eff6ff;display:flex;align-items:center;justify-content:center;font-size:22px;">&#127911;</div>'
-        + '<div><div style="font-size:19px;font-weight:800;color:#0d1b2a;">Custom Fleet Pricing</div><div style="font-size:14px;color:#64748b;">2,500+ drivers</div></div>'
-        + '</div>'
-        + '<p style="font-size:15px;color:#475569;margin-top:18px;line-height:1.6;">Fleets this size get custom pricing and a dedicated account contact. Reach out and we&rsquo;ll put together a plan for you.</p>'
-        + '<a href="mailto:info@workoccmed.com?subject=2500%2B%20Driver%20Fleet%20Pricing" style="margin-top:20px;display:block;text-align:center;background:#1d4ed8;color:white;font-weight:800;padding:14px;border-radius:12px;text-decoration:none;">Contact Us</a>'
-        + '<a href="tel:8882334567" style="margin-top:10px;display:block;text-align:center;border:2px solid #1d4ed8;color:#1d4ed8;font-weight:800;padding:12px;border-radius:12px;text-decoration:none;">Call (888) 233-4567</a>'
-        + '</div>';
-    } else {
-      var t = TIERS[key];
-      var featuresHtml = t.features.map(function(f){
-        var included = f.indexOf('INCLUDED') > -1;
-        return '<div style="display:flex;gap:8px;font-size:14.5px;color:' + (included ? '#0f172a' : '#334155') + ';padding:3px 0;' + (included ? 'font-weight:600;' : '') + '"><span style="color:' + (included ? '#1d4ed8' : '#22c55e') + ';font-weight:700;flex-shrink:0;">&#10003;</span><span>' + f + '</span></div>';
-      }).join('');
-      var notIncHtml = t.notIncluded.length ? (
-        '<div style="margin-top:18px;padding-top:16px;border-top:1px solid #f1f5f9;">'
-        + '<div style="font-size:12.5px;font-weight:800;color:#92400e;margin-bottom:6px;">Not included &mdash; billed separately:</div>'
-        + t.notIncluded.map(function(f){ return '<div style="font-size:12.5px;color:#b45309;padding:2px 0;">&#10007; ' + f + '</div>'; }).join('')
-        + '</div>'
-      ) : '';
-      var badgeHtml = t.badge ? '<span style="background:#1d4ed8;color:white;font-size:11.5px;font-weight:800;padding:5px 14px;border-radius:999px;white-space:nowrap;">' + t.badge + '</span>' : '';
-
-      leftHtml = ''
-        + '<div style="background:white;border:2px solid #1d4ed8;border-radius:16px;padding:28px;">'
-        + '<div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;">'
-        + '<div style="display:flex;align-items:center;gap:12px;">'
-        + '<div style="width:48px;height:48px;border-radius:50%;background:#eff6ff;display:flex;align-items:center;justify-content:center;font-size:22px;">' + t.icon + '</div>'
-        + '<div><div style="font-size:19px;font-weight:800;color:#0d1b2a;">' + t.name + '</div><div style="font-size:14px;color:#64748b;">' + t.range + '</div></div>'
-        + '</div>' + badgeHtml + '</div>'
-        + '<div style="margin-top:18px;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;"><span style="font-size:40px;font-weight:800;color:#0d1b2a;">' + t.price + '</span><span style="font-size:14px;color:#64748b;">' + t.period + '</span></div>'
-        + '<div style="margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:4px 20px;">' + featuresHtml + '</div>'
-        + notIncHtml
-        + '<div style="margin-top:20px;display:flex;flex-direction:column;gap:10px;">'
-        + '<a href="https://portal.dot-physical.net/join-consortium" style="text-align:center;background:#1d4ed8;color:white;font-weight:800;padding:14px;border-radius:12px;text-decoration:none;">Enroll Now</a>'
-        + '<a href="mailto:info@workoccmed.com?subject=DOT%20Consortium%20Question" style="text-align:center;border:2px solid #1d4ed8;color:#1d4ed8;font-weight:800;padding:12px;border-radius:12px;text-decoration:none;">Talk to a Fleet Specialist</a>'
-        + '</div></div>';
-    }
-
-    var rows = '';
-    ORDER.forEach(function(k){
-      if (k === key) return;
-      var tt = TIERS[k];
-      rows += '<button type="button" data-fleet="' + k + '" class="fleet-row-btn" style="all:unset;cursor:pointer;display:flex;justify-content:space-between;padding:11px 6px;border-bottom:1px solid #f1f5f9;font-family:inherit;width:100%;box-sizing:border-box;">'
-        + '<span style="font-size:14.5px;color:#334155;">' + tt.range + '</span>'
-        + '<span style="font-size:14.5px;font-weight:800;color:#0d1b2a;">' + tt.price + '<span style="font-weight:500;color:#94a3b8;font-size:12px;"> ' + shortPeriod(tt.period) + '</span></span>'
-        + '</button>';
-    });
-
-    var premiumRow = key !== 'premium'
-      ? '<button type="button" data-fleet="premium" class="fleet-row-btn" style="all:unset;cursor:pointer;width:100%;box-sizing:border-box;display:flex;justify-content:space-between;align-items:center;background:#1d4ed8;color:white;font-weight:800;padding:14px;border-radius:12px;margin-top:12px;font-family:inherit;"><span>&#11088; Premium &mdash; all-inclusive</span><span>$220<span style="font-weight:500;font-size:12px;opacity:.85;">/driver</span></span></button>'
-      : '';
-    var contactRow = key !== '2500+'
-      ? '<a href="mailto:info@workoccmed.com?subject=2500%2B%20Driver%20Fleet%20Pricing" style="display:flex;align-items:center;justify-content:center;gap:8px;background:#0d1b2a;color:white;font-weight:800;padding:14px;border-radius:12px;text-decoration:none;margin-top:10px;">&#127911; 2,500+ drivers? Contact us</a>'
-      : '';
-
-    rightHtml = ''
-      + '<div style="background:white;border:1px solid #e2e8f0;border-radius:16px;padding:22px;">'
-      + '<div style="font-size:15px;font-weight:800;color:#0d1b2a;margin-bottom:8px;">Other fleet sizes</div>'
-      + rows + premiumRow + contactRow
-      + '<div style="margin-top:14px;font-size:12px;color:#94a3b8;text-align:center;">Testing and Clearinghouse fees billed separately.</div>'
-      + '</div>';
-
-    wrap.innerHTML = leftHtml + rightHtml;
-
-    var rowBtns = wrap.querySelectorAll('.fleet-row-btn');
-    for (var i = 0; i < rowBtns.length; i++) {
-      rowBtns[i].addEventListener('click', function(){
-        select.value = this.getAttribute('data-fleet');
-        render();
-        wrap.scrollIntoView({ behavior:'smooth', block:'start' });
-      });
-    }
-  }
-
-  select.addEventListener('change', render);
-  render();
-})();
-</script>
-
-
-<!-- HOW IT WORKS -->
-<section style="background:#f8fafc;padding:64px 48px;">
-  <div style="max-width:1100px;margin:0 auto;text-align:center;">
-    <div style="font-size:15px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#1d4ed8;margin-bottom:10px;">Simple Process</div>
-    <h2 style="font-size:clamp(1.8rem,3vw,2.4rem);font-weight:800;color:#0d1b2a;margin-bottom:44px;letter-spacing:-0.02em;">Get Compliant in 3 Steps</h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;">
-      <div style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:16px;padding:28px 22px;">
-        <div style="width:44px;height:44px;border-radius:50%;background:#1d4ed8;color:white;font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">1</div>
-        <div style="font-size:18px;font-weight:700;color:#0d1b2a;margin-bottom:6px;">Enroll Online</div>
-        <div style="font-size:16px;color:#6b7280;line-height:1.5;">Sign up in minutes &mdash; from $49/year per driver. Get your enrollment certificate.</div>
+      <!-- BASIC -->
+      <div style="background:white;border:1px solid #e2e8f0;border-radius:16px;overflow:hidden;">
+        <div style="background:#0d1b2a;padding:12px 20px;">
+          <span style="font-size:12.5px;font-weight:800;letter-spacing:.07em;color:white;text-transform:uppercase;">Fleet / Employer / Basic</span>
+        </div>
+        <div style="padding:24px 24px 28px;">
+          <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px;">
+            <span style="font-size:42px;font-weight:900;color:#1d4ed8;line-height:1;">$49</span>
+            <span style="font-size:15px;color:#64748b;">/ driver / year</span>
+          </div>
+          <p style="font-size:14px;color:#64748b;line-height:1.55;margin-bottom:20px;">For <strong style="color:#374151;">1&ndash;4 drivers</strong>. Consortium administration only &mdash; drug tests, breath alcohol tests, and Clearinghouse queries are billed separately (not included).</p>
+          <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:20px;">
+            <div style="font-size:14px;color:#374151;display:flex;gap:8px;"><span style="color:#22c55e;font-weight:700;flex-shrink:0;">&#10003;</span>Full C/TPA enrollment &amp; account setup</div>
+            <div style="font-size:14px;color:#374151;display:flex;gap:8px;"><span style="color:#22c55e;font-weight:700;flex-shrink:0;">&#10003;</span>Consortium pool enrollment</div>
+            <div style="font-size:14px;color:#374151;display:flex;gap:8px;"><span style="color:#22c55e;font-weight:700;flex-shrink:0;">&#10003;</span>Random selection scheduling (50% drug / 10% alcohol)</div>
+            <div style="font-size:14px;color:#374151;display:flex;gap:8px;"><span style="color:#22c55e;font-weight:700;flex-shrink:0;">&#10003;</span>Driver notifications with clinic location instructions</div>
+            <div style="font-size:14px;color:#374151;display:flex;gap:8px;"><span style="color:#22c55e;font-weight:700;flex-shrink:0;">&#10003;</span>MRO review of all results</div>
+            <div style="font-size:14px;color:#374151;display:flex;gap:8px;"><span style="color:#22c55e;font-weight:700;flex-shrink:0;">&#10003;</span>FMCSA Clearinghouse violation reporting</div>
+            <div style="font-size:14px;color:#374151;display:flex;gap:8px;"><span style="color:#22c55e;font-weight:700;flex-shrink:0;">&#10003;</span>Annual MIS report</div>
+            <div style="font-size:14px;color:#374151;display:flex;gap:8px;"><span style="color:#22c55e;font-weight:700;flex-shrink:0;">&#10003;</span>DER guidance &amp; compliance support</div>
+          </div>
+          <a href="https://portal.dot-physical.net/join-consortium" style="display:block;text-align:center;background:#1d4ed8;color:white;font-weight:800;font-size:15px;padding:13px;border-radius:10px;text-decoration:none;">Enroll Now &rarr;</a>
+        </div>
       </div>
-      <div style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:16px;padding:28px 22px;">
-        <div style="width:44px;height:44px;border-radius:50%;background:#1d4ed8;color:white;font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">2</div>
-        <div style="font-size:18px;font-weight:700;color:#0d1b2a;margin-bottom:6px;">We Manage the Pool</div>
-        <div style="font-size:16px;color:#6b7280;line-height:1.5;">Random selections, notifications, MRO review, and Clearinghouse reporting &mdash; all handled.</div>
+
+      <!-- COMPANY -->
+      <div style="background:white;border:1px solid #e2e8f0;border-radius:16px;overflow:hidden;">
+        <div style="background:#7c3aed;padding:12px 20px;">
+          <span style="font-size:12.5px;font-weight:800;letter-spacing:.07em;color:white;text-transform:uppercase;">Company &mdash; Fleet 5&ndash;50</span>
+        </div>
+        <div style="padding:24px 24px 28px;">
+          <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px;">
+            <span style="font-size:42px;font-weight:900;color:#1d4ed8;line-height:1;">$200</span>
+            <span style="font-size:15px;color:#64748b;">/ company / year</span>
+          </div>
+          <p style="font-size:14px;color:#64748b;line-height:1.55;margin-bottom:20px;">Flat rate covering a fleet of <strong style="color:#374151;">5&ndash;50 drivers</strong>. Consortium administration only &mdash; drug tests, breath alcohol tests, and Clearinghouse queries are billed separately (not included).</p>
+          <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:20px;">
+            <div style="font-size:14px;color:#374151;display:flex;gap:8px;"><span style="color:#22c55e;font-weight:700;flex-shrink:0;">&#10003;</span>Flat $200/yr &mdash; covers your whole fleet of 5&ndash;50 drivers</div>
+            <div style="font-size:14px;color:#374151;display:flex;gap:8px;"><span style="color:#22c55e;font-weight:700;flex-shrink:0;">&#10003;</span>Full C/TPA enrollment &amp; account setup</div>
+            <div style="font-size:14px;color:#374151;display:flex;gap:8px;"><span style="color:#22c55e;font-weight:700;flex-shrink:0;">&#10003;</span>Consortium pool management for all drivers</div>
+            <div style="font-size:14px;color:#374151;display:flex;gap:8px;"><span style="color:#22c55e;font-weight:700;flex-shrink:0;">&#10003;</span>Random selection scheduling (50% drug / 10% alcohol)</div>
+            <div style="font-size:14px;color:#374151;display:flex;gap:8px;"><span style="color:#22c55e;font-weight:700;flex-shrink:0;">&#10003;</span>Driver notifications with clinic location instructions</div>
+            <div style="font-size:14px;color:#374151;display:flex;gap:8px;"><span style="color:#22c55e;font-weight:700;flex-shrink:0;">&#10003;</span>MRO review of all results</div>
+            <div style="font-size:14px;color:#374151;display:flex;gap:8px;"><span style="color:#22c55e;font-weight:700;flex-shrink:0;">&#10003;</span>FMCSA Clearinghouse violation reporting</div>
+            <div style="font-size:14px;color:#374151;display:flex;gap:8px;"><span style="color:#22c55e;font-weight:700;flex-shrink:0;">&#10003;</span>Annual MIS report &amp; DER compliance support</div>
+          </div>
+          <a href="https://portal.dot-physical.net/join-consortium" style="display:block;text-align:center;background:#1d4ed8;color:white;font-weight:800;font-size:15px;padding:13px;border-radius:10px;text-decoration:none;">Enroll Now &rarr;</a>
+        </div>
       </div>
-      <div style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:16px;padding:28px 22px;">
-        <div style="width:44px;height:44px;border-radius:50%;background:#1d4ed8;color:white;font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">3</div>
-        <div style="font-size:18px;font-weight:700;color:#0d1b2a;margin-bottom:6px;">Stay Audit-Ready</div>
-        <div style="font-size:16px;color:#6b7280;line-height:1.5;">Keep compliant records and annual MIS reports on hand for any DOT audit.</div>
+
+      <!-- PREMIUM -->
+      <div style="background:white;border:2px solid #0d9488;border-radius:16px;overflow:hidden;">
+        <div style="background:#0d9488;padding:12px 20px;display:flex;align-items:center;gap:8px;">
+          <span style="font-size:15px;">&#11088;</span>
+          <span style="font-size:12.5px;font-weight:800;letter-spacing:.07em;color:white;text-transform:uppercase;">Premium &mdash; All-Inclusive</span>
+        </div>
+        <div style="padding:24px 24px 28px;">
+          <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px;">
+            <span style="font-size:42px;font-weight:900;color:#1d4ed8;line-height:1;">$220</span>
+            <span style="font-size:15px;color:#64748b;">/ driver / first year</span>
+          </div>
+          <div style="font-size:14px;font-weight:700;color:#1d4ed8;margin-bottom:12px;">then $150 / driver / year to renew</div>
+          <p style="font-size:14px;color:#64748b;line-height:1.55;margin-bottom:20px;">Priced <strong style="color:#374151;">per driver</strong>, one driver per enrollment &mdash; not per company. On your first order you place a DOT urine drug screen; Clearinghouse consent is renewed yearly; random tests are then ordered at no additional charge.</p>
+          <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:20px;">
+            <div style="font-size:14px;color:#374151;display:flex;gap:8px;"><span style="color:#22c55e;font-weight:700;flex-shrink:0;">&#10003;</span>Everything in Basic &mdash; full C/TPA suite</div>
+            <div style="font-size:14px;font-weight:700;color:#0d1b2a;display:flex;gap:8px;"><span style="color:#22c55e;font-weight:700;flex-shrink:0;">&#10003;</span>Random drug tests &mdash; INCLUDED</div>
+            <div style="font-size:14px;font-weight:700;color:#0d1b2a;display:flex;gap:8px;"><span style="color:#22c55e;font-weight:700;flex-shrink:0;">&#10003;</span>Breath alcohol tests (BAT) &mdash; INCLUDED</div>
+            <div style="font-size:14px;font-weight:700;color:#0d1b2a;display:flex;gap:8px;"><span style="color:#22c55e;font-weight:700;flex-shrink:0;">&#10003;</span>Clearinghouse queries &mdash; INCLUDED</div>
+            <div style="font-size:14px;color:#374151;display:flex;gap:8px;"><span style="color:#22c55e;font-weight:700;flex-shrink:0;">&#10003;</span>Initial DOT urine drug screen on enrollment</div>
+            <div style="font-size:14px;color:#374151;display:flex;gap:8px;"><span style="color:#22c55e;font-weight:700;flex-shrink:0;">&#10003;</span>Annual Clearinghouse consent renewal</div>
+          </div>
+          <a href="https://portal.dot-physical.net/join-consortium" style="display:block;text-align:center;background:#0d9488;color:white;font-weight:800;font-size:15px;padding:13px;border-radius:10px;text-decoration:none;">Get Started &rarr;</a>
+        </div>
       </div>
+
     </div>
-    <div style="margin-top:44px;">
-      <a href="https://portal.dot-physical.net/join-consortium" style="display:inline-block;background:#1d4ed8;color:white;font-size:19px;font-weight:800;padding:16px 36px;border-radius:12px;text-decoration:none;box-shadow:0 6px 20px rgba(29,78,216,0.3);">Enroll &mdash; from $49/yr per driver &rarr;</a>
-    </div>
+    <div style="margin-top:18px;font-size:13px;color:#94a3b8;text-align:center;">Fleet over 50 drivers? <a href="https://portal.dot-physical.net/join-consortium" style="color:#1d4ed8;font-weight:600;">View all fleet plans (up to 2,500+) &rarr;</a> &nbsp;&middot;&nbsp; Questions? Call <a href="tel:8882334567" style="color:#1d4ed8;">(888) 233-4567</a></div>
   </div>
 </section>
 
