@@ -74,12 +74,12 @@ function generatePage(city, state, abbr, stateSlug, highways) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DOT Physical in ${city}, ${abbr} | CDL Exam &amp; Drug Test — $110 | Doctors Place</title>
+  <title>DOT Physical in ${city}, ${abbr} | CDL Exam &amp; Drug Test — $110 | WorkOccMed</title>
   <meta name="description" content="DOT physicals &amp; drug testing in ${city}, ${abbr}. FMCSA-certified examiner, same-day results. Order online in 2 minutes. From $110." />
   <meta name="keywords" content="DOT physical ${city}, DOT physical ${abbr}, CDL medical exam ${city}, drug testing ${city}, FMCSA medical examiner ${city} ${abbr}, occupational health ${city}" />
   <link rel="canonical" href="https://www.dot-physical.net/cities/${citySlug}.html" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="DOT Physical &amp; Drug Testing in ${city}, ${abbr} | Doctors Place" />
+  <meta property="og:title" content="DOT Physical &amp; Drug Testing in ${city}, ${abbr} | WorkOccMed" />
   <meta property="og:description" content="DOT physicals &amp; drug testing in ${city}, ${abbr}. FMCSA-certified examiner, same-day results. Order online in 2 minutes. From $110." />
   <meta property="og:url" content="https://www.dot-physical.net/cities/${citySlug}.html" />
   <meta property="og:image" content="https://www.dot-physical.net/og-image.png" />
@@ -87,7 +87,7 @@ function generatePage(city, state, abbr, stateSlug, highways) {
   {
     "@context": "https://schema.org",
     "@type": "MedicalClinic",
-    "name": "Doctors Place — ${city} DOT Physical Center",
+    "name": "WorkOccMed — ${city} DOT Physical Center",
     "description": "FMCSA-certified DOT physical exams and drug testing serving ${city}, ${state} and surrounding areas.",
     "url": "https://www.dot-physical.net/cities/${citySlug}.html",
     "telephone": "+18882334567",
@@ -146,7 +146,7 @@ function generatePage(city, state, abbr, stateSlug, highways) {
   <nav class="site-nav">
     <div class="nav-inner">
       <a href="../index.html" class="nav-logo">
-        <img src="../dp-logo.png" alt="Doctors Place" height="38" />
+        <img src="../dp-logo.png" alt="WorkOccMed" height="38" />
       </a>
       <ul class="nav-links">
         <li><a href="../services.html">Services</a></li>
@@ -217,7 +217,7 @@ function generatePage(city, state, abbr, stateSlug, highways) {
 
   <div style="background:#f8fafc;padding:56px 24px">
     <div class="section" style="padding:0">
-      <h2>Why ${city} Drivers Choose Doctors Place</h2>
+      <h2>Why ${city} Drivers Choose WorkOccMed</h2>
       <p class="sub">Trusted by CDL drivers and fleet managers across ${state}.</p>
       <div class="why-grid">
         <div class="why-card">
@@ -260,11 +260,11 @@ function generatePage(city, state, abbr, stateSlug, highways) {
     <div class="faq">
       <div class="faq-item">
         <h3>Where can I get a DOT physical near ${city}, ${abbr}?</h3>
-        <p>Doctors Place has multiple collection and exam sites serving ${city} and surrounding areas, accessible from ${highways}. Order at portal.dot-physical.net to find the nearest open slot.</p>
+        <p>WorkOccMed has multiple collection and exam sites serving ${city} and surrounding areas, accessible from ${highways}. Order at portal.dot-physical.net to find the nearest open slot.</p>
       </div>
       <div class="faq-item">
         <h3>How much does a DOT physical cost in ${city}?</h3>
-        <p>DOT physicals through Doctors Place start at <strong>$110</strong> in the ${city} area. Your Medical Examiner Certificate is included at no extra charge.</p>
+        <p>DOT physicals through WorkOccMed start at <strong>$110</strong> in the ${city} area. Your Medical Examiner Certificate is included at no extra charge.</p>
       </div>
       <div class="faq-item">
         <h3>How do I order a DOT physical in ${city}?</h3>
@@ -283,13 +283,13 @@ function generatePage(city, state, abbr, stateSlug, highways) {
 
   <div class="cta-banner">
     <h2>Ready to Order in ${city}, ${abbr}?</h2>
-    <p>Join thousands of CDL drivers who trust Doctors Place for fast, compliant DOT physicals.</p>
+    <p>Join thousands of CDL drivers who trust WorkOccMed for fast, compliant DOT physicals.</p>
     <a href="https://portal.dot-physical.net/order">Order Now &mdash; It Only Takes 2 Minutes</a>
   </div>
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <p>&copy; 2026 Doctors Place. All rights reserved.</p>
+      <p>&copy; 2026 WorkOccMed. All rights reserved.</p>
       <p style="margin-top:8px;font-size:.85rem;color:#94a3b8">
         <a href="../index.html">Home</a> &middot;
         <a href="../services.html">Services</a> &middot;

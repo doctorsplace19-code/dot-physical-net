@@ -1,5 +1,5 @@
 ﻿/**
- * State landing page generator for Doctors Place / dot-physical.net
+ * State landing page generator for WorkOccMed / dot-physical.net
  *
  * Run with: node generate-state-pages.js
  *
@@ -807,7 +807,7 @@ const states = [
       { name: 'Toms River', sites: '8+' },
       { name: 'All Other NJ Cities', sites: 'Statewide coverage' },
     ],
-    faqExtra: 'New Jersey is home to Doctors Place\'s main office in Hackensack. The Port Newark-Elizabeth complex is the largest port on the East Coast, making NJ one of the highest-demand CDL compliance markets in the US.',
+    faqExtra: 'New Jersey is home to the Port Newark-Elizabeth complex, the largest port on the East Coast, making NJ one of the highest-demand CDL compliance markets in the US.',
   },
   {
     slug: 'hawaii',
@@ -994,24 +994,24 @@ function generatePage(state) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DOT Physicals, Drug Testing & Occupational Health in ${state.name} | Doctors Place</title>
+<title>DOT Physicals, Drug Testing & Occupational Health in ${state.name} | WorkOccMed</title>
 <meta name="description" content="Order DOT physicals, drug tests, titer tests, TB tests, and more anywhere in ${state.name}. ${state.sites} collection sites statewide. Serving CDL drivers, healthcare workers, and all employers. Results in 24â€“48 hours.">
 <meta name="keywords" content="DOT physical ${state.name}, DOT drug test ${state.name}, CDL physical ${state.abbr}, occupational health ${state.name}, MMR titer test ${state.name}, TB test ${state.name}, non-DOT drug screen ${state.name}, pre-employment physical ${state.name}, FMCSA physical ${state.name}">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.dot-physical.net/dot-physical-${state.slug}.html">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.dot-physical.net/dot-physical-${state.slug}.html">
-<meta property="og:title" content="DOT Physicals, Drug Testing & Occupational Health in ${state.name} | Doctors Place">
+<meta property="og:title" content="DOT Physicals, Drug Testing & Occupational Health in ${state.name} | WorkOccMed">
 <meta property="og:description" content="Order DOT physicals, drug tests, titer tests, TB tests, and more anywhere in ${state.name}. ${state.sites} collection sites statewide. Results in 24â€“48 hours.">
-<meta property="og:site_name" content="Doctors Place">
+<meta property="og:site_name" content="WorkOccMed">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="DOT Physicals, Drug Testing & Occupational Health in ${state.name} | Doctors Place">
+<meta name="twitter:title" content="DOT Physicals, Drug Testing & Occupational Health in ${state.name} | WorkOccMed">
 <meta name="twitter:description" content="DOT physicals, drug testing, titer tests & occupational health at ${state.sites} ${state.name} collection sites. Order online.">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "MedicalBusiness",
-  "name": "Doctors Place",
+  "name": "WorkOccMed",
   "url": "https://www.dot-physical.net",
   "description": "DOT physical exams and drug testing services throughout ${state.name}.",
   "telephone": "+12013455803",
@@ -1252,8 +1252,8 @@ ${citiesHtml}
   <h2 class="section-title">${state.name} DOT testing &mdash;<br>common questions</h2>
   <div class="faq-list">
     <div class="faq-item">
-      <div class="faq-q">Do I need to be local to use Doctors Place in ${state.name}?</div>
-      <div class="faq-a">No. Doctors Place is a fully nationwide service. Our physical office is in Hackensack, NJ, but we serve employers and drivers in all 50 states &mdash; including all of ${state.name} &mdash; through our 10,000+ partner clinic network. You order online; your driver visits a site near them.</div>
+      <div class="faq-q">Do I need to be local to use WorkOccMed in ${state.name}?</div>
+      <div class="faq-a">No. WorkOccMed is a fully nationwide service. We serve employers and drivers in all 50 states &mdash; including all of ${state.name} &mdash; through our 10,000+ partner clinic network. You order online; your driver visits a site near them.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">How do I order a DOT physical for a driver in ${state.cities[0].name}?</div>
@@ -1288,7 +1288,7 @@ ${citiesHtml}
 <footer>
   <div class="footer-brand">
     <a href="index.html" class="nav-logo" style="color:#fff;"><span class="logo-dot"></span>DOT Physical</a>
-    <p>DOT Physical and WorkOccMed are services provided by Doctors Place, LLC. FMCSA-compliant DOT physicals and drug testing services nationwide &mdash; including all of ${state.name}.</p>
+    <p>DOT Physical and WorkOccMed are services provided by WorkOccMed LLC. FMCSA-compliant DOT physicals and drug testing services nationwide &mdash; including all of ${state.name}.</p>
     <div class="footer-contact">
       <a href="tel:8882334567">ðŸ“ž 888-233-4567</a>
       <a href="contact.html">ðŸ“ 226 State St #1018, Hackensack, NJ 07601</a>
@@ -1320,7 +1320,7 @@ ${citiesHtml}
     <a href="who-we-serve.html">All States &rarr;</a>
   </div>
   <div class="footer-bottom">
-    <p>&copy; 2026 DOT Physical &middot; DOT Physical and WorkOccMed are services provided by Doctors Place, LLC.</p>
+    <p>&copy; 2026 DOT Physical &middot; DOT Physical and WorkOccMed are services provided by WorkOccMed LLC.</p>
     <p>DOT physicals &amp; drug testing nationwide &mdash; including ${state.cities.slice(0,3).map(c => c.name).join(', ')}, and all of ${state.name}.</p>
   </div>
 </footer>
