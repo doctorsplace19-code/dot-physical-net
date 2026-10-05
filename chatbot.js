@@ -202,7 +202,7 @@
     });
 
     // Welcome message
-    appendMessage('bot', 'Hi! I\'m the Doctors Place assistant. I can answer questions about DOT physicals, drug tests, blood pressure requirements, and help you get ordered. What can I help you with?');
+    appendMessage('bot', 'Hi! I\'m the WorkOccMed assistant. I can answer questions about DOT physicals, drug tests, blood pressure requirements, and help you get ordered. What can I help you with?');
   }
 
   function toggleChat() {

@@ -122,6 +122,6 @@
   // Bottom label overlay
   var label = document.createElement('div')
   label.style.cssText = 'position:absolute;bottom:12px;left:50%;transform:translateX(-50%);background:rgba(6,16,31,0.88);color:rgba(255,255,255,0.88);font-family:Arial,sans-serif;font-size:12px;font-weight:500;padding:6px 16px;border-radius:100px;border:1px solid rgba(255,255,255,0.12);white-space:nowrap;pointer-events:none;z-index:2;'
-  label.textContent = '10,000+ collection sites \u00b7 All 50 states \u00b7 Coordinated through Doctors Place'
+  label.textContent = '10,000+ collection sites \u00b7 All 50 states \u00b7 Coordinated through WorkOccMed'
   wrap.appendChild(label)
 })()
