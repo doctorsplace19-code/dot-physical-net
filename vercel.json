@@ -4,12 +4,39 @@
   "redirects": [
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "dot-physical.net" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "dot-physical.net"
+        }
+      ],
       "destination": "https://www.dot-physical.net/:path*",
       "permanent": true
     },
-    { "source": "/order",    "destination": "https://portal.dot-physical.net/order", "permanent": false },
-    { "source": "/orders",   "destination": "https://portal.dot-physical.net/order", "permanent": false },
-    { "source": "/book.html","destination": "https://portal.dot-physical.net/order", "permanent": false }
+    {
+      "source": "/order",
+      "destination": "https://portal.dot-physical.net/order",
+      "permanent": false
+    },
+    {
+      "source": "/orders",
+      "destination": "https://portal.dot-physical.net/order",
+      "permanent": false
+    },
+    {
+      "source": "/book.html",
+      "destination": "https://portal.dot-physical.net/order",
+      "permanent": false
+    },
+    {
+      "source": "/dot-physical-puerto-rico.html",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/dot-physical-puerto-rico",
+      "destination": "/",
+      "permanent": false
+    }
   ]
 }
