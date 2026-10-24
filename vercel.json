@@ -27,16 +27,6 @@
       "source": "/book.html",
       "destination": "https://portal.dot-physical.net/order",
       "permanent": false
-    },
-    {
-      "source": "/dot-physical-puerto-rico.html",
-      "destination": "/",
-      "permanent": false
-    },
-    {
-      "source": "/dot-physical-puerto-rico",
-      "destination": "/",
-      "permanent": false
     }
   ]
 }
